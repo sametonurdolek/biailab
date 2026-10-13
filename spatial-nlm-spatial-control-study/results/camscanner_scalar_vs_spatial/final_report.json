@@ -1,0 +1,120 @@
+{
+  "valid_pairs": 100,
+  "content_groups": 92,
+  "split": {
+    "train": 59,
+    "val": 21,
+    "test": 20
+  },
+  "registration_pairs": 19,
+  "calibration": {
+    "pipeline": {
+      "name": "local_31_0.0",
+      "mode": "local",
+      "size": 31,
+      "white": 0.98,
+      "black": 0.0
+    },
+    "h_lo": 0.0005213606195074932,
+    "h_hi": 0.1,
+    "h_star": 0.038453353688880636,
+    "endpoint_optimum": false
+  },
+  "checkpoints": {
+    "scalar": {
+      "status": "completed",
+      "best_step": 0,
+      "best_val_psnr": 24.645558856782458,
+      "checkpoint_sha256": "6ab484abcf791d7cfa1104a9d2d1f5d1d461e4fe11b902048f4536d78c824ee2",
+      "initial_sha256": "4a538bb58248dc71abaa60e56aecc642b6334b0c09c3f0a6af874783b2a9c41a",
+      "seed": 20261014,
+      "steps": 400,
+      "batch": 4,
+      "crop": 128,
+      "lr": 0.003,
+      "loss": "L1 after shared postprocessing",
+      "optimizer": "Adam",
+      "crop_manifest_sha256": "47fd388f9b5f0af0d62f76544d4c30c9cfc15f0c7be0ebd01add0c08ce743c0d",
+      "split_sha256": "8727e1d42b37cdb9f611dd37357598ef9f7b5ec8ddce367aed9af7238e594abd",
+      "calibration_sha256": "24fd277a33c1b131510814facc641a079f84e6e3e04e8a7befa33154a9c62b96",
+      "nlm_sha256": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb",
+      "protocol_source_sha256": {
+        "config.py": "179ddc7c424f64146b9c56e480057cd13d073f671353dcdfefa35642bb24dc6a",
+        "document_pipeline.py": "c98ba8bc4d6c9a57a52814637ea809fb1409b58e60a35adaccb66e83deb2b462",
+        "models.py": "fb8e89405182d46836c1d6926beffff9d2ad1832729ff2e2d87b7fe14d94fc17",
+        "nlm.py": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb",
+        "metrics.py": "18003b5f434d46e926228b90b3affa17e5ad24ef541b8167d4f2066d15a67bac",
+        "common.py": "9622fe78ea67059a3242fc8ac1beadff70d08878cbc80a0650f60a2a5fd9ce4b",
+        "train.py": "3750d7aa439a301ac80b69179325423eb0c60bbfb3a58bbb4fbca8761f69bb00"
+      }
+    },
+    "spatial": {
+      "status": "completed",
+      "best_step": 400,
+      "best_val_psnr": 25.050227755591983,
+      "checkpoint_sha256": "50a3036259b30c93bc00496b117678ac546da31c8f396b4c1f78e5688c9d5ba0",
+      "initial_sha256": "c9866920cbe1ce615d737eeb72677d2d989373788c86c149aca04ec862db9383",
+      "seed": 20261014,
+      "steps": 400,
+      "batch": 4,
+      "crop": 128,
+      "lr": 0.003,
+      "loss": "L1 after shared postprocessing",
+      "optimizer": "Adam",
+      "crop_manifest_sha256": "47fd388f9b5f0af0d62f76544d4c30c9cfc15f0c7be0ebd01add0c08ce743c0d",
+      "split_sha256": "8727e1d42b37cdb9f611dd37357598ef9f7b5ec8ddce367aed9af7238e594abd",
+      "calibration_sha256": "24fd277a33c1b131510814facc641a079f84e6e3e04e8a7befa33154a9c62b96",
+      "nlm_sha256": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb",
+      "protocol_source_sha256": {
+        "config.py": "179ddc7c424f64146b9c56e480057cd13d073f671353dcdfefa35642bb24dc6a",
+        "document_pipeline.py": "c98ba8bc4d6c9a57a52814637ea809fb1409b58e60a35adaccb66e83deb2b462",
+        "models.py": "fb8e89405182d46836c1d6926beffff9d2ad1832729ff2e2d87b7fe14d94fc17",
+        "nlm.py": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb",
+        "metrics.py": "18003b5f434d46e926228b90b3affa17e5ad24ef541b8167d4f2066d15a67bac",
+        "common.py": "9622fe78ea67059a3242fc8ac1beadff70d08878cbc80a0650f60a2a5fd9ce4b",
+        "train.py": "3750d7aa439a301ac80b69179325423eb0c60bbfb3a58bbb4fbca8761f69bb00"
+      }
+    }
+  },
+  "means": {
+    "scalar_psnr": 25.896911334991454,
+    "spatial_psnr": 26.324670600891114,
+    "delta_psnr": 0.4277592658996582,
+    "scalar_ssim": 0.9604123175144196,
+    "spatial_ssim": 0.9281833529472351,
+    "delta_ssim": -0.03222896456718445
+  },
+  "representative_figures": [
+    {
+      "image": "camscanner_001",
+      "comparison": "results\\figures\\camscanner_001_comparison.png",
+      "closeups": "results\\figures\\camscanner_001_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    },
+    {
+      "image": "camscanner_045",
+      "comparison": "results\\figures\\camscanner_045_comparison.png",
+      "closeups": "results\\figures\\camscanner_045_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    },
+    {
+      "image": "pair_100405_pair_01076_003",
+      "comparison": "results\\figures\\pair_100405_pair_01076_003_comparison.png",
+      "closeups": "results\\figures\\pair_100405_pair_01076_003_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    },
+    {
+      "image": "pair_100405_pair_01076_015",
+      "comparison": "results\\figures\\pair_100405_pair_01076_015_comparison.png",
+      "closeups": "results\\figures\\pair_100405_pair_01076_015_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    }
+  ],
+  "diagram_figure": {
+    "image": "camscanner_004",
+    "path": "results/figures/camscanner_004_diagrams.png",
+    "rule": "precommitted before test; x [.38,.98], y [.05,.95] of prepared page"
+  },
+  "failures": [],
+  "exclusions": []
+}

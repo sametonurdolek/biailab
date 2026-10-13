@@ -1,0 +1,3 @@
+# Preserve the bytes of scientific source snapshots, logs and frozen manifests.
+# No line-ending conversion is allowed to change the published SHA256 evidence.
+* -text

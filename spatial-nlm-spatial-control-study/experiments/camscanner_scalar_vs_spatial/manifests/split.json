@@ -1,0 +1,2651 @@
+{
+  "seed": 20261014,
+  "rule": "sha256(seed:content-group) ordered, 20% val / 20% test / remainder train",
+  "partitions": {
+    "train": [
+      "camscanner_002",
+      "camscanner_003",
+      "camscanner_006",
+      "camscanner_008",
+      "camscanner_009",
+      "camscanner_010",
+      "camscanner_011",
+      "camscanner_013",
+      "camscanner_016",
+      "camscanner_017",
+      "camscanner_018",
+      "camscanner_019",
+      "camscanner_020",
+      "camscanner_021",
+      "camscanner_022",
+      "camscanner_024",
+      "camscanner_025",
+      "camscanner_026",
+      "camscanner_029",
+      "camscanner_031",
+      "camscanner_032",
+      "camscanner_033",
+      "camscanner_034",
+      "camscanner_036",
+      "camscanner_037",
+      "camscanner_038",
+      "camscanner_039",
+      "camscanner_040",
+      "camscanner_041",
+      "camscanner_047",
+      "pair_100405_pair_01076_001",
+      "pair_100405_pair_01076_002",
+      "pair_100405_pair_01076_004",
+      "pair_100405_pair_01076_005",
+      "pair_100405_pair_01076_006",
+      "pair_100405_pair_01076_007",
+      "pair_100405_pair_01076_008",
+      "pair_100405_pair_01076_010",
+      "pair_100405_pair_01076_011",
+      "pair_100405_pair_01076_013",
+      "pair_100405_pair_01076_014",
+      "pair_100405_pair_01076_016",
+      "pair_100405_pair_01076_017",
+      "pair_100405_pair_01076_018",
+      "pair_100405_pair_01076_020",
+      "pair_100405_pair_01076_021",
+      "pair_100405_pair_01076_022",
+      "pair_100405_pair_01076_025",
+      "pair_100405_pair_01076_031",
+      "pair_100405_pair_01076_034",
+      "pair_100405_pair_01076_036",
+      "pair_100405_pair_01076_037",
+      "pair_100405_pair_01076_038",
+      "pair_100405_pair_01076_039",
+      "pair_100405_pair_01076_041",
+      "pair_100405_pair_01076_043",
+      "pair_100405_pair_01076_044",
+      "pair_100405_pair_01076_048",
+      "pair_100405_pair_01076_050"
+    ],
+    "val": [
+      "camscanner_007",
+      "camscanner_014",
+      "camscanner_015",
+      "camscanner_027",
+      "camscanner_028",
+      "camscanner_030",
+      "camscanner_035",
+      "camscanner_042",
+      "camscanner_044",
+      "camscanner_046",
+      "camscanner_049",
+      "camscanner_050",
+      "pair_100405_pair_01076_009",
+      "pair_100405_pair_01076_012",
+      "pair_100405_pair_01076_019",
+      "pair_100405_pair_01076_032",
+      "pair_100405_pair_01076_033",
+      "pair_100405_pair_01076_035",
+      "pair_100405_pair_01076_040",
+      "pair_100405_pair_01076_045",
+      "pair_100405_pair_01076_046"
+    ],
+    "test": [
+      "camscanner_001",
+      "camscanner_004",
+      "camscanner_005",
+      "camscanner_012",
+      "camscanner_023",
+      "camscanner_043",
+      "camscanner_045",
+      "camscanner_048",
+      "pair_100405_pair_01076_003",
+      "pair_100405_pair_01076_015",
+      "pair_100405_pair_01076_023",
+      "pair_100405_pair_01076_024",
+      "pair_100405_pair_01076_026",
+      "pair_100405_pair_01076_027",
+      "pair_100405_pair_01076_028",
+      "pair_100405_pair_01076_029",
+      "pair_100405_pair_01076_030",
+      "pair_100405_pair_01076_042",
+      "pair_100405_pair_01076_047",
+      "pair_100405_pair_01076_049"
+    ]
+  },
+  "content_groups": {
+    "camscanner_001": [
+      "camscanner_001"
+    ],
+    "camscanner_002": [
+      "camscanner_002"
+    ],
+    "camscanner_003": [
+      "camscanner_003"
+    ],
+    "camscanner_004": [
+      "camscanner_004",
+      "camscanner_005"
+    ],
+    "camscanner_006": [
+      "camscanner_006"
+    ],
+    "camscanner_007": [
+      "camscanner_007"
+    ],
+    "camscanner_008": [
+      "camscanner_008"
+    ],
+    "camscanner_009": [
+      "camscanner_009"
+    ],
+    "camscanner_010": [
+      "camscanner_010"
+    ],
+    "camscanner_011": [
+      "camscanner_011"
+    ],
+    "camscanner_012": [
+      "camscanner_012"
+    ],
+    "camscanner_013": [
+      "camscanner_013"
+    ],
+    "camscanner_014": [
+      "camscanner_014"
+    ],
+    "camscanner_015": [
+      "camscanner_015"
+    ],
+    "camscanner_016": [
+      "camscanner_016"
+    ],
+    "camscanner_017": [
+      "camscanner_017"
+    ],
+    "camscanner_018": [
+      "camscanner_018"
+    ],
+    "camscanner_019": [
+      "camscanner_019"
+    ],
+    "camscanner_020": [
+      "camscanner_020"
+    ],
+    "camscanner_021": [
+      "camscanner_021"
+    ],
+    "camscanner_022": [
+      "camscanner_022"
+    ],
+    "camscanner_023": [
+      "camscanner_023"
+    ],
+    "camscanner_024": [
+      "camscanner_024"
+    ],
+    "camscanner_025": [
+      "camscanner_025"
+    ],
+    "camscanner_026": [
+      "camscanner_026"
+    ],
+    "camscanner_027": [
+      "camscanner_027"
+    ],
+    "camscanner_028": [
+      "camscanner_028",
+      "camscanner_030"
+    ],
+    "camscanner_029": [
+      "camscanner_029",
+      "camscanner_032"
+    ],
+    "camscanner_031": [
+      "camscanner_031"
+    ],
+    "camscanner_033": [
+      "camscanner_033"
+    ],
+    "camscanner_034": [
+      "camscanner_034"
+    ],
+    "camscanner_035": [
+      "camscanner_035"
+    ],
+    "camscanner_036": [
+      "camscanner_036"
+    ],
+    "camscanner_037": [
+      "camscanner_037"
+    ],
+    "camscanner_038": [
+      "camscanner_038"
+    ],
+    "camscanner_039": [
+      "camscanner_039"
+    ],
+    "camscanner_040": [
+      "camscanner_040"
+    ],
+    "camscanner_041": [
+      "camscanner_041"
+    ],
+    "camscanner_042": [
+      "camscanner_042"
+    ],
+    "camscanner_043": [
+      "camscanner_043"
+    ],
+    "camscanner_044": [
+      "camscanner_044"
+    ],
+    "camscanner_045": [
+      "camscanner_045"
+    ],
+    "camscanner_046": [
+      "camscanner_046"
+    ],
+    "camscanner_047": [
+      "camscanner_047"
+    ],
+    "camscanner_048": [
+      "camscanner_048"
+    ],
+    "camscanner_049": [
+      "camscanner_049"
+    ],
+    "camscanner_050": [
+      "camscanner_050"
+    ],
+    "pair_100405_pair_01076_001": [
+      "pair_100405_pair_01076_001"
+    ],
+    "pair_100405_pair_01076_002": [
+      "pair_100405_pair_01076_002"
+    ],
+    "pair_100405_pair_01076_003": [
+      "pair_100405_pair_01076_003"
+    ],
+    "pair_100405_pair_01076_004": [
+      "pair_100405_pair_01076_004"
+    ],
+    "pair_100405_pair_01076_005": [
+      "pair_100405_pair_01076_005"
+    ],
+    "pair_100405_pair_01076_006": [
+      "pair_100405_pair_01076_006"
+    ],
+    "pair_100405_pair_01076_007": [
+      "pair_100405_pair_01076_007"
+    ],
+    "pair_100405_pair_01076_008": [
+      "pair_100405_pair_01076_008"
+    ],
+    "pair_100405_pair_01076_009": [
+      "pair_100405_pair_01076_009"
+    ],
+    "pair_100405_pair_01076_010": [
+      "pair_100405_pair_01076_010"
+    ],
+    "pair_100405_pair_01076_011": [
+      "pair_100405_pair_01076_011"
+    ],
+    "pair_100405_pair_01076_012": [
+      "pair_100405_pair_01076_012"
+    ],
+    "pair_100405_pair_01076_013": [
+      "pair_100405_pair_01076_013"
+    ],
+    "pair_100405_pair_01076_014": [
+      "pair_100405_pair_01076_014"
+    ],
+    "pair_100405_pair_01076_015": [
+      "pair_100405_pair_01076_015"
+    ],
+    "pair_100405_pair_01076_016": [
+      "pair_100405_pair_01076_016"
+    ],
+    "pair_100405_pair_01076_017": [
+      "pair_100405_pair_01076_017"
+    ],
+    "pair_100405_pair_01076_018": [
+      "pair_100405_pair_01076_018"
+    ],
+    "pair_100405_pair_01076_019": [
+      "pair_100405_pair_01076_019"
+    ],
+    "pair_100405_pair_01076_020": [
+      "pair_100405_pair_01076_020"
+    ],
+    "pair_100405_pair_01076_021": [
+      "pair_100405_pair_01076_021"
+    ],
+    "pair_100405_pair_01076_022": [
+      "pair_100405_pair_01076_022"
+    ],
+    "pair_100405_pair_01076_023": [
+      "pair_100405_pair_01076_023"
+    ],
+    "pair_100405_pair_01076_024": [
+      "pair_100405_pair_01076_024"
+    ],
+    "pair_100405_pair_01076_025": [
+      "pair_100405_pair_01076_025"
+    ],
+    "pair_100405_pair_01076_026": [
+      "pair_100405_pair_01076_026"
+    ],
+    "pair_100405_pair_01076_027": [
+      "pair_100405_pair_01076_027"
+    ],
+    "pair_100405_pair_01076_028": [
+      "pair_100405_pair_01076_028",
+      "pair_100405_pair_01076_029"
+    ],
+    "pair_100405_pair_01076_030": [
+      "pair_100405_pair_01076_030"
+    ],
+    "pair_100405_pair_01076_031": [
+      "pair_100405_pair_01076_031",
+      "pair_100405_pair_01076_034"
+    ],
+    "pair_100405_pair_01076_032": [
+      "pair_100405_pair_01076_032",
+      "pair_100405_pair_01076_033",
+      "pair_100405_pair_01076_035"
+    ],
+    "pair_100405_pair_01076_036": [
+      "pair_100405_pair_01076_036"
+    ],
+    "pair_100405_pair_01076_037": [
+      "pair_100405_pair_01076_037"
+    ],
+    "pair_100405_pair_01076_038": [
+      "pair_100405_pair_01076_038"
+    ],
+    "pair_100405_pair_01076_039": [
+      "pair_100405_pair_01076_039"
+    ],
+    "pair_100405_pair_01076_040": [
+      "pair_100405_pair_01076_040"
+    ],
+    "pair_100405_pair_01076_041": [
+      "pair_100405_pair_01076_041"
+    ],
+    "pair_100405_pair_01076_042": [
+      "pair_100405_pair_01076_042"
+    ],
+    "pair_100405_pair_01076_043": [
+      "pair_100405_pair_01076_043"
+    ],
+    "pair_100405_pair_01076_044": [
+      "pair_100405_pair_01076_044",
+      "pair_100405_pair_01076_048"
+    ],
+    "pair_100405_pair_01076_045": [
+      "pair_100405_pair_01076_045"
+    ],
+    "pair_100405_pair_01076_046": [
+      "pair_100405_pair_01076_046"
+    ],
+    "pair_100405_pair_01076_047": [
+      "pair_100405_pair_01076_047"
+    ],
+    "pair_100405_pair_01076_049": [
+      "pair_100405_pair_01076_049"
+    ],
+    "pair_100405_pair_01076_050": [
+      "pair_100405_pair_01076_050"
+    ]
+  },
+  "duplicate_links": [
+    {
+      "a": "camscanner_004",
+      "b": "camscanner_005",
+      "phash_distance": 28,
+      "inliers": 194
+    },
+    {
+      "a": "camscanner_028",
+      "b": "camscanner_030",
+      "phash_distance": 28,
+      "inliers": 572
+    },
+    {
+      "a": "camscanner_029",
+      "b": "camscanner_032",
+      "phash_distance": 26,
+      "inliers": 431
+    },
+    {
+      "a": "pair_100405_pair_01076_028",
+      "b": "pair_100405_pair_01076_029",
+      "phash_distance": 32,
+      "inliers": 510
+    },
+    {
+      "a": "pair_100405_pair_01076_031",
+      "b": "pair_100405_pair_01076_034",
+      "phash_distance": 16,
+      "inliers": 342
+    },
+    {
+      "a": "pair_100405_pair_01076_032",
+      "b": "pair_100405_pair_01076_035",
+      "phash_distance": 24,
+      "inliers": 329
+    },
+    {
+      "a": "pair_100405_pair_01076_033",
+      "b": "pair_100405_pair_01076_035",
+      "phash_distance": 18,
+      "inliers": 575
+    },
+    {
+      "a": "pair_100405_pair_01076_044",
+      "b": "pair_100405_pair_01076_048",
+      "phash_distance": 12,
+      "inliers": 595
+    }
+  ],
+  "excluded": [],
+  "prepared": [
+    {
+      "id": "camscanner_001",
+      "split": "test",
+      "content_group": "camscanner_001",
+      "width": 1472,
+      "height": 653,
+      "original_clean_roi": [
+        2,
+        2,
+        1474,
+        655
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_001_dirty.png",
+        "sha256": "3bfcec35a46622c801fe0d65a330e0657977b6e9374af8524da304f845fda612"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_001_clean.png",
+        "sha256": "223a518e2a1b7d5df7444628dd466748d0aaf1f8a65f9190e487f5a161b635de"
+      }
+    },
+    {
+      "id": "camscanner_002",
+      "split": "train",
+      "content_group": "camscanner_002",
+      "width": 1060,
+      "height": 844,
+      "original_clean_roi": [
+        0,
+        0,
+        1060,
+        844
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_002_dirty.png",
+        "sha256": "8524cb4ca4ff468a31dc29284e0cbde5a30ac40375449a94adb9d080c6bb94ea"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_002_clean.png",
+        "sha256": "e9899e9a8aedc0e47cf9f98ddefbfb2b08e24dcb47e0f4682a8bec63eeef9a34"
+      }
+    },
+    {
+      "id": "camscanner_003",
+      "split": "train",
+      "content_group": "camscanner_003",
+      "width": 1052,
+      "height": 1092,
+      "original_clean_roi": [
+        0,
+        0,
+        1052,
+        1092
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_003_dirty.png",
+        "sha256": "a6e2e5feed11d75d85cacab89bfe8dd8628fb52bebdb37ccb63a6bb3087b5d92"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_003_clean.png",
+        "sha256": "3fc2e8c3e42c2c17c2178d4efef235dee3540550e92393d4de6da1c7275a843f"
+      }
+    },
+    {
+      "id": "camscanner_004",
+      "split": "test",
+      "content_group": "camscanner_004",
+      "width": 752,
+      "height": 504,
+      "original_clean_roi": [
+        0,
+        0,
+        752,
+        504
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_004_dirty.png",
+        "sha256": "d6fcf03801b588f8bff4e6769d0fd36af6bcdbdd4ca5a797c6ed0d16aab7a508"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_004_clean.png",
+        "sha256": "072c10acfdf607568c0fee73a2f347b385bab62263f053628f7413503988721f"
+      }
+    },
+    {
+      "id": "camscanner_005",
+      "split": "test",
+      "content_group": "camscanner_004",
+      "width": 788,
+      "height": 524,
+      "original_clean_roi": [
+        0,
+        0,
+        788,
+        524
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_005_dirty.png",
+        "sha256": "a4b20f5934bbfbfc12a43d384df9f39c700667ab7ad8d98fd71b653668b2cf8f"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_005_clean.png",
+        "sha256": "506d778b9715412cf17b87f5ff56ecd1055a31f53434f9ebe1b26628858c8442"
+      }
+    },
+    {
+      "id": "camscanner_006",
+      "split": "train",
+      "content_group": "camscanner_006",
+      "width": 944,
+      "height": 552,
+      "original_clean_roi": [
+        0,
+        0,
+        944,
+        552
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_006_dirty.png",
+        "sha256": "a8c3f2e2b2796968ee7ea092e65bcf4ab4377e87fb4dcd597de86abfa88daba7"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_006_clean.png",
+        "sha256": "4fc774416cbfbee22756bd199e6e2029d275422dfe91cbafe9a4ddab0b5a6435"
+      }
+    },
+    {
+      "id": "camscanner_007",
+      "split": "val",
+      "content_group": "camscanner_007",
+      "width": 703,
+      "height": 1036,
+      "original_clean_roi": [
+        2,
+        2,
+        705,
+        1038
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_007_dirty.png",
+        "sha256": "58d4442b7278a7618688ba1f6a5db7f4248ed29db4196c688318edf23d658667"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_007_clean.png",
+        "sha256": "d6decc2c93138bac03e4bfd18332bec40913041f2c5ee8a0e077bf084f686898"
+      }
+    },
+    {
+      "id": "camscanner_008",
+      "split": "train",
+      "content_group": "camscanner_008",
+      "width": 736,
+      "height": 1028,
+      "original_clean_roi": [
+        0,
+        0,
+        736,
+        1028
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_008_dirty.png",
+        "sha256": "292b0a44ce57d5c83a64105e83ca5a3b41742622494bb02f0c618321902eedec"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_008_clean.png",
+        "sha256": "825827e0c95145ff28748281b9f76f4716fbb1f302b545c17441377682e0963d"
+      }
+    },
+    {
+      "id": "camscanner_009",
+      "split": "train",
+      "content_group": "camscanner_009",
+      "width": 896,
+      "height": 912,
+      "original_clean_roi": [
+        0,
+        0,
+        896,
+        912
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_009_dirty.png",
+        "sha256": "013d786e1a61dee743e4983139b660003751323fa0862a79623437135d777126"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_009_clean.png",
+        "sha256": "561ce34f12374989d1539d6fc7dfd08d55a10419be598c578f058d543d34ad0e"
+      }
+    },
+    {
+      "id": "camscanner_010",
+      "split": "train",
+      "content_group": "camscanner_010",
+      "width": 872,
+      "height": 928,
+      "original_clean_roi": [
+        0,
+        0,
+        872,
+        928
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_010_dirty.png",
+        "sha256": "52f470fb79724072a6ed9736fdebdd03dd4a609b9beef6ee1e71300239ca4ad0"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_010_clean.png",
+        "sha256": "a07facb955d891c4ec26550eddd6d52bf5cee0908b1a3b5f2dc070e59309d601"
+      }
+    },
+    {
+      "id": "camscanner_011",
+      "split": "train",
+      "content_group": "camscanner_011",
+      "width": 880,
+      "height": 596,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        596
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_011_dirty.png",
+        "sha256": "dd3d5afc03406e2fbf22ee5f6e673712606d963606a79d541df5f2b66fa51adb"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_011_clean.png",
+        "sha256": "961ccd0312a85c3997fce5c6c28487aee06cccb34988cad508e8c5ff64f586fc"
+      }
+    },
+    {
+      "id": "camscanner_012",
+      "split": "test",
+      "content_group": "camscanner_012",
+      "width": 1040,
+      "height": 700,
+      "original_clean_roi": [
+        0,
+        0,
+        1040,
+        700
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_012_dirty.png",
+        "sha256": "81b30856a796f22134aa7bc48e5611e0b18786acd686f25d07b60ecd70436299"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_012_clean.png",
+        "sha256": "6b5d82d9d01b4787b340764047c83c8b7991e77d07566bdc98e352a7b7123346"
+      }
+    },
+    {
+      "id": "camscanner_013",
+      "split": "train",
+      "content_group": "camscanner_013",
+      "width": 1024,
+      "height": 832,
+      "original_clean_roi": [
+        0,
+        0,
+        1024,
+        832
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_013_dirty.png",
+        "sha256": "f645ebbccdde9042954bd8badc20f77cb6b92e7ed6e6386cce9f431bbc8e2b26"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_013_clean.png",
+        "sha256": "d8633546f57e3b6894a7764d4fafdfd01ea6c8d76afcc6bedf8028d7a6b00006"
+      }
+    },
+    {
+      "id": "camscanner_014",
+      "split": "val",
+      "content_group": "camscanner_014",
+      "width": 956,
+      "height": 843,
+      "original_clean_roi": [
+        2,
+        2,
+        958,
+        845
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_014_dirty.png",
+        "sha256": "ce1bb537c4071a647cf3879247e3217661c9438cabebfcfcc22de26a72bb3f14"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_014_clean.png",
+        "sha256": "386257fdbfedecae2762690dd15b651382b6c4fc3963ed7d07cd24b28d9d1176"
+      }
+    },
+    {
+      "id": "camscanner_015",
+      "split": "val",
+      "content_group": "camscanner_015",
+      "width": 780,
+      "height": 608,
+      "original_clean_roi": [
+        0,
+        0,
+        780,
+        608
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_015_dirty.png",
+        "sha256": "20ec7ae11b5df935edadb9ced04725568c5a902bdabeea8352afbea8fa5bf1a8"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_015_clean.png",
+        "sha256": "b2c8e0fe10bfaf9583aef4e5784f888c96a5d0ec2c4f625dcf44ac4bbcec72ef"
+      }
+    },
+    {
+      "id": "camscanner_016",
+      "split": "train",
+      "content_group": "camscanner_016",
+      "width": 816,
+      "height": 336,
+      "original_clean_roi": [
+        0,
+        0,
+        816,
+        336
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_016_dirty.png",
+        "sha256": "d93df81ba1ac54fed2f176dbd2b26c477112cb7ea941315b78cfaadca2e95cfb"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_016_clean.png",
+        "sha256": "f81e20d5cb9eef672c7b2d5ef76da6911701347dd034d51e2d3a07b069b75557"
+      }
+    },
+    {
+      "id": "camscanner_017",
+      "split": "train",
+      "content_group": "camscanner_017",
+      "width": 660,
+      "height": 852,
+      "original_clean_roi": [
+        0,
+        0,
+        660,
+        852
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_017_dirty.png",
+        "sha256": "4b0686ad9bd5e0ed90c364c38262621db34f687013539acc8211e8427ab3eb61"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_017_clean.png",
+        "sha256": "967a511ef4e44eac1df47bc9e09a193c0ef2502cbe6ba5fd458f75698e4b126f"
+      }
+    },
+    {
+      "id": "camscanner_018",
+      "split": "train",
+      "content_group": "camscanner_018",
+      "width": 808,
+      "height": 880,
+      "original_clean_roi": [
+        0,
+        0,
+        808,
+        880
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_018_dirty.png",
+        "sha256": "026b889d35a5b3979fd6fbe1fff3fe28adbf86672a1c34e0fe70219d4256b181"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_018_clean.png",
+        "sha256": "7ae2e628fae5f4983f88407f79acf25ffa26ace0ce6ce33ab4069ac628d038a2"
+      }
+    },
+    {
+      "id": "camscanner_019",
+      "split": "train",
+      "content_group": "camscanner_019",
+      "width": 532,
+      "height": 864,
+      "original_clean_roi": [
+        0,
+        0,
+        532,
+        864
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_019_dirty.png",
+        "sha256": "635e21ade1a87acafa58976a3eb889bc12316a396245a9917e1e472c6089f709"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_019_clean.png",
+        "sha256": "317977aebf1d5ec72dc45610e67d830815e3b09fba212427b6213779e62398c6"
+      }
+    },
+    {
+      "id": "camscanner_020",
+      "split": "train",
+      "content_group": "camscanner_020",
+      "width": 564,
+      "height": 732,
+      "original_clean_roi": [
+        0,
+        0,
+        564,
+        732
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_020_dirty.png",
+        "sha256": "76697755d78004f3d182337fda07af61d56839513f650b35756cf62d608271a7"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_020_clean.png",
+        "sha256": "6aaca58995f934fe7b87b5d4922de5c7e1d1f3ea1b4c05616abbd239ed3e60a9"
+      }
+    },
+    {
+      "id": "camscanner_021",
+      "split": "train",
+      "content_group": "camscanner_021",
+      "width": 676,
+      "height": 384,
+      "original_clean_roi": [
+        0,
+        0,
+        676,
+        384
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_021_dirty.png",
+        "sha256": "e8ec5640b37463aece7341e4ad23a1409a1b3610f74158055c6d60213ca6f934"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_021_clean.png",
+        "sha256": "86099d97e2c90f3c02d75500fc4349edbd485c6896efd87a4c0c579ddba0a884"
+      }
+    },
+    {
+      "id": "camscanner_022",
+      "split": "train",
+      "content_group": "camscanner_022",
+      "width": 880,
+      "height": 408,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        408
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_022_dirty.png",
+        "sha256": "8c9b6cd35ed9d88fb6450fca0a67c233682462ed4652cd9cdf7211a64f320298"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_022_clean.png",
+        "sha256": "fa98fc8eae159ba0d82ea51ac9618825fdfe1a80247412e7c56537ddcc99b27e"
+      }
+    },
+    {
+      "id": "camscanner_023",
+      "split": "test",
+      "content_group": "camscanner_023",
+      "width": 744,
+      "height": 1040,
+      "original_clean_roi": [
+        0,
+        0,
+        744,
+        1040
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_023_dirty.png",
+        "sha256": "95648fb279e08d8e564f0ee0b49ae7d23691281c3567b68f24713e804c2142fc"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_023_clean.png",
+        "sha256": "2ac66c99e33425e5097bd576e9d3612ce860814f27391bba69eb070770097d46"
+      }
+    },
+    {
+      "id": "camscanner_024",
+      "split": "train",
+      "content_group": "camscanner_024",
+      "width": 968,
+      "height": 423,
+      "original_clean_roi": [
+        2,
+        2,
+        970,
+        425
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_024_dirty.png",
+        "sha256": "0d33774c95380731b3e064a716e611fc3143d556bdcad56be5b7d596653ef587"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_024_clean.png",
+        "sha256": "67238a96e63d9a46f8204f4dd5ae1982488ddd3231335680ccdb827f0645a0f1"
+      }
+    },
+    {
+      "id": "camscanner_025",
+      "split": "train",
+      "content_group": "camscanner_025",
+      "width": 596,
+      "height": 1036,
+      "original_clean_roi": [
+        0,
+        0,
+        596,
+        1036
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_025_dirty.png",
+        "sha256": "81bcf05a972953ae4c89cc123f5750668645aa7f2da309be05134ee8ea306cc6"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_025_clean.png",
+        "sha256": "1fa8e95d762321f98cd3e3338ed92bf6504bd5d8c40cdee1d8a53fd7d26478e3"
+      }
+    },
+    {
+      "id": "camscanner_026",
+      "split": "train",
+      "content_group": "camscanner_026",
+      "width": 768,
+      "height": 724,
+      "original_clean_roi": [
+        0,
+        0,
+        768,
+        724
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_026_dirty.png",
+        "sha256": "791e18bcfc70d3b1f64fdeea76ae03c7c4e0d772da82e11e7a4bc9e9047535a2"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_026_clean.png",
+        "sha256": "80a2d6dfa7426c49cdcea38daa3b668d09e17e0123dd4120bd180cf24b19ce00"
+      }
+    },
+    {
+      "id": "camscanner_027",
+      "split": "val",
+      "content_group": "camscanner_027",
+      "width": 712,
+      "height": 460,
+      "original_clean_roi": [
+        0,
+        0,
+        712,
+        460
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_027_dirty.png",
+        "sha256": "4f1a454614a23634cd7aa1d1812869f148cd599bff863887a515fb4ffa1804c8"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_027_clean.png",
+        "sha256": "f79eb7dbb25832a8819f0ccef62b9a32cd318aaf7cdd7b20312c1ecdf401e9d3"
+      }
+    },
+    {
+      "id": "camscanner_028",
+      "split": "val",
+      "content_group": "camscanner_028",
+      "width": 876,
+      "height": 459,
+      "original_clean_roi": [
+        2,
+        2,
+        878,
+        461
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_028_dirty.png",
+        "sha256": "8597f1a2eabd0e17440bcdc7fa393edc3aecf552dcaefdfd10231a86d3d41a1e"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_028_clean.png",
+        "sha256": "db0deb36709c2dc389cad1ac0aa557317d88697039e257b4e7f6826d7e977b3d"
+      }
+    },
+    {
+      "id": "camscanner_029",
+      "split": "train",
+      "content_group": "camscanner_029",
+      "width": 880,
+      "height": 520,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        520
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_029_dirty.png",
+        "sha256": "ed80e95ebe029e4ba72e83c27c944064b0b92530384b8182b9cbf1ade77d09f2"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_029_clean.png",
+        "sha256": "dcbf58940fae3dd74b705cd208bb9adbab5a93998f08ed155b483f703dfdb576"
+      }
+    },
+    {
+      "id": "camscanner_030",
+      "split": "val",
+      "content_group": "camscanner_028",
+      "width": 880,
+      "height": 452,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        452
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_030_dirty.png",
+        "sha256": "1c9c00e0d7873b3719c25af21bf6658da029ef00c9e448b873cf2a8f1c2748c9"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_030_clean.png",
+        "sha256": "aa3cef88b442ff84bfbbac41cab9824356fcf4393eef7a17f2b492f6e3416744"
+      }
+    },
+    {
+      "id": "camscanner_031",
+      "split": "train",
+      "content_group": "camscanner_031",
+      "width": 592,
+      "height": 852,
+      "original_clean_roi": [
+        0,
+        0,
+        592,
+        852
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_031_dirty.png",
+        "sha256": "8b62ebe1d4ef016df9f55031c80b1820cfdda6ce50b8e658dfb30ce24bf673e1"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_031_clean.png",
+        "sha256": "bfd5a207b121b41643518648fa64d1800df129cb11a7d29148495153ad18881c"
+      }
+    },
+    {
+      "id": "camscanner_032",
+      "split": "train",
+      "content_group": "camscanner_029",
+      "width": 588,
+      "height": 404,
+      "original_clean_roi": [
+        0,
+        0,
+        588,
+        404
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_032_dirty.png",
+        "sha256": "b9a5e1b7c340a5a209ccd18f498428a00d3227c835d5fd45135840273067917e"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_032_clean.png",
+        "sha256": "817320d9ffb5fecc723ead3aa3c013e61ee09bfe32b712e21ebbcf7aaf8db68e"
+      }
+    },
+    {
+      "id": "camscanner_033",
+      "split": "train",
+      "content_group": "camscanner_033",
+      "width": 940,
+      "height": 339,
+      "original_clean_roi": [
+        2,
+        2,
+        942,
+        341
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_033_dirty.png",
+        "sha256": "bd4170cb5394031dec5d121a639c4036ec9c96747c1ead84a997bea571f3f0aa"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_033_clean.png",
+        "sha256": "07f5858f1d6f2f91f60e7980ec4b660ea124918359fc2c1a002ec63bfd44e71e"
+      }
+    },
+    {
+      "id": "camscanner_034",
+      "split": "train",
+      "content_group": "camscanner_034",
+      "width": 696,
+      "height": 692,
+      "original_clean_roi": [
+        0,
+        0,
+        696,
+        692
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_034_dirty.png",
+        "sha256": "aca6dbb69d013e65b72adff3e1d7ee7666dc989b84cc4338c8a94f70a59769a1"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_034_clean.png",
+        "sha256": "81a4ad7ea61fbe5aa98143d6ff16e4a554bb6153b1a05b22f5908c8e8d4eec95"
+      }
+    },
+    {
+      "id": "camscanner_035",
+      "split": "val",
+      "content_group": "camscanner_035",
+      "width": 536,
+      "height": 456,
+      "original_clean_roi": [
+        0,
+        0,
+        536,
+        456
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_035_dirty.png",
+        "sha256": "894370aa84e1f323bf74d519b415ef3d71d2aee1120e0954bda779262e35723f"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_035_clean.png",
+        "sha256": "1faf99869bc50492bb4aed21fa6f19f5f1dd4ffe5ddff48ebefa6940648b929f"
+      }
+    },
+    {
+      "id": "camscanner_036",
+      "split": "train",
+      "content_group": "camscanner_036",
+      "width": 880,
+      "height": 384,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        384
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_036_dirty.png",
+        "sha256": "5e1845e9478f9e1954804df28c880f97a7ad4e3d2ea8ac4cc9d426d3077191ee"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_036_clean.png",
+        "sha256": "bb415f7df41820640e0429463a8592180b729c08e99fa108192ac60538eb0f3d"
+      }
+    },
+    {
+      "id": "camscanner_037",
+      "split": "train",
+      "content_group": "camscanner_037",
+      "width": 836,
+      "height": 1048,
+      "original_clean_roi": [
+        0,
+        0,
+        836,
+        1048
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_037_dirty.png",
+        "sha256": "48f1f76372b640ad092d105ff107a9901b2d8f76292651c4a605017f8893c9ed"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_037_clean.png",
+        "sha256": "274e1fc6f37025d2ef08f12572f1935ade8482a68ca18a2489ddbab4941f3f4b"
+      }
+    },
+    {
+      "id": "camscanner_038",
+      "split": "train",
+      "content_group": "camscanner_038",
+      "width": 755,
+      "height": 1036,
+      "original_clean_roi": [
+        2,
+        2,
+        757,
+        1038
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_038_dirty.png",
+        "sha256": "fe3e292524e63f4593c3c8ffa0cd70c842bd76ff675cedb34d6c45ffa65e9f23"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_038_clean.png",
+        "sha256": "f31b98b6a0af67eee019faedb3976250ec476e5b076a0031c706219f24f35387"
+      }
+    },
+    {
+      "id": "camscanner_039",
+      "split": "train",
+      "content_group": "camscanner_039",
+      "width": 436,
+      "height": 836,
+      "original_clean_roi": [
+        0,
+        0,
+        436,
+        836
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_039_dirty.png",
+        "sha256": "54a5c67c82f8d85da60a4302f8f5405e76fd2bc1fdda0adcea81f30951ca841f"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_039_clean.png",
+        "sha256": "6b20a9ac14998ece9267ede728d4f03c70e73e4eb336532eaf5e3299a90cf308"
+      }
+    },
+    {
+      "id": "camscanner_040",
+      "split": "train",
+      "content_group": "camscanner_040",
+      "width": 516,
+      "height": 868,
+      "original_clean_roi": [
+        0,
+        0,
+        516,
+        868
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_040_dirty.png",
+        "sha256": "ba9e7fe4a021649f961976afb9a089dc3364a79d738338bbe96b5dbe03fb4754"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_040_clean.png",
+        "sha256": "a05ad6881dfb0fa6d1f42007e344401f55e40510b062838b98d5e621de6af246"
+      }
+    },
+    {
+      "id": "camscanner_041",
+      "split": "train",
+      "content_group": "camscanner_041",
+      "width": 871,
+      "height": 864,
+      "original_clean_roi": [
+        2,
+        2,
+        873,
+        866
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_041_dirty.png",
+        "sha256": "48baee8e57757c8453647fae8dcc872cc3ba6689825f09052afce630dd39e557"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_041_clean.png",
+        "sha256": "41bda14ec2de7fd5291d67940e6c6a359b9168b9ea73141b555fcbda5c0eb688"
+      }
+    },
+    {
+      "id": "camscanner_042",
+      "split": "val",
+      "content_group": "camscanner_042",
+      "width": 836,
+      "height": 555,
+      "original_clean_roi": [
+        2,
+        2,
+        838,
+        557
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_042_dirty.png",
+        "sha256": "f3600a5627dd621addffd193a5bdf45fdb23a4fc150f34349fe7c79f8be4d10e"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_042_clean.png",
+        "sha256": "3c609dad801a9c82e24197589437f6a6e91feec9959cdae2a3794a5733bf2109"
+      }
+    },
+    {
+      "id": "camscanner_043",
+      "split": "test",
+      "content_group": "camscanner_043",
+      "width": 872,
+      "height": 996,
+      "original_clean_roi": [
+        0,
+        0,
+        872,
+        996
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_043_dirty.png",
+        "sha256": "6bfb7d694c44d201ba89a68680e1026204f570620e32fa5e6d74ad4488aade7e"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_043_clean.png",
+        "sha256": "60a4426b0d276fdfd557910f9547bd180e5683561456dec962d27ca18b2492ee"
+      }
+    },
+    {
+      "id": "camscanner_044",
+      "split": "val",
+      "content_group": "camscanner_044",
+      "width": 784,
+      "height": 524,
+      "original_clean_roi": [
+        0,
+        0,
+        784,
+        524
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_044_dirty.png",
+        "sha256": "c3db9aa321f54b34b671d85fcaf7eb0041b3128b1c60d701f85f34ee27504174"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_044_clean.png",
+        "sha256": "d9c533e82f2f27bed6e054d329f05f3af0aaeb208cd4b049481f7430da650712"
+      }
+    },
+    {
+      "id": "camscanner_045",
+      "split": "test",
+      "content_group": "camscanner_045",
+      "width": 640,
+      "height": 292,
+      "original_clean_roi": [
+        0,
+        0,
+        640,
+        292
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_045_dirty.png",
+        "sha256": "9dd7ad6b7c64a6453c5d3dfd83d8d747d7eae1358b4db47b120de01043a79194"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_045_clean.png",
+        "sha256": "7de4e34da5ed4fc7123bdce2ea6a443a9641dd4e29f4fe6e1e72d4ad87b738a2"
+      }
+    },
+    {
+      "id": "camscanner_046",
+      "split": "val",
+      "content_group": "camscanner_046",
+      "width": 880,
+      "height": 620,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        620
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_046_dirty.png",
+        "sha256": "a00fc1093dfd4d49764590033875016395402c16848e85e879f2d0f199d02d26"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_046_clean.png",
+        "sha256": "9512ecd90a33f0afd13e012e3737ce6c5281862f21f679c978ec21ee8a98451f"
+      }
+    },
+    {
+      "id": "camscanner_047",
+      "split": "train",
+      "content_group": "camscanner_047",
+      "width": 612,
+      "height": 420,
+      "original_clean_roi": [
+        0,
+        0,
+        612,
+        420
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\camscanner_047_dirty.png",
+        "sha256": "fa05106edd8bdaa40d5940ae026887c13731ea84c76d07dcff5ce2b7338a3584"
+      },
+      "clean": {
+        "path": "prepared\\train\\camscanner_047_clean.png",
+        "sha256": "dbc3b385ec021e3adbb0a06c5c15ed085c6d4bdbdca0ac7cc9dbd0da414d9065"
+      }
+    },
+    {
+      "id": "camscanner_048",
+      "split": "test",
+      "content_group": "camscanner_048",
+      "width": 819,
+      "height": 659,
+      "original_clean_roi": [
+        2,
+        2,
+        821,
+        661
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\test\\camscanner_048_dirty.png",
+        "sha256": "9320b0b3a750c95ed6190190c5726aa160b1eb3e987b6172121063fc233497c1"
+      },
+      "clean": {
+        "path": "prepared\\test\\camscanner_048_clean.png",
+        "sha256": "b62817d5a85af4fd53f00cb9804bd7129e8c8fb0340f6f4cfe6c1178b7fb9e2e"
+      }
+    },
+    {
+      "id": "camscanner_049",
+      "split": "val",
+      "content_group": "camscanner_049",
+      "width": 480,
+      "height": 843,
+      "original_clean_roi": [
+        2,
+        2,
+        482,
+        845
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_049_dirty.png",
+        "sha256": "dd443281cecc0f92a076117de3270351da5cbb6bde3f0821459382ac66a0871c"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_049_clean.png",
+        "sha256": "3182e76096bf9a82dc92c3501aa87f485fe0612f951f8d81f280a72bbd30e480"
+      }
+    },
+    {
+      "id": "camscanner_050",
+      "split": "val",
+      "content_group": "camscanner_050",
+      "width": 620,
+      "height": 520,
+      "original_clean_roi": [
+        0,
+        0,
+        620,
+        520
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\camscanner_050_dirty.png",
+        "sha256": "1f1f8cdea3ab7e2211448f2edb7b61df18980072e4ca2cae2d3098a9faba283d"
+      },
+      "clean": {
+        "path": "prepared\\val\\camscanner_050_clean.png",
+        "sha256": "83c9ca3ed5b5c6983c72920ef92365c139d9af64e8b96261f765ac06c004bdb9"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_001",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_001",
+      "width": 528,
+      "height": 984,
+      "original_clean_roi": [
+        0,
+        0,
+        528,
+        984
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_001_dirty.png",
+        "sha256": "de207d67e7d0e1cf41833ac53bd8a75915a7dc2d82bbb387eff49fb8b68d012e"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_001_clean.png",
+        "sha256": "5aaaa4d1f3b8acc46cb2052dfc13040f22bb02549eb33ad7636d913bf070ca11"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_002",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_002",
+      "width": 480,
+      "height": 712,
+      "original_clean_roi": [
+        0,
+        0,
+        480,
+        712
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_002_dirty.png",
+        "sha256": "cd2e0c73dfe6ff96640bbbcd21731476a75d8f76ced5ae09e8be7a5e2099d32c"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_002_clean.png",
+        "sha256": "bb825ca87923fdfb51135d809213e6473fd2cb179af2b028427c34deeca41519"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_003",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_003",
+      "width": 564,
+      "height": 1012,
+      "original_clean_roi": [
+        0,
+        0,
+        564,
+        1012
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_003_dirty.png",
+        "sha256": "1569b8db3a9fe9b1fb7eaa34b648be671dcac335cf99b16a103629a6b433bbde"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_003_clean.png",
+        "sha256": "7d5144a8427af950e1e100f6b935ba85e7e9447b6112f20d05fefb696612ab90"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_004",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_004",
+      "width": 608,
+      "height": 820,
+      "original_clean_roi": [
+        0,
+        0,
+        608,
+        820
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_004_dirty.png",
+        "sha256": "5fa962cac949b11a1255458bbc57e66b095e9477a3e2f96e50f02013375e1c5d"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_004_clean.png",
+        "sha256": "710d6c2df9ddc65914360dd1bedbb93d89c918fd8b6edb35922275b1fafba3f6"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_005",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_005",
+      "width": 580,
+      "height": 804,
+      "original_clean_roi": [
+        0,
+        0,
+        580,
+        804
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_005_dirty.png",
+        "sha256": "11df40b19939b36ea8db2b84feda306e0daca5205a79ebe08d455b09c1dbcc72"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_005_clean.png",
+        "sha256": "09422f39df545d538e7866d20a485cd149ecda05ee91aec5c5ebf485a9c84378"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_006",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_006",
+      "width": 576,
+      "height": 816,
+      "original_clean_roi": [
+        0,
+        0,
+        576,
+        816
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_006_dirty.png",
+        "sha256": "e9f8ba72be6f5f32b5f7c664a3aa824e0ed743db1128e282764e1a1a5f60c747"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_006_clean.png",
+        "sha256": "30c011f726f0b518c6d07ce01bb181ed71add73d0c327da0d657cc66b00f3f78"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_007",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_007",
+      "width": 988,
+      "height": 1040,
+      "original_clean_roi": [
+        0,
+        0,
+        988,
+        1040
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_007_dirty.png",
+        "sha256": "c511f594c40d8f596156ce7a42686b57f9cbe9f81578cca3243bc8b05c980b52"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_007_clean.png",
+        "sha256": "20d1b8489f5b427783e8dcf63329eed7c8336fa4cc928838276515a74d3fe11d"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_008",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_008",
+      "width": 1040,
+      "height": 724,
+      "original_clean_roi": [
+        0,
+        0,
+        1040,
+        724
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_008_dirty.png",
+        "sha256": "e97b74563abba15d721ee60c0e999b07b37301a5efbd704f1a805670c749ef7d"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_008_clean.png",
+        "sha256": "59e79eb9b3887cfe3b9ac972dbe4f8e54eaada33b962953e4c2dda5b00198593"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_009",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_009",
+      "width": 872,
+      "height": 428,
+      "original_clean_roi": [
+        0,
+        0,
+        872,
+        428
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_009_dirty.png",
+        "sha256": "270ea3862411ffb3b78e77930313d4be343a55ba63e1e226e38a33a99b55928b"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_009_clean.png",
+        "sha256": "e309c5fe1cf1a2cbb61fb8681075771c1ab3da5b72cd6ac5f14977bc5ec77462"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_010",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_010",
+      "width": 703,
+      "height": 800,
+      "original_clean_roi": [
+        2,
+        2,
+        705,
+        802
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_010_dirty.png",
+        "sha256": "8d4c3462dbcae79053b12f61337e42e5d1236b1f8b2aaa224400a95daf6d9b86"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_010_clean.png",
+        "sha256": "1a689200a8ba3ca871587458032816a199e920345deda30d7f317be7442e1b6e"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_011",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_011",
+      "width": 924,
+      "height": 428,
+      "original_clean_roi": [
+        0,
+        0,
+        924,
+        428
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_011_dirty.png",
+        "sha256": "ac4d4e35c238c4a6fff1efa77f0712afcd608c76e6ea75cac6ebba980295bfa6"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_011_clean.png",
+        "sha256": "e120612adb3cb0ad776f27279ccd1683746175d4cca6bb412a89c7dbc12052bf"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_012",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_012",
+      "width": 488,
+      "height": 583,
+      "original_clean_roi": [
+        2,
+        2,
+        490,
+        585
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_012_dirty.png",
+        "sha256": "370ccce8d43dc91a925941f00ea696f9833c6316ca925f401f8135171cb97f18"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_012_clean.png",
+        "sha256": "8f20fc9619cfc817da18ee0837b8d5ae78ed178fd90e35053263946b5f733f15"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_013",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_013",
+      "width": 936,
+      "height": 544,
+      "original_clean_roi": [
+        0,
+        0,
+        936,
+        544
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_013_dirty.png",
+        "sha256": "3e746b7c09d315ebf4832c635c1aa8ca71d564c1c00e3d09c0a9e78b0403dd33"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_013_clean.png",
+        "sha256": "593f6b4cf66848484228cb3a123787c849d79e1ece418eb490d181002374a6f6"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_014",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_014",
+      "width": 604,
+      "height": 480,
+      "original_clean_roi": [
+        0,
+        0,
+        604,
+        480
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_014_dirty.png",
+        "sha256": "6f7a85713552bbc604de5a0d9654219fa5626e3390ad3e3e4d61c48fbb066cfe"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_014_clean.png",
+        "sha256": "b311ca06a3367998f62e7ca01d03b44d9e8663c0acc807565a7c357d6291bcd5"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_015",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_015",
+      "width": 844,
+      "height": 863,
+      "original_clean_roi": [
+        0,
+        0,
+        844,
+        863
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_015_dirty.png",
+        "sha256": "f57d63be7f2c44c5008069b6b39f9105b48850ca73b1232c9c5f328daa07cc71"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_015_clean.png",
+        "sha256": "227a8908b70e4b032c961d96f524f997a3eb2d5425cdd0ee3e9010df517182de"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_016",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_016",
+      "width": 532,
+      "height": 504,
+      "original_clean_roi": [
+        0,
+        0,
+        532,
+        504
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_016_dirty.png",
+        "sha256": "f4d24c2586a9b5a810c9b9d0a16e0e13d0cfa829c0f8e66c32dd264f2fa1e36a"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_016_clean.png",
+        "sha256": "e00c073a3afbf75fdc3ed45576622a094ecd1465c26006928dead1e2804595de"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_017",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_017",
+      "width": 1000,
+      "height": 964,
+      "original_clean_roi": [
+        0,
+        0,
+        1000,
+        964
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_017_dirty.png",
+        "sha256": "08a212b50df68c26d53cfbbb263c8acce7ddd414ce869cca457140ea6ab3b75f"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_017_clean.png",
+        "sha256": "197af14ff267c00a400e7571c183d6b57a1d2501a2601b8e6b8c24b22e4687d7"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_018",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_018",
+      "width": 703,
+      "height": 511,
+      "original_clean_roi": [
+        2,
+        2,
+        705,
+        513
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_018_dirty.png",
+        "sha256": "5ea1bdbe493f241d9af2c3ce0b4b4986703728b1a1158e518c4cb50573ea41c4"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_018_clean.png",
+        "sha256": "cf1dcdb02ff25aa7f3269d9e3c4d8acdd58776ffce197bf6eac257454ffc4d31"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_019",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_019",
+      "width": 792,
+      "height": 552,
+      "original_clean_roi": [
+        0,
+        0,
+        792,
+        552
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_019_dirty.png",
+        "sha256": "0e893c8faa28cab7d917ede592c97ff0c1df0e9bfff73b578d84033cbfc3cffd"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_019_clean.png",
+        "sha256": "35d9715dec9a07e8ddd1c254bb6e80323ddceda074edfd18b696725218275d92"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_020",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_020",
+      "width": 696,
+      "height": 755,
+      "original_clean_roi": [
+        2,
+        2,
+        698,
+        757
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_020_dirty.png",
+        "sha256": "ad1531b49e7f1aa833c28e25cd72da5ae7476288c1e713472624ed417684958d"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_020_clean.png",
+        "sha256": "cc38d3ab8a356da3a709a2d827d27a2fcac0b6d6f7cbd3566fb08f4149140454"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_021",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_021",
+      "width": 767,
+      "height": 611,
+      "original_clean_roi": [
+        2,
+        2,
+        769,
+        613
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_021_dirty.png",
+        "sha256": "2fa07a43875a83d3378528b62846aa69c908c71cf6c4ea9aff5e7cbecfb10bfb"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_021_clean.png",
+        "sha256": "f9f8cd135ab0bad6ad6008697e469a57348aad745a110ba16072ce8683cb92cd"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_022",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_022",
+      "width": 812,
+      "height": 436,
+      "original_clean_roi": [
+        0,
+        0,
+        812,
+        436
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_022_dirty.png",
+        "sha256": "fde55bd778a25fbd1913894f9e4c94bda5d610319788c8fc77c3a52849bcfc12"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_022_clean.png",
+        "sha256": "af3027f98f2e9ac76baba8996e3395bf26cf47561a388cae59f69644c56bcf30"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_023",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_023",
+      "width": 568,
+      "height": 936,
+      "original_clean_roi": [
+        0,
+        0,
+        568,
+        936
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_023_dirty.png",
+        "sha256": "833f72758bdcb2254bcdcc9897af32832d34bd81187d0073642e9886784fedd4"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_023_clean.png",
+        "sha256": "8c37202385df480d6aa4ade103766dc2e36bce7e365ad0c8c1de892c2e357055"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_024",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_024",
+      "width": 624,
+      "height": 1040,
+      "original_clean_roi": [
+        0,
+        0,
+        624,
+        1040
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_024_dirty.png",
+        "sha256": "9dc655f950ce21b98711e26637b3d2672395157cfc595c58fae43841a41d62fa"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_024_clean.png",
+        "sha256": "d5e6e5a62abf4dc6d2d438453d2ce047107b9cf0ff6b1cc6f261f963c19fcedd"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_025",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_025",
+      "width": 880,
+      "height": 795,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        795
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_025_dirty.png",
+        "sha256": "0e4a12b0889be0fa5ff513e684553b02fb33132d0f998d675d8af75ce8a67314"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_025_clean.png",
+        "sha256": "15a5d878fc4878a65ccb293090dce9c37b0737601d848a6768570e0228ccca00"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_026",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_026",
+      "width": 764,
+      "height": 1040,
+      "original_clean_roi": [
+        0,
+        0,
+        764,
+        1040
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_026_dirty.png",
+        "sha256": "6e9ad1cef000f879b6e0b0b4f3b85f29e4e9cede08bc6acdc80043f567a3ce38"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_026_clean.png",
+        "sha256": "ae3a239d71a96751b71e6cae8686e9e327c3793fe758aeaacfba20fbd3b4539a"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_027",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_027",
+      "width": 848,
+      "height": 540,
+      "original_clean_roi": [
+        0,
+        0,
+        848,
+        540
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_027_dirty.png",
+        "sha256": "597d9e3a842b198dffa288a24e23507c88964b0127e7ff6df99bc82f54d2fc37"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_027_clean.png",
+        "sha256": "32eab4462920dd218ff27a942734775b54aa60ba76be3f7f2350cecf1f15a6f8"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_028",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_028",
+      "width": 724,
+      "height": 292,
+      "original_clean_roi": [
+        0,
+        0,
+        724,
+        292
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_028_dirty.png",
+        "sha256": "b487b801520152e753045b3cfde96fe17d2c4571f6f7eac815791b1d64af025d"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_028_clean.png",
+        "sha256": "4cdb4d9589b978d1b9e596b4d4bcd5a4532914f1ce956b75e71e160580a98b6e"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_029",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_028",
+      "width": 1044,
+      "height": 496,
+      "original_clean_roi": [
+        0,
+        0,
+        1044,
+        496
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_029_dirty.png",
+        "sha256": "10822d3be0509df6dfa0c259a893f58112e01a4dfe2a5d28284f1552fd4f53ec"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_029_clean.png",
+        "sha256": "5375bbd1a983512aec36033dceff0e0e9d6a7a01dde05f9c00ff4941f0dcbf19"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_030",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_030",
+      "width": 880,
+      "height": 511,
+      "original_clean_roi": [
+        0,
+        0,
+        880,
+        511
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_030_dirty.png",
+        "sha256": "f57e88191ba799ecd197743e441b5ecd1f3d1fe40a0dd20aa55b192e8816da06"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_030_clean.png",
+        "sha256": "a5c7bdd9b897a258de3f5b50cd0ffe0a06e938aa5f93d0e611ef9d72fa10da76"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_031",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_031",
+      "width": 600,
+      "height": 876,
+      "original_clean_roi": [
+        0,
+        0,
+        600,
+        876
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_031_dirty.png",
+        "sha256": "c9eaf3a6b2796d97a2ded5ef4cd60e9ca7701cf9277d130cbdde5bb34aa8bf7d"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_031_clean.png",
+        "sha256": "7fa9e5c7d803bd94d6e1f212e13097c569bb71ecd3fbc0f6af5f5d14ff41eb52"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_032",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_032",
+      "width": 892,
+      "height": 700,
+      "original_clean_roi": [
+        0,
+        0,
+        892,
+        700
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_032_dirty.png",
+        "sha256": "dc16fd94e82a5bc4f247dd7098f3fa7b29ee9169a3602206e55f668e86598d24"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_032_clean.png",
+        "sha256": "91564cb5b10471ca11b954bb5e56a176962930ce197c96f376c4f12b5c2cc248"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_033",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_032",
+      "width": 1020,
+      "height": 980,
+      "original_clean_roi": [
+        0,
+        0,
+        1020,
+        980
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_033_dirty.png",
+        "sha256": "ba7e7dcba12922c59d98b7b896170ef9239d85c79066745ba2d728bbf3aea606"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_033_clean.png",
+        "sha256": "d2dc6d3bf2c18a4393f6494589271fec0d88a9038d9b4102a6f57940560be2f4"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_034",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_031",
+      "width": 492,
+      "height": 760,
+      "original_clean_roi": [
+        0,
+        0,
+        492,
+        760
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_034_dirty.png",
+        "sha256": "4208a28f2dfe20db8fee50f6d23783a5819cdf6b090577f605998edd4603e3fc"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_034_clean.png",
+        "sha256": "716782f2700a7523f12f3115a7d9e002da0d039d2df6fffc5b5744575d60d78e"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_035",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_032",
+      "width": 624,
+      "height": 684,
+      "original_clean_roi": [
+        0,
+        0,
+        624,
+        684
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_035_dirty.png",
+        "sha256": "932653eaa6dd982302763de52e87663272ce686d3461bd8aee776468d45ba549"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_035_clean.png",
+        "sha256": "97627f8fbf81cb4ab531c9bca2ca6fb3cd0510c8f92adc9aa6fde7ff254f82bd"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_036",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_036",
+      "width": 548,
+      "height": 752,
+      "original_clean_roi": [
+        0,
+        0,
+        548,
+        752
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_036_dirty.png",
+        "sha256": "4a4de3a66fb156f9d1b4a203e40e1226a9feb599fb98b0aac92132ff1b0db106"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_036_clean.png",
+        "sha256": "b1b5d0f03f2a0d135e83d27d1245bcfed6100d20de6d0ac3b15f62482354785d"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_037",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_037",
+      "width": 620,
+      "height": 712,
+      "original_clean_roi": [
+        0,
+        0,
+        620,
+        712
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_037_dirty.png",
+        "sha256": "a94dd3cce666dc3e9337609938f3e94da6a36216617fae619e535589ab0e2d87"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_037_clean.png",
+        "sha256": "86e0ae58a393bf6213080c552feea9e20603e5101fd67cfb4977678c6f2ced97"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_038",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_038",
+      "width": 808,
+      "height": 815,
+      "original_clean_roi": [
+        2,
+        2,
+        810,
+        817
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_038_dirty.png",
+        "sha256": "9eeb521efd1bbea7f21b90741e836969fe38172fe19b8a75984e9f52d8b99de4"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_038_clean.png",
+        "sha256": "146e619e4177b38360f2bc6b38f4443f403fcd086b04ed86e8ecaff5abb343c6"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_039",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_039",
+      "width": 1040,
+      "height": 756,
+      "original_clean_roi": [
+        0,
+        0,
+        1040,
+        756
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_039_dirty.png",
+        "sha256": "cc97ef4375f6236600e550e146b52a911d852c97c0bf17a6be45a93db537fc0a"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_039_clean.png",
+        "sha256": "3b5dcb0f6edc7af85f064d296acfa4241e12fd2730ea68184c985e5d8e11bec4"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_040",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_040",
+      "width": 512,
+      "height": 639,
+      "original_clean_roi": [
+        2,
+        2,
+        514,
+        641
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_040_dirty.png",
+        "sha256": "558fb3b6ef0ad41f4843f4c5230d7efa4d116b3e2c446820a6a42d0b802d9018"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_040_clean.png",
+        "sha256": "1b2f33276910525ab0deec6ae1c91383be3321b88c683bf5c3633a3b4e10767d"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_041",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_041",
+      "width": 756,
+      "height": 376,
+      "original_clean_roi": [
+        0,
+        0,
+        756,
+        376
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_041_dirty.png",
+        "sha256": "dd64f877f03696c1719af4fc903e08c3fb6555e78aec6f76411a47fa8010e359"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_041_clean.png",
+        "sha256": "91c32799ea6e3a8c1c4ac2956f98e49b3361acf15ab7529a6e794b31c1f08832"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_042",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_042",
+      "width": 1040,
+      "height": 628,
+      "original_clean_roi": [
+        0,
+        0,
+        1040,
+        628
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_042_dirty.png",
+        "sha256": "53c730a1c4a73f6c9b59b2e38444fe55cf4ce4146dee4c7f643e4736ccee68ab"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_042_clean.png",
+        "sha256": "354c1e3969d10afccd02f086b9a77fdc5547eb5d4c90320b73ce02cd90ad745b"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_043",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_043",
+      "width": 860,
+      "height": 544,
+      "original_clean_roi": [
+        0,
+        0,
+        860,
+        544
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_043_dirty.png",
+        "sha256": "1a863a4a80d28ed81680e30eab6ed31871d530a2261bbbe0814f73647b0c1623"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_043_clean.png",
+        "sha256": "d026b3cb61e871d6f16841dafa8d9afddcfe77f33f88aa4827a186092f13467e"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_044",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_044",
+      "width": 860,
+      "height": 412,
+      "original_clean_roi": [
+        0,
+        0,
+        860,
+        412
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_044_dirty.png",
+        "sha256": "a6b27ca1b3c27638b9565f6520f5c1a3adc61aeb5639a4ea974b1a9508a87c23"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_044_clean.png",
+        "sha256": "6a10534c2fd68b61247d21b9533f3200617456e4d615416cb59383bcf1518db3"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_045",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_045",
+      "width": 755,
+      "height": 859,
+      "original_clean_roi": [
+        2,
+        2,
+        757,
+        861
+      ],
+      "registration": true,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_045_dirty.png",
+        "sha256": "da3121305ba799873588d440837d02fa690bb9662bfd51245bf2029f2bcdc804"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_045_clean.png",
+        "sha256": "17d5b29e2f34756224c32a6078c4cae0fca9dc9c00535558ea2b613c41d88677"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_046",
+      "split": "val",
+      "content_group": "pair_100405_pair_01076_046",
+      "width": 1040,
+      "height": 424,
+      "original_clean_roi": [
+        0,
+        0,
+        1040,
+        424
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\val\\pair_100405_pair_01076_046_dirty.png",
+        "sha256": "1889105a001bedf0e34704e891897649612421cf6e130f1292cd893b1280aa5b"
+      },
+      "clean": {
+        "path": "prepared\\val\\pair_100405_pair_01076_046_clean.png",
+        "sha256": "09dadbcbf4688b547e31ea603c90c991db24f7b37eed98b92b40eab535b4c372"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_047",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_047",
+      "width": 840,
+      "height": 460,
+      "original_clean_roi": [
+        0,
+        0,
+        840,
+        460
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_047_dirty.png",
+        "sha256": "6a1b0083c9e0247f8655b26c71cf9890f0df94dcc11b5b4c1bf4800e4034ea8e"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_047_clean.png",
+        "sha256": "dfaaba66d453a1e87d42f74ac35d0d3436eac80f230af24eec716d000d0c2ed5"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_048",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_044",
+      "width": 707,
+      "height": 356,
+      "original_clean_roi": [
+        0,
+        0,
+        707,
+        356
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_048_dirty.png",
+        "sha256": "7a2d2306f01fce501f89c53fe7491efdfcf8a08c1405cedd4481ba84cc84547b"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_048_clean.png",
+        "sha256": "8491fc895e4797c8f84d5b86aafa113add6b6fd2e6f77c6d9fee3e925a98ce50"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_049",
+      "split": "test",
+      "content_group": "pair_100405_pair_01076_049",
+      "width": 924,
+      "height": 772,
+      "original_clean_roi": [
+        0,
+        0,
+        924,
+        772
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\test\\pair_100405_pair_01076_049_dirty.png",
+        "sha256": "f0a326dbf6ac0292f55b4dc93bcbd5f52f08e9eebfc4217026492ac7ae751895"
+      },
+      "clean": {
+        "path": "prepared\\test\\pair_100405_pair_01076_049_clean.png",
+        "sha256": "5b6d312480e9743821ba803766d1f46dbe14346360c8dad2cc57938a595f8e6d"
+      }
+    },
+    {
+      "id": "pair_100405_pair_01076_050",
+      "split": "train",
+      "content_group": "pair_100405_pair_01076_050",
+      "width": 652,
+      "height": 828,
+      "original_clean_roi": [
+        0,
+        0,
+        652,
+        828
+      ],
+      "registration": false,
+      "dirty": {
+        "path": "prepared\\train\\pair_100405_pair_01076_050_dirty.png",
+        "sha256": "077d6e8b8c513ae136962ac964627955ecce02fcc1cffec8315aeae01bb9921a"
+      },
+      "clean": {
+        "path": "prepared\\train\\pair_100405_pair_01076_050_clean.png",
+        "sha256": "f7665978e0f0f8e1e86a8ffbbd1f70b669f08c225ba46604f3fd80b8559024b7"
+      }
+    }
+  ]
+}

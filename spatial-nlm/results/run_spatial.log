@@ -1,0 +1,46 @@
+nlm formula check
+nlm self-test ok  max_abs=1.19e-07
+device NVIDIA GeForce RTX 5060 Laptop GPU
+spatial H-Net parameters 74337
+bench crop 128 batch implicit 1  forward+backward 0.036s
+bench full 512x768 forward 0.803s
+awgn block in metrics.json is complete; scoring spatial noise only
+=== spatial fixed-h sweep on val ===
+  sweep value=0.0200  val_psnr=18.721  (11.6s)
+  sweep value=0.0268  val_psnr=18.728  (10.6s)
+  sweep value=0.0359  val_psnr=18.816  (10.3s)
+  sweep value=0.0481  val_psnr=19.078  (10.8s)
+  sweep value=0.0645  val_psnr=20.034  (11.0s)
+  sweep value=0.0864  val_psnr=23.566  (10.1s)
+  sweep value=0.1158  val_psnr=25.667  (10.5s)
+  sweep value=0.1551  val_psnr=24.666  (10.4s)
+  sweep value=0.2078  val_psnr=23.759  (11.0s)
+  sweep value=0.2785  val_psnr=23.042  (10.6s)
+  sweep value=0.3732  val_psnr=22.482  (10.2s)
+  sweep value=0.5000  val_psnr=22.071  (11.4s)
+spatial h* = 0.1158  bounds [0.0200, 0.5000]
+=== spatial hand-crafted k sweep on val ===
+  sweep value=0.2500  val_psnr=18.721  (11.9s)
+  sweep value=0.5000  val_psnr=19.744  (11.0s)
+  sweep value=0.7500  val_psnr=25.902  (11.7s)
+  sweep value=1.0000  val_psnr=25.859  (11.6s)
+  sweep value=1.5000  val_psnr=24.363  (11.1s)
+  sweep value=2.0000  val_psnr=23.627  (10.2s)
+  sweep value=3.0000  val_psnr=22.849  (10.3s)
+  sweep value=4.0000  val_psnr=22.456  (10.4s)
+  sweep value=6.0000  val_psnr=22.180  (10.4s)
+  sweep value=8.0000  val_psnr=22.099  (10.6s)
+=== spatial oracle-sigma k sweep on val ===
+  sweep value=0.2500  val_psnr=18.724  (10.7s)
+  sweep value=0.5000  val_psnr=20.255  (11.8s)
+  sweep value=0.7500  val_psnr=26.035  (10.4s)
+  sweep value=1.0000  val_psnr=25.942  (9.9s)
+  sweep value=1.5000  val_psnr=24.371  (9.9s)
+  sweep value=2.0000  val_psnr=23.577  (10.2s)
+  sweep value=3.0000  val_psnr=22.783  (10.3s)
+  sweep value=4.0000  val_psnr=22.435  (12.5s)
+  sweep value=6.0000  val_psnr=22.157  (8.4s)
+  sweep value=8.0000  val_psnr=22.079  (10.9s)
+spatial opencv best h=30 psnr=22.340  our fixed on same image 22.393
+spatial/scalar init val 25.670  fixed h* val 25.667
+spatial/scalar seed=20 step=1 loss=0.0452 val_psnr=18.961 h_mean=0.0437 h_std=0.000000 trunk_grad=5.723e-04 head_w=0.14887

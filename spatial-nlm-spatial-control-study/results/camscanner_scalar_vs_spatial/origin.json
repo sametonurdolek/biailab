@@ -1,0 +1,17 @@
+{
+  "experiment": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\experiments\\camscanner_scalar_vs_spatial",
+  "report": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\experiments\\camscanner_scalar_vs_spatial\\README.md",
+  "checkpoints": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\experiments\\camscanner_scalar_vs_spatial\\checkpoints",
+  "figures": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\experiments\\camscanner_scalar_vs_spatial\\results\\figures",
+  "artifacts_sha256": {
+    "environment_final.json": "e53aa96a6aa10fe52df843af661457743932f66d69bf0df4d8064d32b5daf531",
+    "final_report.json": "c3ccba2f2a38f5b7f7ede6213152c9fffc7228a0a1711832e2433ab4a1d8adf2",
+    "frozen.json": "b8cb1da662f88d2f6bebb78264e9ac9470645b4fb5c9585bd6b536cb97b4133a",
+    "metrics.json": "13b44f08737e2d2f296b87c65158b67bb7c8d38ae8a3f2f882b6a5d3ea41a9fa",
+    "per_image.csv": "e2bce231a211ad72b7691f888d07b158d75608e7b48735d3c83c6b3206f2f680",
+    "preservation_verification.json": "0065c5826c6796b8f2cbbd3eff2605bc6dc892cfda73d22b45c33f51a174ae37",
+    "representatives.json": "7dbf9181cf0dbdc14a510e7dc5e3ecc98e0353692fbd937ae4bdc6943715c438",
+    "summary.md": "fcab881c24e799cb8a169f42fa3e2ed6ddfcf4731f744ab714bcc7ec3179fcd0",
+    "training_control_verification.json": "31e6776fd21a9b3a4221eafb64f47b6ebd48f1147bc3f2649cc0481e0cd8bbe8"
+  }
+}

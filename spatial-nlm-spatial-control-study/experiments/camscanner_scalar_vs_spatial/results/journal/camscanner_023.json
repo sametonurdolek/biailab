@@ -1,0 +1,17 @@
+{
+  "image": "camscanner_023",
+  "scalar_psnr": 20.32392120361328,
+  "scalar_ssim": 0.9020584225654602,
+  "scalar_h_mean": 0.03869105502963066,
+  "scalar_h_std": 0.0,
+  "scalar_h_min": 0.03869105502963066,
+  "scalar_h_max": 0.03869105502963066,
+  "spatial_psnr": 21.04192352294922,
+  "spatial_ssim": 0.8684030771255493,
+  "spatial_h_mean": 0.029392743483185768,
+  "spatial_h_std": 0.03849906474351883,
+  "spatial_h_min": 0.0005213606054894626,
+  "spatial_h_max": 0.10000000149011612,
+  "delta_psnr": 0.7180023193359375,
+  "delta_ssim": -0.03365534543991089
+}

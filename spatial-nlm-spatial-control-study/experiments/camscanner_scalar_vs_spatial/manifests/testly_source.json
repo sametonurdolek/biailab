@@ -1,0 +1,37 @@
+{
+  "evidence_layer": "local source checkout, not verified runtime",
+  "inspected_files": [
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\pipeline_cuda.py",
+      "sha256": "50345d21ed1012f8e654eab53740daa1afc81233b247c504887768fbc2fe2ec2"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\enhancement\\binarizer_pth_cuda_infer.py",
+      "sha256": "3e95407d8153e3ae112a30ea82e8de732314d961661fb1d2e5a6332001f6ecb8"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\enhancement\\figure_detector_cuda.py",
+      "sha256": "fd4e489c9064f1beaff137437b8677252df039cc3d9e22d617d7872cbab7ed8a"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\enhancement\\figure_nafnet_pth_cuda_infer.py",
+      "sha256": "d680d4eceb9ac133d156470c13c093908b9b23ec352a48f147831e94a044a326"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\mask_rescue.py",
+      "sha256": "1ee6c554d593f5d5af358933c0f5011580947500813f0ca864ab54cebc454d50"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\seamless_blend.py",
+      "sha256": "3f798d945cc4c951925e1db4b45486fa5fb1330fed8f2a1baf5a1bf313f7dc3d"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\config_cv.py",
+      "sha256": "1c4bd0a9f3f39aaca87c2650d6c57524d3814d7adef935261d048eda647da5d0"
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\dewarp\\linear_smart_dewarper.py",
+      "sha256": "da9032a8b80898e647dc1cef6c87ab64474f5edb45e29cba9903e9aa4f85034f"
+    }
+  ]
+}

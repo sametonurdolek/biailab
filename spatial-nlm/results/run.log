@@ -1,0 +1,146 @@
+nlm formula check
+nlm self-test ok  max_abs=1.19e-07
+device NVIDIA GeForce RTX 5060 Laptop GPU
+C:\testly_external_workspace\spatial-nlm\run_experiment.py:452: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:39.)
+  image = torch.rand(1, 1, CROP, CROP, device=device)
+bench crop 128 batch implicit 1  forward+backward 0.088s
+bench full 512x768 forward 0.795s
+=== awgn fixed-h sweep on val ===
+  sweep value=0.0200  val_psnr=20.441  (10.7s)
+  sweep value=0.0268  val_psnr=20.444  (10.3s)
+  sweep value=0.0359  val_psnr=20.503  (10.6s)
+  sweep value=0.0481  val_psnr=21.287  (7.7s)
+  sweep value=0.0645  val_psnr=25.238  (3.9s)
+  sweep value=0.0864  val_psnr=27.205  (5.9s)
+  sweep value=0.1158  val_psnr=26.060  (10.2s)
+  sweep value=0.1551  val_psnr=24.765  (10.2s)
+  sweep value=0.2078  val_psnr=23.867  (10.4s)
+  sweep value=0.2785  val_psnr=23.150  (10.3s)
+  sweep value=0.3732  val_psnr=22.582  (9.9s)
+  sweep value=0.5000  val_psnr=22.163  (10.2s)
+awgn h* = 0.0864  bounds [0.0200, 0.5000]
+=== awgn hand-crafted k sweep on val ===
+  sweep value=0.2500  val_psnr=20.441  (10.4s)
+  sweep value=0.5000  val_psnr=21.278  (10.1s)
+  sweep value=0.7500  val_psnr=26.742  (10.3s)
+  sweep value=1.0000  val_psnr=26.619  (10.3s)
+  sweep value=1.5000  val_psnr=24.833  (10.0s)
+  sweep value=2.0000  val_psnr=24.009  (10.3s)
+  sweep value=3.0000  val_psnr=23.092  (9.9s)
+  sweep value=4.0000  val_psnr=22.578  (9.9s)
+  sweep value=6.0000  val_psnr=22.187  (9.8s)
+  sweep value=8.0000  val_psnr=22.164  (10.5s)
+=== awgn oracle-sigma k sweep on val ===
+  sweep value=0.2500  val_psnr=20.442  (10.4s)
+  sweep value=0.5000  val_psnr=21.429  (10.1s)
+  sweep value=0.7500  val_psnr=26.791  (10.3s)
+  sweep value=1.0000  val_psnr=26.839  (10.1s)
+  sweep value=1.5000  val_psnr=24.966  (10.5s)
+  sweep value=2.0000  val_psnr=24.027  (10.7s)
+  sweep value=3.0000  val_psnr=23.032  (10.7s)
+  sweep value=4.0000  val_psnr=22.501  (10.1s)
+  sweep value=6.0000  val_psnr=22.163  (9.7s)
+  sweep value=8.0000  val_psnr=22.163  (9.6s)
+awgn opencv best h=20 psnr=23.834  our fixed on same image 24.046
+awgn/scalar init val 27.143  fixed h* val 27.205
+awgn/scalar seed=10 step=1 loss=0.0259 val_psnr=24.597 h_mean=0.1628 h_std=0.000000 trunk_grad=1.729e-04 head_w=0.20889
+awgn/scalar seed=10 step=50 loss=0.0204 val_psnr=27.199 h_mean=0.0868 h_std=0.000000 trunk_grad=1.428e-05 head_w=0.19124
+awgn/scalar seed=10 step=100 loss=0.0207 val_psnr=27.193 h_mean=0.0871 h_std=0.000000 trunk_grad=5.454e-05 head_w=0.19019
+awgn/scalar seed=10 step=150 loss=0.0315 val_psnr=27.202 h_mean=0.0866 h_std=0.000000 trunk_grad=2.853e-05 head_w=0.18993
+awgn/scalar seed=10 step=200 loss=0.0313 val_psnr=27.200 h_mean=0.0868 h_std=0.000000 trunk_grad=2.682e-05 head_w=0.18980
+awgn/scalar seed=10 step=250 loss=0.0386 val_psnr=27.205 h_mean=0.0865 h_std=0.000000 trunk_grad=6.958e-06 head_w=0.18956
+awgn/scalar seed=10 step=300 loss=0.0309 val_psnr=27.217 h_mean=0.0856 h_std=0.000000 trunk_grad=9.679e-05 head_w=0.18987
+awgn/scalar seed=10 step=350 loss=0.0225 val_psnr=27.170 h_mean=0.0884 h_std=0.000000 trunk_grad=4.784e-06 head_w=0.18927
+awgn/scalar seed=10 step=400 loss=0.0199 val_psnr=27.202 h_mean=0.0868 h_std=0.000000 trunk_grad=5.480e-06 head_w=0.18976
+awgn/spatial init val 27.045  fixed h* val 27.205
+awgn/spatial seed=11 step=1 loss=0.0347 val_psnr=20.857 h_mean=0.0430 h_std=0.004597 trunk_grad=5.861e-05 head_w=0.18544
+awgn/spatial seed=11 step=50 loss=0.0230 val_psnr=27.206 h_mean=0.0832 h_std=0.001415 trunk_grad=6.044e-04 head_w=0.16948
+awgn/spatial seed=11 step=100 loss=0.0300 val_psnr=27.143 h_mean=0.0903 h_std=0.002738 trunk_grad=4.492e-05 head_w=0.16278
+awgn/spatial seed=11 step=150 loss=0.0255 val_psnr=27.209 h_mean=0.0881 h_std=0.003497 trunk_grad=3.745e-05 head_w=0.16257
+awgn/spatial seed=11 step=200 loss=0.0363 val_psnr=27.259 h_mean=0.0867 h_std=0.003257 trunk_grad=2.901e-05 head_w=0.16173
+awgn/spatial seed=11 step=250 loss=0.0344 val_psnr=27.265 h_mean=0.0846 h_std=0.005122 trunk_grad=3.216e-05 head_w=0.16288
+awgn/spatial seed=11 step=300 loss=0.0232 val_psnr=27.359 h_mean=0.0837 h_std=0.004565 trunk_grad=3.029e-05 head_w=0.16430
+awgn/spatial seed=11 step=350 loss=0.0319 val_psnr=27.424 h_mean=0.0859 h_std=0.005892 trunk_grad=1.335e-03 head_w=0.16429
+awgn/spatial seed=11 step=400 loss=0.0219 val_psnr=27.496 h_mean=0.0846 h_std=0.007074 trunk_grad=5.364e-05 head_w=0.16578
+=== awgn test ===
+awgn oracle constant-h sweep on test (upper bound)
+awgn test noisy                psnr 20.491
+awgn test fixed                psnr 28.033
+awgn test handcrafted          psnr 27.442
+awgn test oracle_constant_h    psnr 28.033
+awgn test oracle_true_sigma    psnr 27.725
+awgn test scalar               psnr 28.036
+awgn test spatial              psnr 28.314
+wrote partial metrics after awgn
+=== spatial fixed-h sweep on val ===
+  sweep value=0.0200  val_psnr=18.721  (12.4s)
+  sweep value=0.0268  val_psnr=18.728  (11.9s)
+  sweep value=0.0359  val_psnr=18.816  (11.8s)
+  sweep value=0.0481  val_psnr=19.078  (12.1s)
+  sweep value=0.0645  val_psnr=20.034  (11.7s)
+  sweep value=0.0864  val_psnr=23.566  (11.7s)
+  sweep value=0.1158  val_psnr=25.667  (11.6s)
+  sweep value=0.1551  val_psnr=24.666  (12.4s)
+  sweep value=0.2078  val_psnr=23.759  (11.7s)
+  sweep value=0.2785  val_psnr=23.042  (12.1s)
+  sweep value=0.3732  val_psnr=22.482  (11.9s)
+  sweep value=0.5000  val_psnr=22.071  (12.0s)
+spatial h* = 0.1158  bounds [0.0200, 0.5000]
+=== spatial hand-crafted k sweep on val ===
+  sweep value=0.2500  val_psnr=18.721  (12.2s)
+  sweep value=0.5000  val_psnr=19.744  (12.1s)
+  sweep value=0.7500  val_psnr=25.902  (12.0s)
+  sweep value=1.0000  val_psnr=25.859  (11.6s)
+  sweep value=1.5000  val_psnr=24.363  (11.6s)
+  sweep value=2.0000  val_psnr=23.627  (11.9s)
+  sweep value=3.0000  val_psnr=22.849  (12.2s)
+  sweep value=4.0000  val_psnr=22.456  (12.1s)
+  sweep value=6.0000  val_psnr=22.180  (12.3s)
+  sweep value=8.0000  val_psnr=22.099  (11.3s)
+=== spatial oracle-sigma k sweep on val ===
+  sweep value=0.2500  val_psnr=18.724  (11.5s)
+  sweep value=0.5000  val_psnr=20.255  (11.6s)
+  sweep value=0.7500  val_psnr=26.035  (12.0s)
+  sweep value=1.0000  val_psnr=25.942  (11.6s)
+  sweep value=1.5000  val_psnr=24.371  (11.9s)
+  sweep value=2.0000  val_psnr=23.577  (11.6s)
+  sweep value=3.0000  val_psnr=22.783  (12.3s)
+  sweep value=4.0000  val_psnr=22.435  (11.7s)
+  sweep value=6.0000  val_psnr=22.157  (11.5s)
+  sweep value=8.0000  val_psnr=22.079  (11.9s)
+spatial opencv best h=30 psnr=22.340  our fixed on same image 22.393
+spatial/scalar init val 25.670  fixed h* val 25.667
+spatial/scalar seed=20 step=1 loss=0.0452 val_psnr=18.961 h_mean=0.0437 h_std=0.000000 trunk_grad=5.723e-04 head_w=0.14887
+spatial/scalar seed=20 step=50 loss=0.0248 val_psnr=25.630 h_mean=0.1181 h_std=0.000000 trunk_grad=1.277e-04 head_w=0.13301
+spatial/scalar seed=20 step=100 loss=0.0387 val_psnr=25.668 h_mean=0.1155 h_std=0.000000 trunk_grad=6.658e-07 head_w=0.13164
+spatial/scalar seed=20 step=150 loss=0.0347 val_psnr=25.605 h_mean=0.1179 h_std=0.000000 trunk_grad=1.294e-05 head_w=0.13038
+spatial/scalar seed=20 step=200 loss=0.0320 val_psnr=25.662 h_mean=0.1128 h_std=0.000000 trunk_grad=4.685e-05 head_w=0.12801
+spatial/scalar seed=20 step=250 loss=0.0344 val_psnr=25.652 h_mean=0.1161 h_std=0.000000 trunk_grad=2.093e-05 head_w=0.12644
+spatial/scalar seed=20 step=300 loss=0.0267 val_psnr=25.615 h_mean=0.1175 h_std=0.000000 trunk_grad=1.143e-06 head_w=0.12600
+spatial/scalar seed=20 step=350 loss=0.0391 val_psnr=25.621 h_mean=0.1166 h_std=0.000000 trunk_grad=1.020e-05 head_w=0.12618
+spatial/scalar seed=20 step=400 loss=0.0497 val_psnr=25.566 h_mean=0.1207 h_std=0.000000 trunk_grad=7.296e-05 head_w=0.12476
+spatial/spatial init val 25.490  fixed h* val 25.667
+spatial/spatial seed=21 step=1 loss=0.0370 val_psnr=18.894 h_mean=0.0396 h_std=0.009699 trunk_grad=3.827e-04 head_w=0.18398
+spatial/spatial seed=21 step=50 loss=0.0278 val_psnr=25.604 h_mean=0.1180 h_std=0.003469 trunk_grad=7.943e-06 head_w=0.16744
+spatial/spatial seed=21 step=100 loss=0.0392 val_psnr=25.745 h_mean=0.1134 h_std=0.006211 trunk_grad=5.463e-05 head_w=0.16728
+spatial/spatial seed=21 step=150 loss=0.0314 val_psnr=25.729 h_mean=0.0884 h_std=0.012492 trunk_grad=5.046e-04 head_w=0.17231
+spatial/spatial seed=21 step=200 loss=0.0445 val_psnr=26.195 h_mean=0.0973 h_std=0.022455 trunk_grad=3.488e-03 head_w=0.17183
+spatial/spatial seed=21 step=250 loss=0.0288 val_psnr=26.299 h_mean=0.0975 h_std=0.023440 trunk_grad=1.731e-03 head_w=0.17326
+spatial/spatial seed=21 step=300 loss=0.0261 val_psnr=26.341 h_mean=0.0943 h_std=0.021362 trunk_grad=7.873e-04 head_w=0.17326
+FAILED OutOfMemoryError: CUDA out of memory. Tried to allocate 246.00 MiB. GPU 0 has a total capacity of 7.96 GiB of which 6.00 GiB is free. Of the allocated memory 610.09 MiB is allocated by PyTorch, and 249.91 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "C:\testly_external_workspace\spatial-nlm\run_experiment.py", line 675, in <module>
+    main()
+  File "C:\testly_external_workspace\spatial-nlm\run_experiment.py", line 664, in main
+    payload["protocols"][protocol] = run_protocol(
+                                     ^^^^^^^^^^^^^
+  File "C:\testly_external_workspace\spatial-nlm\run_experiment.py", line 528, in run_protocol
+    model, curve_rows = train_model(
+                        ^^^^^^^^^^^^
+  File "C:\testly_external_workspace\spatial-nlm\run_experiment.py", line 360, in train_model
+    restored = nlm(noisy, h_map, PATCH, SEARCH)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\testly_external_workspace\spatial-nlm\nlm.py", line 97, in nlm
+    distance = (center[:, None] - neighbors).square().sum(dim=2) / float(patch_elems)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 246.00 MiB. GPU 0 has a total capacity of 7.96 GiB of which 6.00 GiB is free. Of the allocated memory 610.09 MiB is allocated by PyTorch, and 249.91 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,8 @@
+{
+  "initial_tensors_identical": true,
+  "updates_per_arm": 400,
+  "same_seed": true,
+  "same_crop_manifest": true,
+  "same_split": true,
+  "same_calibration": true
+}

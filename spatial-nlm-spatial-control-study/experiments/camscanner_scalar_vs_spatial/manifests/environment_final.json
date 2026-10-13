@@ -1,0 +1,39 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\Users\\samet\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "os": "Windows-10-10.0.26200-SP0",
+  "numpy": "2.4.4",
+  "opencv": "4.13.0",
+  "pytorch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "seeds": {
+    "python": 20261014,
+    "numpy": 20261014,
+    "torch": 20261014,
+    "cuda": 20261014
+  },
+  "deterministic_algorithms": true,
+  "cudnn_benchmark": false,
+  "tf32": false,
+  "cublas_workspace": ":4096:8",
+  "precision": "float32, no AMP",
+  "limitations": "Deterministic algorithms enforced; numerical equality across different hardware/software is not promised.",
+  "source_hashes": {
+    "audit_dataset.py": "07a5686da30deb2877a72a2f54bc87c805b0fcad342eed73e9be30a69aa6db3c",
+    "calibrate.py": "fae2250c508eba076ed98e80388a09e4302d2508f97862c6ffecebad8a33d8ff",
+    "common.py": "9622fe78ea67059a3242fc8ac1beadff70d08878cbc80a0650f60a2a5fd9ce4b",
+    "config.py": "179ddc7c424f64146b9c56e480057cd13d073f671353dcdfefa35642bb24dc6a",
+    "document_pipeline.py": "c98ba8bc4d6c9a57a52814637ea809fb1409b58e60a35adaccb66e83deb2b462",
+    "evaluate.py": "cc9990d57358d4f02fbac200a61bee3b6d2f0464d511ac2ad71bc2952bd6d6fd",
+    "metrics.py": "18003b5f434d46e926228b90b3affa17e5ad24ef541b8167d4f2066d15a67bac",
+    "models.py": "fb8e89405182d46836c1d6926beffff9d2ad1832729ff2e2d87b7fe14d94fc17",
+    "nlm.py": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb",
+    "prepare_pairs.py": "5b52267c1c22c40790df536ade956c87839f873e040f096cea767a3d45c05c9a",
+    "report.py": "49a2e5758fa31e00baca0410145a294bada71fd2740c4bf4f322dfc7b99a5b2e",
+    "run.py": "17e1f4ad81e89c42dcd023afccfb567660e4002482657a873e9f9752f3d80905",
+    "train.py": "3750d7aa439a301ac80b69179325423eb0c60bbfb3a58bbb4fbca8761f69bb00",
+    "verify.py": "073ac5fa2f665aa05c05f0200809fdbc34d8744bc44264191989455319d97336",
+    "visualize.py": "43237b887a48ab85fad9df0df9c07a8b692e7ced421f4c51a641ce80c9a14529"
+  }
+}

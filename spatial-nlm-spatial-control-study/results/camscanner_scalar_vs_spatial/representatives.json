@@ -1,0 +1,40 @@
+{
+  "rule": "first test filename, best/upper-median/worst delta PSNR; every test also has a comparison figure",
+  "representatives": [
+    "camscanner_001",
+    "camscanner_045",
+    "pair_100405_pair_01076_003",
+    "pair_100405_pair_01076_015"
+  ],
+  "artifacts": [
+    {
+      "image": "camscanner_001",
+      "comparison": "results\\figures\\camscanner_001_comparison.png",
+      "closeups": "results\\figures\\camscanner_001_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    },
+    {
+      "image": "camscanner_045",
+      "comparison": "results\\figures\\camscanner_045_comparison.png",
+      "closeups": "results\\figures\\camscanner_045_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    },
+    {
+      "image": "pair_100405_pair_01076_003",
+      "comparison": "results\\figures\\pair_100405_pair_01076_003_comparison.png",
+      "closeups": "results\\figures\\pair_100405_pair_01076_003_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    },
+    {
+      "image": "pair_100405_pair_01076_015",
+      "comparison": "results\\figures\\pair_100405_pair_01076_015_comparison.png",
+      "closeups": "results\\figures\\pair_100405_pair_01076_015_closeups.png",
+      "roi_rule": "max clean edge, max bright/low-edge background, max thin-stroke edge, fixed center"
+    }
+  ],
+  "diagram_example": {
+    "image": "camscanner_004",
+    "path": "results/figures/camscanner_004_diagrams.png",
+    "rule": "precommitted before test; x [.38,.98], y [.05,.95] of prepared page"
+  }
+}

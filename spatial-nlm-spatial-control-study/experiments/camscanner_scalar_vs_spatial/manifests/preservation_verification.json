@@ -1,0 +1,118 @@
+{
+  "baseline_files": [
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\data.py",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\data.py",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\metrics.py",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\metrics.py",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\models.py",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\models.py",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\nlm.py",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\nlm.py",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\README.md",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\README.md",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\requirements.txt",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\requirements.txt",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_snapshot\\run_experiment.py",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\run_experiment.py",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\awgn_scalar.pt",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\awgn_scalar.pt",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\awgn_spatial.pt",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\awgn_spatial.pt",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\figure_awgn_kodim17.png",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\figure_awgn_kodim17.png",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\metrics.json",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\metrics.json",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\metrics_awgn.json",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\metrics_awgn.json",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\run.log",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\run.log",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\run_awgn_preserved.log",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\run_awgn_preserved.log",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\run_spatial.log",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\run_spatial.log",
+      "matches": true
+    },
+    {
+      "copy": "C:\\testly_external_workspace\\spatial-nlm-spatial-control-study\\baseline_results\\spatial_scalar.pt",
+      "original": "C:\\testly_external_workspace\\spatial-nlm\\results\\spatial_scalar.pt",
+      "matches": true
+    }
+  ],
+  "testly_source_files": [
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\pipeline_cuda.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\enhancement\\binarizer_pth_cuda_infer.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\enhancement\\figure_detector_cuda.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\enhancement\\figure_nafnet_pth_cuda_infer.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\mask_rescue.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\seamless_blend.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\config_cv.py",
+      "matches_inspected_sha256": true
+    },
+    {
+      "path": "C:\\testly\\testly_backend\\backend\\services\\dewarp\\linear_smart_dewarper.py",
+      "matches_inspected_sha256": true
+    }
+  ]
+}
