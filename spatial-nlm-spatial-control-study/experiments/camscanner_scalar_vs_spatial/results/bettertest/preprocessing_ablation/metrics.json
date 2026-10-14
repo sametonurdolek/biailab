@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "n_images": 3,
+  "means": {
+    "preprocess_psnr": 25.66042137145996,
+    "preprocess_ssim": 0.9722696542739868,
+    "scalar_psnr": 25.694751103719074,
+    "scalar_ssim": 0.9762571255366007,
+    "spatial_psnr": 25.68054262797038,
+    "spatial_ssim": 0.9740008314450582,
+    "scalar_minus_preprocess_psnr": 0.034329732259114586,
+    "scalar_minus_preprocess_ssim": 0.003987471262613933,
+    "scalar_mean_abs_change_from_preprocess": 0.0018888274595762293,
+    "spatial_minus_preprocess_psnr": 0.020121256510416668,
+    "spatial_minus_preprocess_ssim": 0.0017311771710713704,
+    "spatial_mean_abs_change_from_preprocess": 0.0009450471261516213
+  },
+  "per_image": [
+    {
+      "id": "0000015",
+      "preprocess_psnr": 24.517915725708008,
+      "preprocess_ssim": 0.9652857184410095,
+      "scalar_psnr": 24.518421173095703,
+      "scalar_ssim": 0.9696339964866638,
+      "spatial_psnr": 24.4627742767334,
+      "spatial_ssim": 0.9663960337638855,
+      "scalar_minus_preprocess_psnr": 0.0005054473876953125,
+      "scalar_minus_preprocess_ssim": 0.004348278045654297,
+      "scalar_mean_abs_change_from_preprocess": 0.002087509958073497,
+      "spatial_minus_preprocess_psnr": -0.055141448974609375,
+      "spatial_minus_preprocess_ssim": 0.0011103153228759766,
+      "spatial_mean_abs_change_from_preprocess": 0.001127540017478168
+    },
+    {
+      "id": "0000025",
+      "preprocess_psnr": 23.989696502685547,
+      "preprocess_ssim": 0.9679885506629944,
+      "scalar_psnr": 23.989789962768555,
+      "scalar_ssim": 0.9694640636444092,
+      "spatial_psnr": 23.991615295410156,
+      "spatial_ssim": 0.9690311551094055,
+      "scalar_minus_preprocess_psnr": 9.34600830078125e-05,
+      "scalar_minus_preprocess_ssim": 0.001475512981414795,
+      "scalar_mean_abs_change_from_preprocess": 0.0012508098734542727,
+      "spatial_minus_preprocess_psnr": 0.001918792724609375,
+      "spatial_minus_preprocess_ssim": 0.0010426044464111328,
+      "spatial_mean_abs_change_from_preprocess": 0.0006661111256107688
+    },
+    {
+      "id": "0000035",
+      "preprocess_psnr": 28.473651885986328,
+      "preprocess_ssim": 0.9835346937179565,
+      "scalar_psnr": 28.57604217529297,
+      "scalar_ssim": 0.9896733164787292,
+      "spatial_psnr": 28.587238311767578,
+      "spatial_ssim": 0.9865753054618835,
+      "scalar_minus_preprocess_psnr": 0.10239028930664062,
+      "scalar_minus_preprocess_ssim": 0.006138622760772705,
+      "scalar_mean_abs_change_from_preprocess": 0.002328162547200918,
+      "spatial_minus_preprocess_psnr": 0.11358642578125,
+      "spatial_minus_preprocess_ssim": 0.003040611743927002,
+      "spatial_mean_abs_change_from_preprocess": 0.0010414902353659272
+    }
+  ],
+  "aggregation": "arithmetic image means",
+  "source_bettertest_metrics_sha256": "ec5fe7e6851362b9d0577dc9911b6a49d341d216fac850983848cb2b910b98d0",
+  "new_model_inference": false,
+  "new_training": false,
+  "comparison": "A fixed preprocessing+clip; B/C previously saved frozen scalar/spatial NLM outputs/scores"
+}

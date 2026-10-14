@@ -1,0 +1,34 @@
+dirty -> canonical long side 1024 -> ScaleNet 512 letterbox -> argmax s
+-> Closing(s) -> Gaussian sigma s/6 -> x/max(B,0.1) -> clip[0,1]
+
+checkpoint: C:\testly_external_workspace\biailab\spatial-nlm-spatial-control-study\s-estimator.pt
+epoch: 54
+parameter count: 1710918
+device: cuda
+
+Historical regression local_31_0.0 vs normalize_paper(s=31)
+  0000015: max 0.000e+00  mean 0.000e+00
+  0000025: max 0.000e+00  mean 0.000e+00
+  0000035: max 0.000e+00  mean 0.000e+00
+
+image | predicted s | probabilities
+  0000015 | 21 | s15:0.0757 s21:0.2338 s31:0.2207 s45:0.1927 s63:0.1581 s91:0.1190
+  0000025 | 21 | s15:0.1921 s21:0.3366 s31:0.2747 s45:0.1285 s63:0.0527 s91:0.0153
+  0000035 | 15 | s15:0.4934 s21:0.3741 s31:0.1035 s45:0.0225 s63:0.0053 s91:0.0012
+
+mean PSNR fixed31: 26.910077
+mean PSNR learned: 27.064607
+delta PSNR: +0.154530
+mean SSIM fixed31: 0.978529
+mean SSIM learned: 0.979719
+delta SSIM: +0.001190
+mean PSNR oracle: 27.067469
+mean oracle headroom PSNR: 0.157391
+captured oracle headroom PSNR: 0.9818181818181745
+learned PSNR > fixed31: 2/3
+learned SSIM > fixed31: 3/3
+selected-s histogram: {'15': 1, '21': 2, '31': 0, '45': 0, '63': 0, '91': 0}
+
+PSNR: bu frozen üçlüde image-conditioned s selection faydalı
+SSIM: bu frozen üçlüde image-conditioned s selection faydalı
+n=3. Bu üç çiftten belge temizleme görevine genelleme yapılmaz.
