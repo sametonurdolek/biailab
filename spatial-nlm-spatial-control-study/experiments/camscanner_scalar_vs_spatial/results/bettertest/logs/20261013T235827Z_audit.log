@@ -1,0 +1,4 @@
+AUDIT 0000015 valid True registration False
+AUDIT 0000025 valid True registration True
+AUDIT 0000035 valid True registration False
+EXIT_CODE=0

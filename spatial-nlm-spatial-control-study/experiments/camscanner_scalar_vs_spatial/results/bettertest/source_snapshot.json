@@ -1,0 +1,18 @@
+{
+  "files": {
+    "metrics.py": "18003b5f434d46e926228b90b3affa17e5ad24ef541b8167d4f2066d15a67bac",
+    "evaluate.py": "cc9990d57358d4f02fbac200a61bee3b6d2f0464d511ac2ad71bc2952bd6d6fd",
+    "prepare_pairs.py": "5b52267c1c22c40790df536ade956c87839f873e040f096cea767a3d45c05c9a",
+    "nlm.py": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb",
+    "config.py": "179ddc7c424f64146b9c56e480057cd13d073f671353dcdfefa35642bb24dc6a",
+    "audit_dataset.py": "07a5686da30deb2877a72a2f54bc87c805b0fcad342eed73e9be30a69aa6db3c",
+    "train.py": "3750d7aa439a301ac80b69179325423eb0c60bbfb3a58bbb4fbca8761f69bb00",
+    "common.py": "9622fe78ea67059a3242fc8ac1beadff70d08878cbc80a0650f60a2a5fd9ce4b",
+    "document_pipeline.py": "c98ba8bc4d6c9a57a52814637ea809fb1409b58e60a35adaccb66e83deb2b462",
+    "models.py": "fb8e89405182d46836c1d6926beffff9d2ad1832729ff2e2d87b7fe14d94fc17",
+    "bettertest_diagnostic_scored.py": "56681224fea0ab242f1eee5e58476dc7fdd4f35c37bd803f748ab47f8fdd1051"
+  },
+  "scoring_helper_sha256": "56681224fea0ab242f1eee5e58476dc7fdd4f35c37bd803f748ab47f8fdd1051",
+  "current_report_helper_sha256": "9731fd743110a5961762079c530117c69a38d0ab65c18317c2abca5a0b8f2741",
+  "note": "Exact scoring helper preserved; subsequent differences are report wording only."
+}

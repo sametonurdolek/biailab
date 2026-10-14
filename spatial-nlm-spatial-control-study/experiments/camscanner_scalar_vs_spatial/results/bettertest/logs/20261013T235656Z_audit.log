@@ -1,0 +1,20 @@
+AUDIT 0000015 valid True registration False
+AUDIT 0000025 valid True registration True
+AUDIT 0000035 valid True registration False
+Traceback (most recent call last):
+  File "C:\testly_external_workspace\biailab\spatial-nlm-spatial-control-study\experiments\camscanner_scalar_vs_spatial\bettertest_diagnostic.py", line 309, in main
+    if args.stage=='audit':audit(args.source.resolve(),output)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\testly_external_workspace\biailab\spatial-nlm-spatial-control-study\experiments\camscanner_scalar_vs_spatial\bettertest_diagnostic.py", line 165, in audit
+    cleanliness(rows,output);content_overlap(rows,output)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\testly_external_workspace\biailab\spatial-nlm-spatial-control-study\experiments\camscanner_scalar_vs_spatial\bettertest_diagnostic.py", line 144, in content_overlap
+    coverage=(np.ptp(p[ok,0])/image.shape[1])*(np.ptp(p[ok,1])/image.shape[0])
+              ^^^^^^^^^^^^^^^
+  File "C:\Users\samet\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\_core\fromnumeric.py", line 3003, in ptp
+    return _methods._ptp(a, axis=axis, out=out, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samet\AppData\Local\Programs\Python\Python311\Lib\site-packages\numpy\_core\_methods.py", line 233, in _ptp
+    umr_maximum(a, axis, None, out, keepdims),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: zero-size array to reduction operation maximum which has no identity

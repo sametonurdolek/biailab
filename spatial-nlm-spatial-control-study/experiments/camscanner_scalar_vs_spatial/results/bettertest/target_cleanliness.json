@@ -1,0 +1,1782 @@
+{
+  "cohorts": {
+    "previous_test_20": {
+      "n": 20,
+      "per_image": [
+        {
+          "id": "camscanner_001",
+          "sha256": "7bd0ff10780b159d1e2d7c10e4510c9fd07f8011d1ae20b3808ae154f56d85ba",
+          "descriptors": {
+            "bright_background_fraction": 0.6896433850702144,
+            "bright_background_variance": 0.001915663480758667,
+            "background_laplacian_abs": 0.00931889284402132,
+            "background_hf_energy": 0.00021216392633505166,
+            "estimated_background_noise": 0.001666797740574406,
+            "global_laplacian_abs": 0.03210514038801193,
+            "white_fraction": 0.5319557362240289,
+            "edge_density": 0.20271823930360516
+          }
+        },
+        {
+          "id": "camscanner_004",
+          "sha256": "4d10c4e7634e6b88a66295d624959cea8c6873d8b5e32a9be8ee8cccbf7e2c2b",
+          "descriptors": {
+            "bright_background_fraction": 0.7350398936170213,
+            "bright_background_variance": 6.70075896778144e-05,
+            "background_laplacian_abs": 0.0016543599776923656,
+            "background_hf_energy": 3.498659862088971e-05,
+            "estimated_background_noise": 0.0003570868718815109,
+            "global_laplacian_abs": 0.031706616282463074,
+            "white_fraction": 0.8578314969604863,
+            "edge_density": 0.12468602245862884
+          }
+        },
+        {
+          "id": "camscanner_005",
+          "sha256": "634c0aad9dc8bd1d7f168a4021f68645912fa7244d6e9eb5501424f8e29e6572",
+          "descriptors": {
+            "bright_background_fraction": 0.7152298794900608,
+            "bright_background_variance": 5.0487829867051914e-05,
+            "background_laplacian_abs": 0.0016209714813157916,
+            "background_hf_energy": 2.0569126718328334e-05,
+            "estimated_background_noise": 0.0003659052222814963,
+            "global_laplacian_abs": 0.03415173664689064,
+            "white_fraction": 0.8450832138567056,
+            "edge_density": 0.13074940907505717
+          }
+        },
+        {
+          "id": "camscanner_012",
+          "sha256": "d84ac7fbfa12810b041258b3d6018e8cd0b95f64fd8366a297132729adbfb805",
+          "descriptors": {
+            "bright_background_fraction": 0.5632760989010989,
+            "bright_background_variance": 7.59995891712606e-05,
+            "background_laplacian_abs": 0.01372512523084879,
+            "background_hf_energy": 0.00044838612666353583,
+            "estimated_background_noise": 0.002113243405295708,
+            "global_laplacian_abs": 0.04676973447203636,
+            "white_fraction": 0.6833461538461538,
+            "edge_density": 0.28001373626373627
+          }
+        },
+        {
+          "id": "camscanner_023",
+          "sha256": "841a1bd1439520450690f37ebbeb066f54a6e96f840f23f8d5f633992495b04a",
+          "descriptors": {
+            "bright_background_fraction": 0.6149064309346567,
+            "bright_background_variance": 3.7736921512987465e-05,
+            "background_laplacian_abs": 0.004772108048200607,
+            "background_hf_energy": 8.434410119662061e-05,
+            "estimated_background_noise": 0.0009679528214523048,
+            "global_laplacian_abs": 0.05935872346162796,
+            "white_fraction": 0.7816118693134823,
+            "edge_density": 0.21378205128205127
+          }
+        },
+        {
+          "id": "camscanner_043",
+          "sha256": "dbe304f6a1b15cadd88d9a0a8a60f01261c55554dd8e6bbd543915e8d8e02d50",
+          "descriptors": {
+            "bright_background_fraction": 0.6295744906230426,
+            "bright_background_variance": 0.0001638161193113774,
+            "background_laplacian_abs": 0.005038379225879908,
+            "background_hf_energy": 9.510090603725985e-05,
+            "estimated_background_noise": 0.00100025423611091,
+            "global_laplacian_abs": 0.04245125129818916,
+            "white_fraction": 0.7791233742308684,
+            "edge_density": 0.2328672488117608
+          }
+        },
+        {
+          "id": "camscanner_045",
+          "sha256": "9baabf00fe11e8598d49400f116210347f6e84ba892f0df98e8bfcbccf3806d5",
+          "descriptors": {
+            "bright_background_fraction": 0.6346264982876713,
+            "bright_background_variance": 7.436051237164065e-05,
+            "background_laplacian_abs": 0.0032385874073952436,
+            "background_hf_energy": 6.214825407369062e-05,
+            "estimated_background_noise": 0.0006327113521438381,
+            "global_laplacian_abs": 0.02895412966609001,
+            "white_fraction": 0.7619060359589042,
+            "edge_density": 0.20360124143835617
+          }
+        },
+        {
+          "id": "camscanner_048",
+          "sha256": "e96294327eeaec2a4f3e4a9ca2c08f08bf7402eb9b40550fba668562397db2c7",
+          "descriptors": {
+            "bright_background_fraction": 0.6488695113525361,
+            "bright_background_variance": 7.895512680988759e-05,
+            "background_laplacian_abs": 0.004143072757869959,
+            "background_hf_energy": 9.016558760777116e-05,
+            "estimated_background_noise": 0.0007913271725781776,
+            "global_laplacian_abs": 0.0469367615878582,
+            "white_fraction": 0.8051476315360241,
+            "edge_density": 0.196897639324914
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_003",
+          "sha256": "fd02911ed04ec659ee50a296a6a9b5470ce78c53ecc6e8e269373b3fd2538d6e",
+          "descriptors": {
+            "bright_background_fraction": 0.772473229052785,
+            "bright_background_variance": 7.067363185342401e-05,
+            "background_laplacian_abs": 0.006885392125695944,
+            "background_hf_energy": 0.0001181475308840163,
+            "estimated_background_noise": 0.0013274099438669621,
+            "global_laplacian_abs": 0.029198329895734787,
+            "white_fraction": 0.852479466263,
+            "edge_density": 0.11690739494856053
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_015",
+          "sha256": "d6b35b5aedf9a61232a8f30a21aef9e0eb39fba201c9d55f6d7896bf8dfdab9e",
+          "descriptors": {
+            "bright_background_fraction": 0.7136229838598958,
+            "bright_background_variance": 8.787627848505508e-06,
+            "background_laplacian_abs": 0.00269413273781538,
+            "background_hf_energy": 3.134109647362493e-05,
+            "estimated_background_noise": 0.000607217376972352,
+            "global_laplacian_abs": 0.027239933609962463,
+            "white_fraction": 0.8293619194587382,
+            "edge_density": 0.17541860477887672
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_023",
+          "sha256": "8f96e301660274c23d15334aa1d79c6b3fc784007af3ab97d0a42072690cc6de",
+          "descriptors": {
+            "bright_background_fraction": 0.5930258366437944,
+            "bright_background_variance": 0.0005418618093244731,
+            "background_laplacian_abs": 0.011285788379609585,
+            "background_hf_energy": 0.00039069028571248055,
+            "estimated_background_noise": 0.001997625973661253,
+            "global_laplacian_abs": 0.07212042808532715,
+            "white_fraction": 0.7480438184663537,
+            "edge_density": 0.23532111472252318
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_024",
+          "sha256": "bdaf66323c84a1640531d5f1939244c63f47d6290966074c781b4d4f1a5db8b8",
+          "descriptors": {
+            "bright_background_fraction": 0.6571622287968442,
+            "bright_background_variance": 4.00072276534047e-05,
+            "background_laplacian_abs": 0.004036346450448036,
+            "background_hf_energy": 8.239035378210247e-05,
+            "estimated_background_noise": 0.0007895033118351151,
+            "global_laplacian_abs": 0.0554824136197567,
+            "white_fraction": 0.8122580744575937,
+            "edge_density": 0.1799710305719921
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_026",
+          "sha256": "fcdb26370084346238dffa6c6a1e89120b9ca5be7d8b3bc8813b9337a48a091b",
+          "descriptors": {
+            "bright_background_fraction": 0.7297787454691905,
+            "bright_background_variance": 5.687787779606879e-05,
+            "background_laplacian_abs": 0.004181983415037394,
+            "background_hf_energy": 8.0552686995361e-05,
+            "estimated_background_noise": 0.0008247775402298791,
+            "global_laplacian_abs": 0.034008320420980453,
+            "white_fraction": 0.8451973419250907,
+            "edge_density": 0.15466169955698753
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_027",
+          "sha256": "ef2c5ec2ea96fe89ff485fe60f59d55395ae482e95832290db2d10813af39bcc",
+          "descriptors": {
+            "bright_background_fraction": 0.6743404961565339,
+            "bright_background_variance": 3.4545732887636404e-06,
+            "background_laplacian_abs": 0.0010124624241143465,
+            "background_hf_energy": 2.1008236217312515e-05,
+            "estimated_background_noise": 0.00023103721067138425,
+            "global_laplacian_abs": 0.04053410515189171,
+            "white_fraction": 0.8460932040531097,
+            "edge_density": 0.1785421034241789
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_028",
+          "sha256": "7bec5c8e98cb8ae21ec75e299cff7b552805a0468470fb74b8a431ca7b13c5bb",
+          "descriptors": {
+            "bright_background_fraction": 0.6951061454628018,
+            "bright_background_variance": 1.6809533917694353e-05,
+            "background_laplacian_abs": 0.002572332974523306,
+            "background_hf_energy": 3.8452148146461695e-05,
+            "estimated_background_noise": 0.0005643759819187303,
+            "global_laplacian_abs": 0.03562423959374428,
+            "white_fraction": 0.8642104366911375,
+            "edge_density": 0.13892094906531446
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_029",
+          "sha256": "dfc2e39a729260c0a406aaee66363682c4088c8e8eda63b332310e091df9ba76",
+          "descriptors": {
+            "bright_background_fraction": 0.7303968143616364,
+            "bright_background_variance": 1.66241115948651e-05,
+            "background_laplacian_abs": 0.0026136604137718678,
+            "background_hf_energy": 3.538338569342159e-05,
+            "estimated_background_noise": 0.0005617648665998445,
+            "global_laplacian_abs": 0.022721780464053154,
+            "white_fraction": 0.8552384593993326,
+            "edge_density": 0.14345414658262268
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_030",
+          "sha256": "8ceb559ff9e77e94d488fa561b666a0e2aba4dedb07f7c8a98f31af7f9081b44",
+          "descriptors": {
+            "bright_background_fraction": 0.5522504892367907,
+            "bright_background_variance": 3.50727759723668e-06,
+            "background_laplacian_abs": 0.0017660708399489522,
+            "background_hf_energy": 2.0964687792002223e-05,
+            "estimated_background_noise": 0.0004146122645671229,
+            "global_laplacian_abs": 0.040997982025146484,
+            "white_fraction": 0.7576587795765878,
+            "edge_density": 0.27140633339263476
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_042",
+          "sha256": "f4898bc287b78e3044f494dd18ca1a1cc2983833f2964e941840c335ae1141fa",
+          "descriptors": {
+            "bright_background_fraction": 0.7805456883880451,
+            "bright_background_variance": 0.00011971213825745508,
+            "background_laplacian_abs": 0.007032688707113266,
+            "background_hf_energy": 0.00014679816376883537,
+            "estimated_background_noise": 0.001318612263337535,
+            "global_laplacian_abs": 0.030332051217556,
+            "white_fraction": 0.8409296913277805,
+            "edge_density": 0.11598940470357667
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_047",
+          "sha256": "806420cd97fe6f972c8c5746b46c18973094370cd93dd31e98e4197fd84f3c5f",
+          "descriptors": {
+            "bright_background_fraction": 0.6924042443064182,
+            "bright_background_variance": 0.00021272466983646154,
+            "background_laplacian_abs": 0.010940346866846085,
+            "background_hf_energy": 0.00033932155929505825,
+            "estimated_background_noise": 0.0018800499137276961,
+            "global_laplacian_abs": 0.04499175399541855,
+            "white_fraction": 0.766620082815735,
+            "edge_density": 0.16601449275362318
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_049",
+          "sha256": "17e6107e779d963cb32b17a46fe45fce6843f1cb87b4b6efdeafc68e68be1284",
+          "descriptors": {
+            "bright_background_fraction": 0.7898946908014266,
+            "bright_background_variance": 0.0001877439208328724,
+            "background_laplacian_abs": 0.008022292517125607,
+            "background_hf_energy": 0.000162086114869453,
+            "estimated_background_noise": 0.0015114903639391003,
+            "global_laplacian_abs": 0.028999140486121178,
+            "white_fraction": 0.8131644909494651,
+            "edge_density": 0.11623685036897471
+          }
+        }
+      ],
+      "means": {
+        "bright_background_fraction": 0.6806083890406233,
+        "bright_background_variance": 0.0001871405784640956,
+        "background_laplacian_abs": 0.005327749741263687,
+        "background_hf_energy": 0.0001257500438441639,
+        "estimated_background_noise": 0.0009961877916822663,
+        "global_laplacian_abs": 0.039234228618443015,
+        "white_fraction": 0.7938630638655289,
+        "edge_density": 0.17890798564139876
+      }
+    },
+    "previous_all_100": {
+      "n": 100,
+      "per_image": [
+        {
+          "id": "camscanner_001",
+          "sha256": "7bd0ff10780b159d1e2d7c10e4510c9fd07f8011d1ae20b3808ae154f56d85ba",
+          "descriptors": {
+            "bright_background_fraction": 0.6896433850702144,
+            "bright_background_variance": 0.001915663480758667,
+            "background_laplacian_abs": 0.00931889284402132,
+            "background_hf_energy": 0.00021216392633505166,
+            "estimated_background_noise": 0.001666797740574406,
+            "global_laplacian_abs": 0.03210514038801193,
+            "white_fraction": 0.5319557362240289,
+            "edge_density": 0.20271823930360516
+          }
+        },
+        {
+          "id": "camscanner_002",
+          "sha256": "0d68513755632ca014e8eb820a0dd9c46bff58532a29405610c387ad3c3d1b75",
+          "descriptors": {
+            "bright_background_fraction": 0.6181939103997138,
+            "bright_background_variance": 3.1010040402179584e-05,
+            "background_laplacian_abs": 0.004589634481817484,
+            "background_hf_energy": 0.00010662275599315763,
+            "estimated_background_noise": 0.0008932030797256101,
+            "global_laplacian_abs": 0.03974197059869766,
+            "white_fraction": 0.7699521595278548,
+            "edge_density": 0.23792922292765806
+          }
+        },
+        {
+          "id": "camscanner_003",
+          "sha256": "7e8b0ed4f4b3cbde8acbcb8435c732e2e67a4af1029d442754117b5345166f8a",
+          "descriptors": {
+            "bright_background_fraction": 0.7436724397275728,
+            "bright_background_variance": 8.2798556832131e-05,
+            "background_laplacian_abs": 0.0025627969298511744,
+            "background_hf_energy": 5.229010639595799e-05,
+            "estimated_background_noise": 0.0004808539957621421,
+            "global_laplacian_abs": 0.018977928906679153,
+            "white_fraction": 0.8271998913633895,
+            "edge_density": 0.16263805902589173
+          }
+        },
+        {
+          "id": "camscanner_004",
+          "sha256": "4d10c4e7634e6b88a66295d624959cea8c6873d8b5e32a9be8ee8cccbf7e2c2b",
+          "descriptors": {
+            "bright_background_fraction": 0.7350398936170213,
+            "bright_background_variance": 6.70075896778144e-05,
+            "background_laplacian_abs": 0.0016543599776923656,
+            "background_hf_energy": 3.498659862088971e-05,
+            "estimated_background_noise": 0.0003570868718815109,
+            "global_laplacian_abs": 0.031706616282463074,
+            "white_fraction": 0.8578314969604863,
+            "edge_density": 0.12468602245862884
+          }
+        },
+        {
+          "id": "camscanner_005",
+          "sha256": "634c0aad9dc8bd1d7f168a4021f68645912fa7244d6e9eb5501424f8e29e6572",
+          "descriptors": {
+            "bright_background_fraction": 0.7152298794900608,
+            "bright_background_variance": 5.0487829867051914e-05,
+            "background_laplacian_abs": 0.0016209714813157916,
+            "background_hf_energy": 2.0569126718328334e-05,
+            "estimated_background_noise": 0.0003659052222814963,
+            "global_laplacian_abs": 0.03415173664689064,
+            "white_fraction": 0.8450832138567056,
+            "edge_density": 0.13074940907505717
+          }
+        },
+        {
+          "id": "camscanner_006",
+          "sha256": "b5bffe16e6374ed8adfb76f1123f7e18cb13748c5953a096bc7ae96767e75cb5",
+          "descriptors": {
+            "bright_background_fraction": 0.6670811839842791,
+            "bright_background_variance": 0.00030589060042984784,
+            "background_laplacian_abs": 0.0019680794794112444,
+            "background_hf_energy": 2.6723002520157024e-05,
+            "estimated_background_noise": 0.0004284856385108118,
+            "global_laplacian_abs": 0.03777181729674339,
+            "white_fraction": 0.7798241371898796,
+            "edge_density": 0.15403156472611151
+          }
+        },
+        {
+          "id": "camscanner_007",
+          "sha256": "c7ee133575c6e40f03345d908fb7c662aa0c5e2db09977486d941b2c722d813c",
+          "descriptors": {
+            "bright_background_fraction": 0.8612773365248613,
+            "bright_background_variance": 2.8012695111101493e-05,
+            "background_laplacian_abs": 0.0071192337200045586,
+            "background_hf_energy": 0.00014513036876451224,
+            "estimated_background_noise": 0.0014144487747528,
+            "global_laplacian_abs": 0.016143281012773514,
+            "white_fraction": 0.9202562289195952,
+            "edge_density": 0.0674980959634425
+          }
+        },
+        {
+          "id": "camscanner_008",
+          "sha256": "dc12f53836e75f216546735bc1a3961c13f4385df381f04b9ab9dbc910eecd3f",
+          "descriptors": {
+            "bright_background_fraction": 0.5928234964473016,
+            "bright_background_variance": 9.687810234026983e-06,
+            "background_laplacian_abs": 0.0024646620731800795,
+            "background_hf_energy": 3.08310154650826e-05,
+            "estimated_background_noise": 0.0005347666598366095,
+            "global_laplacian_abs": 0.038736823946237564,
+            "white_fraction": 0.7682749851970901,
+            "edge_density": 0.24355016071730673
+          }
+        },
+        {
+          "id": "camscanner_009",
+          "sha256": "fb6247c0e4925f4b6cba50b206e0ff12ea30e1cab16727217dc9f5572452e549",
+          "descriptors": {
+            "bright_background_fraction": 0.781097029683584,
+            "bright_background_variance": 0.0011072492925450206,
+            "background_laplacian_abs": 0.004584027454257011,
+            "background_hf_energy": 6.939456216059625e-05,
+            "estimated_background_noise": 0.000897399209353885,
+            "global_laplacian_abs": 0.02296099252998829,
+            "white_fraction": 0.7895336485745614,
+            "edge_density": 0.13237928806390978
+          }
+        },
+        {
+          "id": "camscanner_010",
+          "sha256": "e6755a5df2bff84866fcd2dbf695ecc5670a3890e566fd3b9ee04c24217af4ce",
+          "descriptors": {
+            "bright_background_fraction": 0.7439731789781715,
+            "bright_background_variance": 0.0001728410425130278,
+            "background_laplacian_abs": 0.005704405717551708,
+            "background_hf_energy": 8.346916729351506e-05,
+            "estimated_background_noise": 0.0011357060864530583,
+            "global_laplacian_abs": 0.024604827165603638,
+            "white_fraction": 0.7722697030211958,
+            "edge_density": 0.16131539663081304
+          }
+        },
+        {
+          "id": "camscanner_011",
+          "sha256": "464cce80a23d5071ecd016e422e72fd66c70c00f5b34b9a14544b1892689e5bb",
+          "descriptors": {
+            "bright_background_fraction": 0.5063777455765711,
+            "bright_background_variance": 1.0779729564092122e-05,
+            "background_laplacian_abs": 0.002926539396867156,
+            "background_hf_energy": 4.560296656563878e-05,
+            "estimated_background_noise": 0.0006502862378720926,
+            "global_laplacian_abs": 0.05041074380278587,
+            "white_fraction": 0.7164048200122025,
+            "edge_density": 0.30429568334350215
+          }
+        },
+        {
+          "id": "camscanner_012",
+          "sha256": "d84ac7fbfa12810b041258b3d6018e8cd0b95f64fd8366a297132729adbfb805",
+          "descriptors": {
+            "bright_background_fraction": 0.5632760989010989,
+            "bright_background_variance": 7.59995891712606e-05,
+            "background_laplacian_abs": 0.01372512523084879,
+            "background_hf_energy": 0.00044838612666353583,
+            "estimated_background_noise": 0.002113243405295708,
+            "global_laplacian_abs": 0.04676973447203636,
+            "white_fraction": 0.6833461538461538,
+            "edge_density": 0.28001373626373627
+          }
+        },
+        {
+          "id": "camscanner_013",
+          "sha256": "8d24076afd3686148672e20b482a438c96b09e0d5c6eef4a45def1a105a033cb",
+          "descriptors": {
+            "bright_background_fraction": 0.8022601787860577,
+            "bright_background_variance": 9.02090105228126e-05,
+            "background_laplacian_abs": 0.002406385261565447,
+            "background_hf_energy": 2.9030254154349677e-05,
+            "estimated_background_noise": 0.000527247398642457,
+            "global_laplacian_abs": 0.01426749024540186,
+            "white_fraction": 0.8708730844350961,
+            "edge_density": 0.11163330078125
+          }
+        },
+        {
+          "id": "camscanner_014",
+          "sha256": "edc482bafd5637b92813ec4ae2b4d21b1abc9cf0b211c96c13ae14d9dd136202",
+          "descriptors": {
+            "bright_background_fraction": 0.7080148071625344,
+            "bright_background_variance": 0.00015441120194736868,
+            "background_laplacian_abs": 0.002342585241422057,
+            "background_hf_energy": 9.457913984078914e-05,
+            "estimated_background_noise": 0.00038345664162729357,
+            "global_laplacian_abs": 0.040457580238580704,
+            "white_fraction": 0.8200757575757576,
+            "edge_density": 0.17824060409287681
+          }
+        },
+        {
+          "id": "camscanner_015",
+          "sha256": "af4bbec14610f8c6a030e4b4233ab24ffa38a99c7735a95c6bd5c6301d7ae6ec",
+          "descriptors": {
+            "bright_background_fraction": 0.7302800269905533,
+            "bright_background_variance": 5.929831604589708e-05,
+            "background_laplacian_abs": 0.002532592276111245,
+            "background_hf_energy": 5.728083124267869e-05,
+            "estimated_background_noise": 0.0004960882253483907,
+            "global_laplacian_abs": 0.026966527104377747,
+            "white_fraction": 0.8418121626180837,
+            "edge_density": 0.13646887651821862
+          }
+        },
+        {
+          "id": "camscanner_016",
+          "sha256": "92cce25a9a19a185115923f22a05116d8c62fb5b6c53f0251e86e4b747a0ff56",
+          "descriptors": {
+            "bright_background_fraction": 0.546594158496732,
+            "bright_background_variance": 3.7397527194116265e-05,
+            "background_laplacian_abs": 0.006382498424500227,
+            "background_hf_energy": 0.00010267378092976287,
+            "estimated_background_noise": 0.0013048059570444335,
+            "global_laplacian_abs": 0.049232278019189835,
+            "white_fraction": 0.7284663865546218,
+            "edge_density": 0.2752283204948646
+          }
+        },
+        {
+          "id": "camscanner_017",
+          "sha256": "bc8b4865172a92f7ced1fbdff6f905447f69b709db54dcf6360d9386773bc82b",
+          "descriptors": {
+            "bright_background_fraction": 0.5617939963010385,
+            "bright_background_variance": 1.2344223250693176e-05,
+            "background_laplacian_abs": 0.0046172537840902805,
+            "background_hf_energy": 7.354596891673282e-05,
+            "estimated_background_noise": 0.0010381335977208452,
+            "global_laplacian_abs": 0.07853174209594727,
+            "white_fraction": 0.7920543462796984,
+            "edge_density": 0.23683845497225778
+          }
+        },
+        {
+          "id": "camscanner_018",
+          "sha256": "9f79628717904d06f8d70947f1ab169275630a6ac7201c3000b0d391887a3fb9",
+          "descriptors": {
+            "bright_background_fraction": 0.5510069756975697,
+            "bright_background_variance": 0.0008076528902165592,
+            "background_laplacian_abs": 0.012150292284786701,
+            "background_hf_energy": 0.0003146719536744058,
+            "estimated_background_noise": 0.002142072281700542,
+            "global_laplacian_abs": 0.05419314280152321,
+            "white_fraction": 0.6440608123312331,
+            "edge_density": 0.2549251800180018
+          }
+        },
+        {
+          "id": "camscanner_019",
+          "sha256": "c954ecd79c5345f5940ef256829d38d35b92a2a5a558e311b7b1d9e02b3c20c7",
+          "descriptors": {
+            "bright_background_fraction": 0.6540396129211918,
+            "bright_background_variance": 0.00021181012562010437,
+            "background_laplacian_abs": 0.005618386436253786,
+            "background_hf_energy": 0.0001863404322648421,
+            "estimated_background_noise": 0.0010148605879820858,
+            "global_laplacian_abs": 0.06084933876991272,
+            "white_fraction": 0.7932396094402674,
+            "edge_density": 0.20065136800334168
+          }
+        },
+        {
+          "id": "camscanner_020",
+          "sha256": "ee186b6f8817ade29f8be5d9eb2670122aff8f34242fd32b4461a90ef0d05887",
+          "descriptors": {
+            "bright_background_fraction": 0.6422969228384297,
+            "bright_background_variance": 0.0025140796788036823,
+            "background_laplacian_abs": 0.004790362436324358,
+            "background_hf_energy": 0.00014997960533946753,
+            "estimated_background_noise": 0.0008260320311502959,
+            "global_laplacian_abs": 0.056190356612205505,
+            "white_fraction": 0.7128119792272216,
+            "edge_density": 0.16465866372127272
+          }
+        },
+        {
+          "id": "camscanner_021",
+          "sha256": "ec84cfc7c695f4bee744998af6de8e17ee189e4ae85adda944a5d8ecd2f63d48",
+          "descriptors": {
+            "bright_background_fraction": 0.6607148360453649,
+            "bright_background_variance": 2.363394742133096e-05,
+            "background_laplacian_abs": 0.001557365176267922,
+            "background_hf_energy": 3.469601142569445e-05,
+            "estimated_background_noise": 0.00031618411614628633,
+            "global_laplacian_abs": 0.03223017603158951,
+            "white_fraction": 0.829935589250493,
+            "edge_density": 0.17704095784023668
+          }
+        },
+        {
+          "id": "camscanner_022",
+          "sha256": "f5e1e94b62d75b60f601672161f6d56e39f023391ba5852688869b6452e875c3",
+          "descriptors": {
+            "bright_background_fraction": 0.6405386586452763,
+            "bright_background_variance": 1.3854966709914152e-05,
+            "background_laplacian_abs": 0.0032537567894905806,
+            "background_hf_energy": 3.9430578908650205e-05,
+            "estimated_background_noise": 0.0007128885155292102,
+            "global_laplacian_abs": 0.03455103933811188,
+            "white_fraction": 0.8006016042780749,
+            "edge_density": 0.20936107397504455
+          }
+        },
+        {
+          "id": "camscanner_023",
+          "sha256": "841a1bd1439520450690f37ebbeb066f54a6e96f840f23f8d5f633992495b04a",
+          "descriptors": {
+            "bright_background_fraction": 0.6149064309346567,
+            "bright_background_variance": 3.7736921512987465e-05,
+            "background_laplacian_abs": 0.004772108048200607,
+            "background_hf_energy": 8.434410119662061e-05,
+            "estimated_background_noise": 0.0009679528214523048,
+            "global_laplacian_abs": 0.05935872346162796,
+            "white_fraction": 0.7816118693134823,
+            "edge_density": 0.21378205128205127
+          }
+        },
+        {
+          "id": "camscanner_024",
+          "sha256": "61282805e766e1deb3caa761fb8da1edbf89bedb1cf5320480d9d00ab19b9945",
+          "descriptors": {
+            "bright_background_fraction": 0.6746465434990025,
+            "bright_background_variance": 8.090504707070068e-05,
+            "background_laplacian_abs": 0.006737496238201857,
+            "background_hf_energy": 0.0001241389982169494,
+            "estimated_background_noise": 0.0013154339667705332,
+            "global_laplacian_abs": 0.03529955819249153,
+            "white_fraction": 0.791316101425391,
+            "edge_density": 0.19001358892069276
+          }
+        },
+        {
+          "id": "camscanner_025",
+          "sha256": "7e0e3afb15a4ec0eb639d690cd6b62ab9c7bd22c6f284739551b6363b662a09c",
+          "descriptors": {
+            "bright_background_fraction": 0.6909447798709544,
+            "bright_background_variance": 0.001001390628516674,
+            "background_laplacian_abs": 0.004536957945674658,
+            "background_hf_energy": 7.452742283931002e-05,
+            "estimated_background_noise": 0.0009317170306791755,
+            "global_laplacian_abs": 0.04203195497393608,
+            "white_fraction": 0.7304390920162732,
+            "edge_density": 0.1635306807286673
+          }
+        },
+        {
+          "id": "camscanner_026",
+          "sha256": "012f4bd44fc5373e641eaae1c94fb168fbed80fbce9623dd6cf6143adcf636c1",
+          "descriptors": {
+            "bright_background_fraction": 0.5343523394337016,
+            "bright_background_variance": 0.0006379029946401715,
+            "background_laplacian_abs": 0.004531725309789181,
+            "background_hf_energy": 8.629526564618573e-05,
+            "estimated_background_noise": 0.000899189074239253,
+            "global_laplacian_abs": 0.0571463517844677,
+            "white_fraction": 0.6907174407228361,
+            "edge_density": 0.2657508920349908
+          }
+        },
+        {
+          "id": "camscanner_027",
+          "sha256": "9136305c99ab043286541151d7178402262a66180246d7dd07721d26de42c76a",
+          "descriptors": {
+            "bright_background_fraction": 0.7330605764533463,
+            "bright_background_variance": 5.3364874474937096e-05,
+            "background_laplacian_abs": 0.002898359438404441,
+            "background_hf_energy": 7.14027410140261e-05,
+            "estimated_background_noise": 0.0005498878130721574,
+            "global_laplacian_abs": 0.037446413189172745,
+            "white_fraction": 0.8829689789936492,
+            "edge_density": 0.13095078163165608
+          }
+        },
+        {
+          "id": "camscanner_028",
+          "sha256": "fee958e9e18062745ce9ab749dc90f34f53f9c85e0a81c048a7566c52cdba698",
+          "descriptors": {
+            "bright_background_fraction": 0.7451894757510308,
+            "bright_background_variance": 1.4211325378710171e-06,
+            "background_laplacian_abs": 0.0005328882834874094,
+            "background_hf_energy": 5.8593022913555615e-06,
+            "estimated_background_noise": 0.0001277649321802744,
+            "global_laplacian_abs": 0.018159175291657448,
+            "white_fraction": 0.8980610642057726,
+            "edge_density": 0.12155900255252307
+          }
+        },
+        {
+          "id": "camscanner_029",
+          "sha256": "f93cb41c8827d7d0e02b5d62ef0a87804f07a7af5b0704d230021585e9b354a2",
+          "descriptors": {
+            "bright_background_fraction": 0.7596743881118881,
+            "bright_background_variance": 0.00016052932187449187,
+            "background_laplacian_abs": 0.005196612793952227,
+            "background_hf_energy": 8.693537529325113e-05,
+            "estimated_background_noise": 0.0010379361396632778,
+            "global_laplacian_abs": 0.027284638956189156,
+            "white_fraction": 0.8450633741258742,
+            "edge_density": 0.12290865384615385
+          }
+        },
+        {
+          "id": "camscanner_030",
+          "sha256": "c22d036aecc259d269d38e0255ceafe80eaec4be327b727d443de2dd705dbc13",
+          "descriptors": {
+            "bright_background_fraction": 0.7290652654867257,
+            "bright_background_variance": 1.8574271507532103e-06,
+            "background_laplacian_abs": 0.0005998637643642724,
+            "background_hf_energy": 7.384953732980648e-06,
+            "estimated_background_noise": 0.0001431666606705283,
+            "global_laplacian_abs": 0.02136564441025257,
+            "white_fraction": 0.8926639179404666,
+            "edge_density": 0.1260659694288013
+          }
+        },
+        {
+          "id": "camscanner_031",
+          "sha256": "0a3bfaa231cdcf6e680e95ee5221d6b06c5f62eef7fc1952d4574c6bf8422495",
+          "descriptors": {
+            "bright_background_fraction": 0.6123628029437889,
+            "bright_background_variance": 0.00014704812201671302,
+            "background_laplacian_abs": 0.0062530869618058205,
+            "background_hf_energy": 0.00016629879246465862,
+            "estimated_background_noise": 0.0011657015217172056,
+            "global_laplacian_abs": 0.055287182331085205,
+            "white_fraction": 0.7605058844055322,
+            "edge_density": 0.22032221482045425
+          }
+        },
+        {
+          "id": "camscanner_032",
+          "sha256": "49cc0e82dcdf601a64ec094c86d4257eb8354e60252912139e0ef2946e1207b8",
+          "descriptors": {
+            "bright_background_fraction": 0.6873442446285445,
+            "bright_background_variance": 0.00010954085882985964,
+            "background_laplacian_abs": 0.011940461583435535,
+            "background_hf_energy": 0.00027746515115723014,
+            "estimated_background_noise": 0.002237537319065635,
+            "global_laplacian_abs": 0.04621883109211922,
+            "white_fraction": 0.6789460833838485,
+            "edge_density": 0.15683723984643363
+          }
+        },
+        {
+          "id": "camscanner_033",
+          "sha256": "9e429a2aa4836885760e9771ba633b75ba4cb702ba6cc506c991d69b9966fef6",
+          "descriptors": {
+            "bright_background_fraction": 0.7235200375549735,
+            "bright_background_variance": 0.0014140562852844596,
+            "background_laplacian_abs": 0.005632477346807718,
+            "background_hf_energy": 6.915617996128276e-05,
+            "estimated_background_noise": 0.0011776978282392657,
+            "global_laplacian_abs": 0.02563624270260334,
+            "white_fraction": 0.6454699313139299,
+            "edge_density": 0.1344474230370114
+          }
+        },
+        {
+          "id": "camscanner_034",
+          "sha256": "0068b4148bac4d8e022bd35a243761607f7c65373c4b5b4ff1a78fa329639757",
+          "descriptors": {
+            "bright_background_fraction": 0.6160720217925719,
+            "bright_background_variance": 7.098585774656385e-05,
+            "background_laplacian_abs": 0.006601639557629824,
+            "background_hf_energy": 0.00012666507973335683,
+            "estimated_background_noise": 0.0013566132124213416,
+            "global_laplacian_abs": 0.07071208208799362,
+            "white_fraction": 0.823439887715102,
+            "edge_density": 0.20490332868247957
+          }
+        },
+        {
+          "id": "camscanner_035",
+          "sha256": "97ee2aa56bc55f29029c40b79bdd66e5eff397c0f8fe57953eecd2c8bc03c82c",
+          "descriptors": {
+            "bright_background_fraction": 0.6398762765121759,
+            "bright_background_variance": 0.00013225595466792583,
+            "background_laplacian_abs": 0.004188605584204197,
+            "background_hf_energy": 6.706135900458321e-05,
+            "estimated_background_noise": 0.0009148984676733914,
+            "global_laplacian_abs": 0.044590044766664505,
+            "white_fraction": 0.7695036331500392,
+            "edge_density": 0.15626636554071746
+          }
+        },
+        {
+          "id": "camscanner_036",
+          "sha256": "10a7c82ecd2befe25b9ce2ef0dcb0041a85e6e9d67700e8fe68285582806a733",
+          "descriptors": {
+            "bright_background_fraction": 0.7470140861742425,
+            "bright_background_variance": 1.9833580154227093e-05,
+            "background_laplacian_abs": 0.0021037731785327196,
+            "background_hf_energy": 3.738543455256149e-05,
+            "estimated_background_noise": 0.0004389192541836856,
+            "global_laplacian_abs": 0.02400892600417137,
+            "white_fraction": 0.8815991950757576,
+            "edge_density": 0.13165542140151515
+          }
+        },
+        {
+          "id": "camscanner_037",
+          "sha256": "e90abad3f1b5a02fce78dc40ab6a6dabf8fc857a6b366481218b97128c3f5031",
+          "descriptors": {
+            "bright_background_fraction": 0.7054323112604551,
+            "bright_background_variance": 7.021472993073985e-05,
+            "background_laplacian_abs": 0.006676049903035164,
+            "background_hf_energy": 0.00012945638445671648,
+            "estimated_background_noise": 0.0012900058433748958,
+            "global_laplacian_abs": 0.028388191014528275,
+            "white_fraction": 0.8093258062748822,
+            "edge_density": 0.17645937579897
+          }
+        },
+        {
+          "id": "camscanner_038",
+          "sha256": "5bd5f592a5956650eb3ee852ee62cee5cfaa7a40c31379d71ce5284f475c1750",
+          "descriptors": {
+            "bright_background_fraction": 0.7676142697881828,
+            "bright_background_variance": 5.5822947615524754e-05,
+            "background_laplacian_abs": 0.0022284553851932287,
+            "background_hf_energy": 3.4089156542904675e-05,
+            "estimated_background_noise": 0.00047612516709334116,
+            "global_laplacian_abs": 0.021251130849123,
+            "white_fraction": 0.8755586804499847,
+            "edge_density": 0.12636186277490624
+          }
+        },
+        {
+          "id": "camscanner_039",
+          "sha256": "5204003669ca18888cc165ccc8cf045de9a2624922240cfcab14896d5872ebb0",
+          "descriptors": {
+            "bright_background_fraction": 0.5271388437733199,
+            "bright_background_variance": 7.213134813355282e-05,
+            "background_laplacian_abs": 0.00871073268353939,
+            "background_hf_energy": 0.00020907809084746987,
+            "estimated_background_noise": 0.0017451185550436971,
+            "global_laplacian_abs": 0.0784544125199318,
+            "white_fraction": 0.7547298187085729,
+            "edge_density": 0.23627145428207716
+          }
+        },
+        {
+          "id": "camscanner_040",
+          "sha256": "e9d2775a61a7c2256f760d4a4748aaa2954981aa3f1610ca2bd4ba06ae3041c2",
+          "descriptors": {
+            "bright_background_fraction": 0.6989001714714392,
+            "bright_background_variance": 0.0002511722268536687,
+            "background_laplacian_abs": 0.008942468091845512,
+            "background_hf_energy": 0.00019571652228478342,
+            "estimated_background_noise": 0.001623652765916022,
+            "global_laplacian_abs": 0.043874286115169525,
+            "white_fraction": 0.7253420497981639,
+            "edge_density": 0.17330002143392992
+          }
+        },
+        {
+          "id": "camscanner_041",
+          "sha256": "a2887ee43d3e17bd0a121bd96f6d5f7cf8def1253b082372bb097234b6ab0943",
+          "descriptors": {
+            "bright_background_fraction": 0.8139486504279131,
+            "bright_background_variance": 0.0006564114592038095,
+            "background_laplacian_abs": 0.01309917401522398,
+            "background_hf_energy": 0.0003889725776389241,
+            "estimated_background_noise": 0.0022617756360769547,
+            "global_laplacian_abs": 0.028909169137477875,
+            "white_fraction": 0.7306464779460171,
+            "edge_density": 0.10895984200131666
+          }
+        },
+        {
+          "id": "camscanner_042",
+          "sha256": "17e9d60c128a2468a1cd55f76f58928fc60d0eef54d58cefacf0913b7b910fe7",
+          "descriptors": {
+            "bright_background_fraction": 0.6089488031348497,
+            "bright_background_variance": 0.00012070625234628096,
+            "background_laplacian_abs": 0.00488810520619154,
+            "background_hf_energy": 0.0001248425105586648,
+            "estimated_background_noise": 0.0009908488127520832,
+            "global_laplacian_abs": 0.06650828570127487,
+            "white_fraction": 0.8142239543402334,
+            "edge_density": 0.21231791464349603
+          }
+        },
+        {
+          "id": "camscanner_043",
+          "sha256": "dbe304f6a1b15cadd88d9a0a8a60f01261c55554dd8e6bbd543915e8d8e02d50",
+          "descriptors": {
+            "bright_background_fraction": 0.6295744906230426,
+            "bright_background_variance": 0.0001638161193113774,
+            "background_laplacian_abs": 0.005038379225879908,
+            "background_hf_energy": 9.510090603725985e-05,
+            "estimated_background_noise": 0.00100025423611091,
+            "global_laplacian_abs": 0.04245125129818916,
+            "white_fraction": 0.7791233742308684,
+            "edge_density": 0.2328672488117608
+          }
+        },
+        {
+          "id": "camscanner_044",
+          "sha256": "313689e96676b046ad5b2001e23e8997d609b0a4bce0e1e90baeb1e29747bb91",
+          "descriptors": {
+            "bright_background_fraction": 0.6397462610998598,
+            "bright_background_variance": 9.919340664055198e-05,
+            "background_laplacian_abs": 0.0010800566524267197,
+            "background_hf_energy": 2.0064995624125004e-05,
+            "estimated_background_noise": 0.00025827907873225784,
+            "global_laplacian_abs": 0.050916481763124466,
+            "white_fraction": 0.7904804097211403,
+            "edge_density": 0.18399721529833307
+          }
+        },
+        {
+          "id": "camscanner_045",
+          "sha256": "9baabf00fe11e8598d49400f116210347f6e84ba892f0df98e8bfcbccf3806d5",
+          "descriptors": {
+            "bright_background_fraction": 0.6346264982876713,
+            "bright_background_variance": 7.436051237164065e-05,
+            "background_laplacian_abs": 0.0032385874073952436,
+            "background_hf_energy": 6.214825407369062e-05,
+            "estimated_background_noise": 0.0006327113521438381,
+            "global_laplacian_abs": 0.02895412966609001,
+            "white_fraction": 0.7619060359589042,
+            "edge_density": 0.20360124143835617
+          }
+        },
+        {
+          "id": "camscanner_046",
+          "sha256": "e5714b8ffd308e13a56369a1453079cb7d6fd955b4280e29397d46043d232700",
+          "descriptors": {
+            "bright_background_fraction": 0.7221609237536657,
+            "bright_background_variance": 9.631190914660692e-05,
+            "background_laplacian_abs": 0.011865343898534775,
+            "background_hf_energy": 0.0004762980970554054,
+            "estimated_background_noise": 0.002202278507962558,
+            "global_laplacian_abs": 0.04303557053208351,
+            "white_fraction": 0.7907404692082112,
+            "edge_density": 0.1710648826979472
+          }
+        },
+        {
+          "id": "camscanner_047",
+          "sha256": "fda671fd59e9f5b89ea0e3df11a8c0a7fcba7d3b82dcc4461232b36a3a9affed",
+          "descriptors": {
+            "bright_background_fraction": 0.5524159663865547,
+            "bright_background_variance": 3.365867814864032e-05,
+            "background_laplacian_abs": 0.0014593342784792185,
+            "background_hf_energy": 5.657165820593946e-05,
+            "estimated_background_noise": 0.0003110357377401443,
+            "global_laplacian_abs": 0.06329773366451263,
+            "white_fraction": 0.7831427015250545,
+            "edge_density": 0.2521591970121382
+          }
+        },
+        {
+          "id": "camscanner_048",
+          "sha256": "e96294327eeaec2a4f3e4a9ca2c08f08bf7402eb9b40550fba668562397db2c7",
+          "descriptors": {
+            "bright_background_fraction": 0.6488695113525361,
+            "bright_background_variance": 7.895512680988759e-05,
+            "background_laplacian_abs": 0.004143072757869959,
+            "background_hf_energy": 9.016558760777116e-05,
+            "estimated_background_noise": 0.0007913271725781776,
+            "global_laplacian_abs": 0.0469367615878582,
+            "white_fraction": 0.8051476315360241,
+            "edge_density": 0.196897639324914
+          }
+        },
+        {
+          "id": "camscanner_049",
+          "sha256": "3f9269efc12a1b9cf010240b35a4ccd74899580248f726155b7daea9de231958",
+          "descriptors": {
+            "bright_background_fraction": 0.6975787173007308,
+            "bright_background_variance": 3.765479050343856e-05,
+            "background_laplacian_abs": 0.005887284874916077,
+            "background_hf_energy": 0.00010302294685970992,
+            "estimated_background_noise": 0.0011552962602432385,
+            "global_laplacian_abs": 0.043761856853961945,
+            "white_fraction": 0.830741947759228,
+            "edge_density": 0.1572223794237318
+          }
+        },
+        {
+          "id": "camscanner_050",
+          "sha256": "b04dc093364889e6170e041e23923a18517e0cfa515eac0c64b642980c0604ad",
+          "descriptors": {
+            "bright_background_fraction": 0.6627605459057072,
+            "bright_background_variance": 3.266855128458701e-05,
+            "background_laplacian_abs": 0.003748434828594327,
+            "background_hf_energy": 5.579434218816459e-05,
+            "estimated_background_noise": 0.0007878248697108032,
+            "global_laplacian_abs": 0.03578061982989311,
+            "white_fraction": 0.8264857320099256,
+            "edge_density": 0.17966501240694788
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_001",
+          "sha256": "3653dc06aaf218a92c10e7da721f6882047a89d856ca8719e1b173867be4ba0c",
+          "descriptors": {
+            "bright_background_fraction": 0.7261005635624538,
+            "bright_background_variance": 6.0705526266247034e-05,
+            "background_laplacian_abs": 0.005543399136513472,
+            "background_hf_energy": 8.18487533251755e-05,
+            "estimated_background_noise": 0.0011260064214074625,
+            "global_laplacian_abs": 0.03608259558677673,
+            "white_fraction": 0.8459595959595959,
+            "edge_density": 0.14074818305001233
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_002",
+          "sha256": "0a68072c838c276cb7c2153f773e97989095d20e27da76c890725211d9eae7bc",
+          "descriptors": {
+            "bright_background_fraction": 0.6961054541198501,
+            "bright_background_variance": 0.00013453791325446218,
+            "background_laplacian_abs": 0.008634804747998714,
+            "background_hf_energy": 0.00017861046944744885,
+            "estimated_background_noise": 0.0016341718332655325,
+            "global_laplacian_abs": 0.047797560691833496,
+            "white_fraction": 0.8082865168539326,
+            "edge_density": 0.1533503043071161
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_003",
+          "sha256": "fd02911ed04ec659ee50a296a6a9b5470ce78c53ecc6e8e269373b3fd2538d6e",
+          "descriptors": {
+            "bright_background_fraction": 0.772473229052785,
+            "bright_background_variance": 7.067363185342401e-05,
+            "background_laplacian_abs": 0.006885392125695944,
+            "background_hf_energy": 0.0001181475308840163,
+            "estimated_background_noise": 0.0013274099438669621,
+            "global_laplacian_abs": 0.029198329895734787,
+            "white_fraction": 0.852479466263,
+            "edge_density": 0.11690739494856053
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_004",
+          "sha256": "d1562e12cc0077d3bc6cb092ad3ab2e0c82220a3495c614977fad02263343703",
+          "descriptors": {
+            "bright_background_fraction": 0.8259788189987163,
+            "bright_background_variance": 5.665058779413812e-05,
+            "background_laplacian_abs": 0.003946270793676376,
+            "background_hf_energy": 6.87174397171475e-05,
+            "estimated_background_noise": 0.0007756694781379294,
+            "global_laplacian_abs": 0.019964098930358887,
+            "white_fraction": 0.9034178433889603,
+            "edge_density": 0.085411986521181
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_005",
+          "sha256": "615d589dd071e812b4d67e30a51c79b89080deaee367887f773486124e788aa0",
+          "descriptors": {
+            "bright_background_fraction": 0.7645500943558071,
+            "bright_background_variance": 9.054878319147974e-05,
+            "background_laplacian_abs": 0.006735580507665873,
+            "background_hf_energy": 0.00011566760076675564,
+            "estimated_background_noise": 0.0013121257175114575,
+            "global_laplacian_abs": 0.027335168793797493,
+            "white_fraction": 0.8531308972379482,
+            "edge_density": 0.11991979756390461
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_006",
+          "sha256": "81be9d1b32964a4541dd83bf81fd91021a4ff6f1084c3d91f29fa7f384f18281",
+          "descriptors": {
+            "bright_background_fraction": 0.7154543675108932,
+            "bright_background_variance": 9.516569843981415e-05,
+            "background_laplacian_abs": 0.007336010690778494,
+            "background_hf_energy": 0.0001441933709429577,
+            "estimated_background_noise": 0.001356449507046521,
+            "global_laplacian_abs": 0.03786539286375046,
+            "white_fraction": 0.8185508578431373,
+            "edge_density": 0.14895237608932463
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_007",
+          "sha256": "ae8e78b5441c0801ee7bc95bba7995c4b3bf1d646a318bc34b08d7c5104e3125",
+          "descriptors": {
+            "bright_background_fraction": 0.7692122781065088,
+            "bright_background_variance": 0.00023078835511114448,
+            "background_laplacian_abs": 0.0038969239685684443,
+            "background_hf_energy": 5.3409545216709375e-05,
+            "estimated_background_noise": 0.0008222927786138406,
+            "global_laplacian_abs": 0.019337425008416176,
+            "white_fraction": 0.828453947368421,
+            "edge_density": 0.13247528028651512
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_008",
+          "sha256": "cd48eeab467cac49ccc069434d5978daff5f77dd1c272c8807824fe5cbebaa86",
+          "descriptors": {
+            "bright_background_fraction": 0.6683289949001275,
+            "bright_background_variance": 0.00020062517432961613,
+            "background_laplacian_abs": 0.005690254736691713,
+            "background_hf_energy": 9.584972576703876e-05,
+            "estimated_background_noise": 0.001122720252433642,
+            "global_laplacian_abs": 0.02939412370324135,
+            "white_fraction": 0.7049418295792605,
+            "edge_density": 0.21600483425414366
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_009",
+          "sha256": "c8b47d353b0b5c00a6521bdf11ef3bc8bf5de486adb4aa2015b0cfe6d2de4d65",
+          "descriptors": {
+            "bright_background_fraction": 0.7289478478950527,
+            "bright_background_variance": 5.3586787544190884e-05,
+            "background_laplacian_abs": 0.006108427885919809,
+            "background_hf_energy": 0.00011407247802708298,
+            "estimated_background_noise": 0.001173047836888523,
+            "global_laplacian_abs": 0.03791360557079315,
+            "white_fraction": 0.8395567178256024,
+            "edge_density": 0.13840242647689274
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_010",
+          "sha256": "e498f9ccb4bb6917e7ca832864d1447f897b87e02479a682ac02802214c6664a",
+          "descriptors": {
+            "bright_background_fraction": 0.6929848635183348,
+            "bright_background_variance": 0.0006645711255259812,
+            "background_laplacian_abs": 0.007640435826033354,
+            "background_hf_energy": 0.0001270430366275832,
+            "estimated_background_noise": 0.0014476210475342624,
+            "global_laplacian_abs": 0.029211489483714104,
+            "white_fraction": 0.7019006804731646,
+            "edge_density": 0.1746166620926485
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_011",
+          "sha256": "3ab31adee6d20920a51a19dc31bf5ae94035240815d8f26de9e2457c53235f15",
+          "descriptors": {
+            "bright_background_fraction": 0.5686243273860097,
+            "bright_background_variance": 0.00033334639738313854,
+            "background_laplacian_abs": 0.00761293713003397,
+            "background_hf_energy": 0.00015639635967090726,
+            "estimated_background_noise": 0.0014369548107063775,
+            "global_laplacian_abs": 0.045844122767448425,
+            "white_fraction": 0.6233462798883359,
+            "edge_density": 0.26920742808593273
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_012",
+          "sha256": "9f783bcb5b0761ea1a95de7b6742d1af5d7d87a0c7cf979d871fc9e6165f59e8",
+          "descriptors": {
+            "bright_background_fraction": 0.6608218722732372,
+            "bright_background_variance": 0.0008380301296710968,
+            "background_laplacian_abs": 0.010556715540587902,
+            "background_hf_energy": 0.0003907633654307574,
+            "estimated_background_noise": 0.0018589075056110827,
+            "global_laplacian_abs": 0.04722398892045021,
+            "white_fraction": 0.6944917660420216,
+            "edge_density": 0.18617470672151354
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_013",
+          "sha256": "92a96014b12dc9b8c823ac6cc865c5fa055328227c754870db568f07726196d5",
+          "descriptors": {
+            "bright_background_fraction": 0.5054695355706386,
+            "bright_background_variance": 0.00041336839785799384,
+            "background_laplacian_abs": 0.009036674164235592,
+            "background_hf_energy": 0.00026963322306983173,
+            "estimated_background_noise": 0.0016423277264728765,
+            "global_laplacian_abs": 0.06296196579933167,
+            "white_fraction": 0.7023472850678733,
+            "edge_density": 0.28512875502765206
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_014",
+          "sha256": "4f8bb3ee3f7f6870a80370dd8934f4313ebfec49f0b6e6f5ea2265acb759c962",
+          "descriptors": {
+            "bright_background_fraction": 0.7082333057395144,
+            "bright_background_variance": 3.661578375613317e-05,
+            "background_laplacian_abs": 0.004748993087559938,
+            "background_hf_energy": 0.00010335087426938117,
+            "estimated_background_noise": 0.0009763703709034202,
+            "global_laplacian_abs": 0.0473477765917778,
+            "white_fraction": 0.8786009933774834,
+            "edge_density": 0.1309016280353201
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_015",
+          "sha256": "d6b35b5aedf9a61232a8f30a21aef9e0eb39fba201c9d55f6d7896bf8dfdab9e",
+          "descriptors": {
+            "bright_background_fraction": 0.7136229838598958,
+            "bright_background_variance": 8.787627848505508e-06,
+            "background_laplacian_abs": 0.00269413273781538,
+            "background_hf_energy": 3.134109647362493e-05,
+            "estimated_background_noise": 0.000607217376972352,
+            "global_laplacian_abs": 0.027239933609962463,
+            "white_fraction": 0.8293619194587382,
+            "edge_density": 0.17541860477887672
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_016",
+          "sha256": "6d3e0109223bc03700077d4937a5aa15d0752a521ed27229f7a31154c8d06464",
+          "descriptors": {
+            "bright_background_fraction": 0.6632541174364482,
+            "bright_background_variance": 0.00010679222032194957,
+            "background_laplacian_abs": 0.007927078753709793,
+            "background_hf_energy": 0.00015045373584143817,
+            "estimated_background_noise": 0.0015818820215223234,
+            "global_laplacian_abs": 0.05578254163265228,
+            "white_fraction": 0.7875082050364005,
+            "edge_density": 0.16542472252058718
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_017",
+          "sha256": "95a4183f5a7a6bb6a41db02af96dc94bbdd2516b0306a863aceb2ba992809ecd",
+          "descriptors": {
+            "bright_background_fraction": 0.6825778008298755,
+            "bright_background_variance": 3.439825013629161e-05,
+            "background_laplacian_abs": 0.002882925560697913,
+            "background_hf_energy": 4.2573392420308664e-05,
+            "estimated_background_noise": 0.0006185788023408447,
+            "global_laplacian_abs": 0.03577226400375366,
+            "white_fraction": 0.8296618257261411,
+            "edge_density": 0.18152178423236515
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_018",
+          "sha256": "f7ca66dbe756a8c49d7ae7ff216c90fc6508c508aef662ca931cfe5fda0fb6e1",
+          "descriptors": {
+            "bright_background_fraction": 0.5526510209966905,
+            "bright_background_variance": 0.00047641241690143943,
+            "background_laplacian_abs": 0.008280608803033829,
+            "background_hf_energy": 0.00022804728359915316,
+            "estimated_background_noise": 0.0016402634629764752,
+            "global_laplacian_abs": 0.06630159169435501,
+            "white_fraction": 0.7013498853352742,
+            "edge_density": 0.2609494513945153
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_019",
+          "sha256": "88522d2da0cdf880eceb0a44fa3520c46488a7cf971d5172d0a61363a0ebd8b2",
+          "descriptors": {
+            "bright_background_fraction": 0.6779182220758307,
+            "bright_background_variance": 5.486693771672435e-05,
+            "background_laplacian_abs": 0.004479187075048685,
+            "background_hf_energy": 7.130108133424073e-05,
+            "estimated_background_noise": 0.0009567436236010994,
+            "global_laplacian_abs": 0.03925425186753273,
+            "white_fraction": 0.8206590360122968,
+            "edge_density": 0.16908212560386474
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_020",
+          "sha256": "2b812b9837ece2966a9d4820feb58186af8c1daa13a928cdb9bdebe5e54be893",
+          "descriptors": {
+            "bright_background_fraction": 0.5925202333897986,
+            "bright_background_variance": 8.003496077435557e-06,
+            "background_laplacian_abs": 0.0021692230366170406,
+            "background_hf_energy": 2.735852831392549e-05,
+            "estimated_background_noise": 0.0004993981768321004,
+            "global_laplacian_abs": 0.045131582766771317,
+            "white_fraction": 0.7844852249200075,
+            "edge_density": 0.23902879728966686
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_021",
+          "sha256": "171b86407a0c6a25845f0bb065763e02228755f9a4ed1e126ccfefbcdfcfb5f6",
+          "descriptors": {
+            "bright_background_fraction": 0.7912667531344574,
+            "bright_background_variance": 1.1493858437461313e-05,
+            "background_laplacian_abs": 0.0010445680236443877,
+            "background_hf_energy": 1.4908064258634113e-05,
+            "estimated_background_noise": 0.00022805729622675137,
+            "global_laplacian_abs": 0.016704082489013672,
+            "white_fraction": 0.8952158004070313,
+            "edge_density": 0.10989423512912172
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_022",
+          "sha256": "0aa13020ade200adf05089814bedaf5991051ed9434b19a27958b92068bb7b89",
+          "descriptors": {
+            "bright_background_fraction": 0.5687988656392643,
+            "bright_background_variance": 1.1722860108420718e-05,
+            "background_laplacian_abs": 0.004112891387194395,
+            "background_hf_energy": 6.760415271855891e-05,
+            "estimated_background_noise": 0.0009291119460989937,
+            "global_laplacian_abs": 0.0639118030667305,
+            "white_fraction": 0.7920526958015095,
+            "edge_density": 0.2337924255434537
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_023",
+          "sha256": "8f96e301660274c23d15334aa1d79c6b3fc784007af3ab97d0a42072690cc6de",
+          "descriptors": {
+            "bright_background_fraction": 0.5930258366437944,
+            "bright_background_variance": 0.0005418618093244731,
+            "background_laplacian_abs": 0.011285788379609585,
+            "background_hf_energy": 0.00039069028571248055,
+            "estimated_background_noise": 0.001997625973661253,
+            "global_laplacian_abs": 0.07212042808532715,
+            "white_fraction": 0.7480438184663537,
+            "edge_density": 0.23532111472252318
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_024",
+          "sha256": "bdaf66323c84a1640531d5f1939244c63f47d6290966074c781b4d4f1a5db8b8",
+          "descriptors": {
+            "bright_background_fraction": 0.6571622287968442,
+            "bright_background_variance": 4.00072276534047e-05,
+            "background_laplacian_abs": 0.004036346450448036,
+            "background_hf_energy": 8.239035378210247e-05,
+            "estimated_background_noise": 0.0007895033118351151,
+            "global_laplacian_abs": 0.0554824136197567,
+            "white_fraction": 0.8122580744575937,
+            "edge_density": 0.1799710305719921
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_025",
+          "sha256": "be75a60fa6c1b8234097031aca65cf211150ddb4698a67083bd85936a733c7c3",
+          "descriptors": {
+            "bright_background_fraction": 0.7961678101772441,
+            "bright_background_variance": 1.1566756256797817e-05,
+            "background_laplacian_abs": 0.0021167288068681955,
+            "background_hf_energy": 2.7078798666479997e-05,
+            "estimated_background_noise": 0.00047021455681349857,
+            "global_laplacian_abs": 0.019112808629870415,
+            "white_fraction": 0.9052444253859349,
+            "edge_density": 0.10540022870211549
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_026",
+          "sha256": "fcdb26370084346238dffa6c6a1e89120b9ca5be7d8b3bc8813b9337a48a091b",
+          "descriptors": {
+            "bright_background_fraction": 0.7297787454691905,
+            "bright_background_variance": 5.687787779606879e-05,
+            "background_laplacian_abs": 0.004181983415037394,
+            "background_hf_energy": 8.0552686995361e-05,
+            "estimated_background_noise": 0.0008247775402298791,
+            "global_laplacian_abs": 0.034008320420980453,
+            "white_fraction": 0.8451973419250907,
+            "edge_density": 0.15466169955698753
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_027",
+          "sha256": "ef2c5ec2ea96fe89ff485fe60f59d55395ae482e95832290db2d10813af39bcc",
+          "descriptors": {
+            "bright_background_fraction": 0.6743404961565339,
+            "bright_background_variance": 3.4545732887636404e-06,
+            "background_laplacian_abs": 0.0010124624241143465,
+            "background_hf_energy": 2.1008236217312515e-05,
+            "estimated_background_noise": 0.00023103721067138425,
+            "global_laplacian_abs": 0.04053410515189171,
+            "white_fraction": 0.8460932040531097,
+            "edge_density": 0.1785421034241789
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_028",
+          "sha256": "7bec5c8e98cb8ae21ec75e299cff7b552805a0468470fb74b8a431ca7b13c5bb",
+          "descriptors": {
+            "bright_background_fraction": 0.6951061454628018,
+            "bright_background_variance": 1.6809533917694353e-05,
+            "background_laplacian_abs": 0.002572332974523306,
+            "background_hf_energy": 3.8452148146461695e-05,
+            "estimated_background_noise": 0.0005643759819187303,
+            "global_laplacian_abs": 0.03562423959374428,
+            "white_fraction": 0.8642104366911375,
+            "edge_density": 0.13892094906531446
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_029",
+          "sha256": "dfc2e39a729260c0a406aaee66363682c4088c8e8eda63b332310e091df9ba76",
+          "descriptors": {
+            "bright_background_fraction": 0.7303968143616364,
+            "bright_background_variance": 1.66241115948651e-05,
+            "background_laplacian_abs": 0.0026136604137718678,
+            "background_hf_energy": 3.538338569342159e-05,
+            "estimated_background_noise": 0.0005617648665998445,
+            "global_laplacian_abs": 0.022721780464053154,
+            "white_fraction": 0.8552384593993326,
+            "edge_density": 0.14345414658262268
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_030",
+          "sha256": "8ceb559ff9e77e94d488fa561b666a0e2aba4dedb07f7c8a98f31af7f9081b44",
+          "descriptors": {
+            "bright_background_fraction": 0.5522504892367907,
+            "bright_background_variance": 3.50727759723668e-06,
+            "background_laplacian_abs": 0.0017660708399489522,
+            "background_hf_energy": 2.0964687792002223e-05,
+            "estimated_background_noise": 0.0004146122645671229,
+            "global_laplacian_abs": 0.040997982025146484,
+            "white_fraction": 0.7576587795765878,
+            "edge_density": 0.27140633339263476
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_031",
+          "sha256": "2d2e2ce0b9710c6ead5f05156b76a5130151cadaee9e87d68ed88e83f2651299",
+          "descriptors": {
+            "bright_background_fraction": 0.8158961187214612,
+            "bright_background_variance": 2.2070666091167368e-05,
+            "background_laplacian_abs": 0.003106557996943593,
+            "background_hf_energy": 5.004327613278292e-05,
+            "estimated_background_noise": 0.0006803172739485893,
+            "global_laplacian_abs": 0.024990800768136978,
+            "white_fraction": 0.9140372907153729,
+            "edge_density": 0.08345319634703197
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_032",
+          "sha256": "e5c0ce004e705ef1540d054fef3473a3526b9f9b1d936ea42a77c9eea49a2d33",
+          "descriptors": {
+            "bright_background_fraction": 0.767570467648943,
+            "bright_background_variance": 3.7202073144726455e-05,
+            "background_laplacian_abs": 0.004064546432346106,
+            "background_hf_energy": 7.892921712482348e-05,
+            "estimated_background_noise": 0.0007993366258319906,
+            "global_laplacian_abs": 0.03145990148186684,
+            "white_fraction": 0.8886258808456118,
+            "edge_density": 0.11282351057014735
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_033",
+          "sha256": "1d2c9661ebdac946cdb0929d29560167396aaf15b26641c959b0af2ff7c67576",
+          "descriptors": {
+            "bright_background_fraction": 0.7705432172869148,
+            "bright_background_variance": 0.001135291182436049,
+            "background_laplacian_abs": 0.008239226415753365,
+            "background_hf_energy": 0.00015876823454163969,
+            "estimated_background_noise": 0.0015130931786546643,
+            "global_laplacian_abs": 0.022574953734874725,
+            "white_fraction": 0.6160004001600641,
+            "edge_density": 0.12123249299719888
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_034",
+          "sha256": "b62f41f4850566f96461834a3dbceaeb40fd90e1df4987755626e668ddd6e27b",
+          "descriptors": {
+            "bright_background_fraction": 0.7721357509627728,
+            "bright_background_variance": 4.698931661550887e-05,
+            "background_laplacian_abs": 0.0043193562887609005,
+            "background_hf_energy": 5.957769099040888e-05,
+            "estimated_background_noise": 0.0009172266246230833,
+            "global_laplacian_abs": 0.02804388292133808,
+            "white_fraction": 0.8677845528455285,
+            "edge_density": 0.10944319640564827
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_035",
+          "sha256": "e9e40055feacb1c13813a667b159c9a6bd9ad83310e75898ae3b6c013e64af6b",
+          "descriptors": {
+            "bright_background_fraction": 0.6377478819913031,
+            "bright_background_variance": 0.0013292005751281977,
+            "background_laplacian_abs": 0.008684433996677399,
+            "background_hf_energy": 0.00020961894188076258,
+            "estimated_background_noise": 0.0015509555180182575,
+            "global_laplacian_abs": 0.04063913971185684,
+            "white_fraction": 0.629617914979757,
+            "edge_density": 0.17509184285500076
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_036",
+          "sha256": "fa2b477f967ad7d4cc01d3b283e80fa0d56d9e8d753053baf66b936fc75ab31a",
+          "descriptors": {
+            "bright_background_fraction": 0.7805074545736915,
+            "bright_background_variance": 6.652696174569428e-05,
+            "background_laplacian_abs": 0.004698340781033039,
+            "background_hf_energy": 0.00011104713485110551,
+            "estimated_background_noise": 0.0008758722930099,
+            "global_laplacian_abs": 0.03440788760781288,
+            "white_fraction": 0.8804647460785836,
+            "edge_density": 0.10454602810995496
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_037",
+          "sha256": "aafcdd59d90bc14477ec258b94a334c32a4df2f8ee8cbdcb7395077400130584",
+          "descriptors": {
+            "bright_background_fraction": 0.4926513229430953,
+            "bright_background_variance": 5.0941744120791554e-05,
+            "background_laplacian_abs": 0.003561402903869748,
+            "background_hf_energy": 6.182333163451403e-05,
+            "estimated_background_noise": 0.0007745644425403954,
+            "global_laplacian_abs": 0.06695516407489777,
+            "white_fraction": 0.7090952337803552,
+            "edge_density": 0.26756524102935847
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_038",
+          "sha256": "418af0094c2dd770b1265681b56d6de0791792f7be7268fdf182234b14291a97",
+          "descriptors": {
+            "bright_background_fraction": 0.6116524417017027,
+            "bright_background_variance": 0.0002927515597548336,
+            "background_laplacian_abs": 0.010294842533767223,
+            "background_hf_energy": 0.00030945020262151957,
+            "estimated_background_noise": 0.0018919841620030926,
+            "global_laplacian_abs": 0.06314273178577423,
+            "white_fraction": 0.716449532951996,
+            "edge_density": 0.22286580414659232
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_039",
+          "sha256": "1e6d8e9bfdf529d5e70afde5356a7b8477f35e879cd4a1c0a292c8e18e9dfcb0",
+          "descriptors": {
+            "bright_background_fraction": 0.588682844932845,
+            "bright_background_variance": 0.00015030114445835352,
+            "background_laplacian_abs": 0.004098564852029085,
+            "background_hf_energy": 6.5133637690451e-05,
+            "estimated_background_noise": 0.0008182910916737809,
+            "global_laplacian_abs": 0.03389445319771767,
+            "white_fraction": 0.6936151811151812,
+            "edge_density": 0.2667022792022792
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_040",
+          "sha256": "61f18a4e10d1541a6947fb51f26689da9a8bae6620f50cefd7339e0273fb8cbc",
+          "descriptors": {
+            "bright_background_fraction": 0.6444898549676299,
+            "bright_background_variance": 2.8274644137127325e-05,
+            "background_laplacian_abs": 0.004560375120490789,
+            "background_hf_energy": 8.633550896774977e-05,
+            "estimated_background_noise": 0.0009890358948816693,
+            "global_laplacian_abs": 0.053980134427547455,
+            "white_fraction": 0.8370194220405801,
+            "edge_density": 0.16313730454386535
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_041",
+          "sha256": "a991e076e2f5c44774b8299e5eba6b44d1830cd9596970a499c9234c8536de46",
+          "descriptors": {
+            "bright_background_fraction": 0.6727773556231003,
+            "bright_background_variance": 0.0009485784103162587,
+            "background_laplacian_abs": 0.007544033695012331,
+            "background_hf_energy": 0.00016864936333149672,
+            "estimated_background_noise": 0.0014652392670382048,
+            "global_laplacian_abs": 0.045997705310583115,
+            "white_fraction": 0.6665505741303613,
+            "edge_density": 0.15842057863334458
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_042",
+          "sha256": "f4898bc287b78e3044f494dd18ca1a1cc2983833f2964e941840c335ae1141fa",
+          "descriptors": {
+            "bright_background_fraction": 0.7805456883880451,
+            "bright_background_variance": 0.00011971213825745508,
+            "background_laplacian_abs": 0.007032688707113266,
+            "background_hf_energy": 0.00014679816376883537,
+            "estimated_background_noise": 0.001318612263337535,
+            "global_laplacian_abs": 0.030332051217556,
+            "white_fraction": 0.8409296913277805,
+            "edge_density": 0.11598940470357667
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_043",
+          "sha256": "7bb74ca75e5f8ccb713e43011e3c5a427a5fa3ac50acebc0e363c24af2873a85",
+          "descriptors": {
+            "bright_background_fraction": 0.5798029240766074,
+            "bright_background_variance": 6.462187593569979e-05,
+            "background_laplacian_abs": 0.0059134201146662235,
+            "background_hf_energy": 9.953425615094602e-05,
+            "estimated_background_noise": 0.0012257919967040955,
+            "global_laplacian_abs": 0.05084911361336708,
+            "white_fraction": 0.7424910225718194,
+            "edge_density": 0.24811046511627907
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_044",
+          "sha256": "0a4ee93e662a241608a39e710a87af1ca19f2a650291028599cbaf48869f6144",
+          "descriptors": {
+            "bright_background_fraction": 0.6361086023933168,
+            "bright_background_variance": 0.00024122452305164188,
+            "background_laplacian_abs": 0.005897845607250929,
+            "background_hf_energy": 0.00010498362098587677,
+            "estimated_background_noise": 0.0011374322395021174,
+            "global_laplacian_abs": 0.033809032291173935,
+            "white_fraction": 0.7347087378640776,
+            "edge_density": 0.21389704222172048
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_045",
+          "sha256": "f11aeed111e42ee26d66afc5419a5ab1bc2d11d975401175e291e3f43c010b7e",
+          "descriptors": {
+            "bright_background_fraction": 0.6964796333530274,
+            "bright_background_variance": 0.0006204134551808238,
+            "background_laplacian_abs": 0.004936215467751026,
+            "background_hf_energy": 0.00014161823492031544,
+            "estimated_background_noise": 0.000961073304910675,
+            "global_laplacian_abs": 0.03622578829526901,
+            "white_fraction": 0.6839242340275138,
+            "edge_density": 0.1632308779772128
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_046",
+          "sha256": "46e5032a0662b394d262cb2fed8f326e4dd89b91d052f9862fa9949d12e73632",
+          "descriptors": {
+            "bright_background_fraction": 0.7616246371552975,
+            "bright_background_variance": 2.1055042452644557e-05,
+            "background_laplacian_abs": 0.0025514194276183844,
+            "background_hf_energy": 3.802084029302932e-05,
+            "estimated_background_noise": 0.0005368918143399255,
+            "global_laplacian_abs": 0.022368960082530975,
+            "white_fraction": 0.8751020500725689,
+            "edge_density": 0.11950743831640058
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_047",
+          "sha256": "806420cd97fe6f972c8c5746b46c18973094370cd93dd31e98e4197fd84f3c5f",
+          "descriptors": {
+            "bright_background_fraction": 0.6924042443064182,
+            "bright_background_variance": 0.00021272466983646154,
+            "background_laplacian_abs": 0.010940346866846085,
+            "background_hf_energy": 0.00033932155929505825,
+            "estimated_background_noise": 0.0018800499137276961,
+            "global_laplacian_abs": 0.04499175399541855,
+            "white_fraction": 0.766620082815735,
+            "edge_density": 0.16601449275362318
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_048",
+          "sha256": "a14e34c4894f5c9675cec50c92e54c5c02c62dd05ea9b518f34d439f35e682e8",
+          "descriptors": {
+            "bright_background_fraction": 0.5790172115124835,
+            "bright_background_variance": 0.00039261652273125947,
+            "background_laplacian_abs": 0.007693109102547169,
+            "background_hf_energy": 0.0001528137072455138,
+            "estimated_background_noise": 0.0014457617318838188,
+            "global_laplacian_abs": 0.04443056881427765,
+            "white_fraction": 0.6525833161165233,
+            "edge_density": 0.24566931010918105
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_049",
+          "sha256": "17e6107e779d963cb32b17a46fe45fce6843f1cb87b4b6efdeafc68e68be1284",
+          "descriptors": {
+            "bright_background_fraction": 0.7898946908014266,
+            "bright_background_variance": 0.0001877439208328724,
+            "background_laplacian_abs": 0.008022292517125607,
+            "background_hf_energy": 0.000162086114869453,
+            "estimated_background_noise": 0.0015114903639391003,
+            "global_laplacian_abs": 0.028999140486121178,
+            "white_fraction": 0.8131644909494651,
+            "edge_density": 0.11623685036897471
+          }
+        },
+        {
+          "id": "pair_100405_pair_01076_050",
+          "sha256": "03c5900a9555c9e33236ff86fd5448a204f333fdb09423facd6d0b4bea86993d",
+          "descriptors": {
+            "bright_background_fraction": 0.6565806437272161,
+            "bright_background_variance": 9.24077321542427e-05,
+            "background_laplacian_abs": 0.005854524206370115,
+            "background_hf_energy": 0.0001101688903872855,
+            "estimated_background_noise": 0.00111331755263423,
+            "global_laplacian_abs": 0.03493314981460571,
+            "white_fraction": 0.7494665244065084,
+            "edge_density": 0.13747925372691977
+          }
+        }
+      ],
+      "means": {
+        "bright_background_fraction": 0.6773420808972304,
+        "bright_background_variance": 0.00024237076494955544,
+        "background_laplacian_abs": 0.005309840945992619,
+        "background_hf_energy": 0.00011687174086091545,
+        "estimated_background_noise": 0.001028244795091694,
+        "global_laplacian_abs": 0.03989821021445095,
+        "white_fraction": 0.7865371973955552,
+        "edge_density": 0.17649398706125852
+      }
+    },
+    "bettertest_3": {
+      "n": 3,
+      "per_image": [
+        {
+          "id": "0000015",
+          "sha256": "0c6ed722fbf6f209ea6608278f8e728e4c9eb295b3cf762a470f4669d44dec6c",
+          "descriptors": {
+            "bright_background_fraction": 0.8574438520871144,
+            "bright_background_variance": 2.7999953999824356e-07,
+            "background_laplacian_abs": 0.0001348109362879768,
+            "background_hf_energy": 3.1957015380612575e-06,
+            "estimated_background_noise": 4.0689831750980735e-05,
+            "global_laplacian_abs": 0.03069695085287094,
+            "white_fraction": 0.9533873071687841,
+            "edge_density": 0.06078436932849365
+          }
+        },
+        {
+          "id": "0000025",
+          "sha256": "08f212cac392127859f00ee505d2346047d00da05efe725fefa3a2ddbcd68bdd",
+          "descriptors": {
+            "bright_background_fraction": 0.7682603382216937,
+            "bright_background_variance": 2.1149304529899382e-07,
+            "background_laplacian_abs": 0.00016488865367136896,
+            "background_hf_energy": 3.3304374937870307e-06,
+            "estimated_background_noise": 4.821829711690526e-05,
+            "global_laplacian_abs": 0.058452058583498,
+            "white_fraction": 0.9143777249306382,
+            "edge_density": 0.10941504822301493
+          }
+        },
+        {
+          "id": "0000035",
+          "sha256": "0816e91e66cc300834756e12f4bfafc1d5d907302f84c8317f58b84ddf864c7d",
+          "descriptors": {
+            "bright_background_fraction": 0.6916512748080544,
+            "bright_background_variance": 3.91111171893499e-07,
+            "background_laplacian_abs": 0.0003375704982317984,
+            "background_hf_energy": 6.069179107726086e-06,
+            "estimated_background_noise": 9.722150217138817e-05,
+            "global_laplacian_abs": 0.07781894505023956,
+            "white_fraction": 0.8820334757834758,
+            "edge_density": 0.1543531797769086
+          }
+        }
+      ],
+      "means": {
+        "bright_background_fraction": 0.7724518217056208,
+        "bright_background_variance": 2.9420125239691214e-07,
+        "background_laplacian_abs": 0.0002124233627303814,
+        "background_hf_energy": 4.198439379858125e-06,
+        "estimated_background_noise": 6.204321034642472e-05,
+        "global_laplacian_abs": 0.0556559848288695,
+        "white_fraction": 0.9165995026276326,
+        "edge_density": 0.1081841991094724
+      }
+    }
+  },
+  "aggregation": "equal-image arithmetic means on RAW clean sources, before resize/registration",
+  "formulas": {
+    "background_mask": "gray>.8 AND farther than 5px square radius from gray<.7; 5px border excluded",
+    "variance": "population variance on mask",
+    "laplacian": "OpenCV ksize1, reflect101",
+    "hf_energy": "mean squared Laplacian on mask",
+    "estimated_noise": "mean absolute Immerkaer 3x3 response on mask * sqrt(pi/2)/6",
+    "white_fraction": "fraction gray>=.98",
+    "edge_density": "fraction Sobel magnitude>.2"
+  },
+  "limitation": "Background and high-frequency proxies are not calibrated sensor noise. White fraction and edge density depend on margins, ink coverage, font, diagrams and content. No restoration parameter is selected from them."
+}

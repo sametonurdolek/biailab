@@ -1,0 +1,615 @@
+{
+  "status": "prepared",
+  "source": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest",
+  "pairs": [
+    {
+      "id": "0000015",
+      "dirty": {
+        "path": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest\\dirty\\0000015.jpg",
+        "sha256": "8feb70041410ed4f519ecaa87456bb883b816cc5782e344119d79db8987c656a",
+        "width": 760,
+        "height": 928,
+        "mode": "RGB",
+        "format": "JPEG",
+        "decoded_dtype": "uint8",
+        "bits_per_channel": 8,
+        "channels": 3,
+        "mean": 0.6277337670326233,
+        "std": 0.07544754445552826,
+        "background_top_quartile_mean": 0.6743936538696289,
+        "background_top_quartile_std": 0.01727340742945671,
+        "ink_bottom_decile_mean": 0.4809280037879944,
+        "quantiles": [
+          0.07058823853731155,
+          0.2235294133424759,
+          0.6039215922355652,
+          0.6392157077789307,
+          0.6745098233222961,
+          0.7098039388656616,
+          0.7647058963775635
+        ],
+        "near_white_fraction": 0.0,
+        "near_black_fraction": 0.0,
+        "edge_mean": 0.05510495975613594,
+        "local_contrast": 0.0420377291738987,
+        "noise_laplacian": 0.000516796031198398,
+        "histogram": [
+          0,
+          0,
+          66,
+          570,
+          1494,
+          1961,
+          2422,
+          3115,
+          3097,
+          2756,
+          2546,
+          2442,
+          2462,
+          2576,
+          2480,
+          2580,
+          3296,
+          3512,
+          14576,
+          142598,
+          329258,
+          152135,
+          24040,
+          4123,
+          1175,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_channel_spread": 0.05154737042276075
+      },
+      "clean": {
+        "path": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest\\clean\\0000015.jpg",
+        "sha256": "0c6ed722fbf6f209ea6608278f8e728e4c9eb295b3cf762a470f4669d44dec6c",
+        "width": 760,
+        "height": 928,
+        "mode": "RGB",
+        "format": "JPEG",
+        "decoded_dtype": "uint8",
+        "bits_per_channel": 8,
+        "channels": 3,
+        "mean": 0.971150815486908,
+        "std": 0.15113292634487152,
+        "background_top_quartile_mean": 1.0,
+        "background_top_quartile_std": 0.0,
+        "ink_bottom_decile_mean": 0.971150815486908,
+        "quantiles": [
+          0.0,
+          0.01568627543747425,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "near_white_fraction": 0.9533873071687841,
+        "near_black_fraction": 0.012437613430127042,
+        "edge_mean": 0.13864678144454956,
+        "local_contrast": 0.08505170792341232,
+        "noise_laplacian": 0.0039755322099201676,
+        "histogram": [
+          9940,
+          1627,
+          907,
+          769,
+          743,
+          610,
+          555,
+          499,
+          508,
+          509,
+          550,
+          544,
+          540,
+          484,
+          523,
+          509,
+          515,
+          559,
+          585,
+          504,
+          630,
+          598,
+          605,
+          669,
+          654,
+          761,
+          862,
+          935,
+          1071,
+          1196,
+          1818,
+          673501
+        ],
+        "mean_channel_spread": 0.00014245489484359988
+      },
+      "geometry": {
+        "valid": true,
+        "reason": "accepted",
+        "matches": 418,
+        "inliers": 357,
+        "inlier_fraction": 0.854066985645933,
+        "coverage": 0.3509972393512726,
+        "residual_median": 0.163344606757164,
+        "residual_p95": 0.5991546511650085,
+        "resized_identity_median": 0.16357845067977905,
+        "resized_identity_p95": 0.6174495220184326,
+        "registration_required": false,
+        "homography": [
+          [
+            1.0002452218025626,
+            -8.920836786562512e-05,
+            -0.048018583476268556
+          ],
+          [
+            0.00033481148631075866,
+            0.9999003612349675,
+            -0.08718636380515604
+          ],
+          [
+            5.537408768513418e-07,
+            -3.994610644580283e-07,
+            1.0
+          ]
+        ]
+      },
+      "pairing_rule": "exact filename identity across dirty/clean",
+      "exact_prior_dirty_matches": [],
+      "prepared": {
+        "width": 760,
+        "height": 928,
+        "original_clean_roi": [
+          0,
+          0,
+          760,
+          928
+        ],
+        "resize_required": false,
+        "registration": false,
+        "applied_homography": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "dirty": {
+          "path": "prepared/0000015_dirty.png",
+          "sha256": "7bcccf681c8fee8f1e4ad3d152b9dc330d04ec2cf476d7418745f9ccc56a3289"
+        },
+        "clean": {
+          "path": "prepared/0000015_clean.png",
+          "sha256": "f97183563deb4fd59d80c484b6c19220655c9fbcd6528149fee7df05324cccd8"
+        }
+      }
+    },
+    {
+      "id": "0000025",
+      "dirty": {
+        "path": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest\\dirty\\0000025.jpg",
+        "sha256": "58e442b2f0fb80b035d743e155e3faeede38a367865201b07f3fbc60bdff6f72",
+        "width": 580,
+        "height": 1044,
+        "mode": "RGB",
+        "format": "JPEG",
+        "decoded_dtype": "uint8",
+        "bits_per_channel": 8,
+        "channels": 3,
+        "mean": 0.6290733814239502,
+        "std": 0.11012157052755356,
+        "background_top_quartile_mean": 0.7061567306518555,
+        "background_top_quartile_std": 0.03258676826953888,
+        "ink_bottom_decile_mean": 0.36542773246765137,
+        "quantiles": [
+          0.07450980693101883,
+          0.12941177189350128,
+          0.5686274766921997,
+          0.6509804129600525,
+          0.7098039388656616,
+          0.7843137383460999,
+          0.7960784435272217
+        ],
+        "near_white_fraction": 0.0,
+        "near_black_fraction": 0.0,
+        "edge_mean": 0.12153618782758713,
+        "local_contrast": 0.087551549077034,
+        "noise_laplacian": 0.0037208537253691624,
+        "histogram": [
+          0,
+          0,
+          160,
+          5305,
+          3398,
+          3443,
+          3228,
+          3038,
+          3055,
+          2939,
+          2928,
+          3051,
+          2994,
+          2824,
+          2888,
+          2683,
+          2663,
+          10532,
+          33343,
+          76829,
+          186004,
+          147625,
+          60678,
+          21319,
+          18320,
+          6273,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_channel_spread": 0.14253704480867524
+      },
+      "clean": {
+        "path": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest\\clean\\0000025.jpg",
+        "sha256": "08f212cac392127859f00ee505d2346047d00da05efe725fefa3a2ddbcd68bdd",
+        "width": 580,
+        "height": 1044,
+        "mode": "RGB",
+        "format": "JPEG",
+        "decoded_dtype": "uint8",
+        "bits_per_channel": 8,
+        "channels": 3,
+        "mean": 0.9489307999610901,
+        "std": 0.19488222897052765,
+        "background_top_quartile_mean": 1.0,
+        "background_top_quartile_std": 0.0,
+        "ink_bottom_decile_mean": 0.5106962323188782,
+        "quantiles": [
+          0.0,
+          0.007843137718737125,
+          0.9882352948188782,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "near_white_fraction": 0.9143777249306382,
+        "near_black_fraction": 0.01728266613819527,
+        "edge_mean": 0.2439074069261551,
+        "local_contrast": 0.15212763845920563,
+        "noise_laplacian": 0.0070184896624854816,
+        "histogram": [
+          12095,
+          2754,
+          1743,
+          1360,
+          1199,
+          1192,
+          1159,
+          1093,
+          1039,
+          1069,
+          1003,
+          953,
+          1004,
+          946,
+          950,
+          973,
+          974,
+          966,
+          960,
+          903,
+          1088,
+          1001,
+          1094,
+          1049,
+          1130,
+          1228,
+          1232,
+          1478,
+          1709,
+          2011,
+          2903,
+          555262
+        ],
+        "mean_channel_spread": 0.00029998523388745114
+      },
+      "geometry": {
+        "valid": true,
+        "reason": "accepted",
+        "matches": 1279,
+        "inliers": 1140,
+        "inlier_fraction": 0.8913213448006255,
+        "coverage": 0.312376469373703,
+        "residual_median": 0.13286092877388,
+        "residual_p95": 0.47076719999313354,
+        "resized_identity_median": 0.7220029830932617,
+        "resized_identity_p95": 1.0243148803710938,
+        "registration_required": true,
+        "homography": [
+          [
+            0.9997116393341058,
+            -8.398726517469979e-05,
+            -0.4397343228098472
+          ],
+          [
+            -0.0001354602768314537,
+            0.999709179466331,
+            -0.41874210811501544
+          ],
+          [
+            -1.7430974241964177e-07,
+            -2.594143831474698e-07,
+            1.0
+          ]
+        ]
+      },
+      "pairing_rule": "exact filename identity across dirty/clean",
+      "exact_prior_dirty_matches": [],
+      "prepared": {
+        "width": 575,
+        "height": 1040,
+        "original_clean_roi": [
+          2,
+          2,
+          577,
+          1042
+        ],
+        "resize_required": false,
+        "registration": true,
+        "applied_homography": [
+          [
+            0.9997116393341058,
+            -8.398726517469979e-05,
+            -0.4397343228098472
+          ],
+          [
+            -0.0001354602768314537,
+            0.999709179466331,
+            -0.41874210811501544
+          ],
+          [
+            -1.7430974241964177e-07,
+            -2.594143831474698e-07,
+            1.0
+          ]
+        ],
+        "dirty": {
+          "path": "prepared/0000025_dirty.png",
+          "sha256": "42334cb9ee351b036d5f5136156e6f605d97c80e9b476a26f541ef6d7c9ae5aa"
+        },
+        "clean": {
+          "path": "prepared/0000025_clean.png",
+          "sha256": "d18cc02403323fae6e0ffb5e231385ab41f765008da233e515dc4ce98b53efc7"
+        }
+      }
+    },
+    {
+      "id": "0000035",
+      "dirty": {
+        "path": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest\\dirty\\0000035.jpg",
+        "sha256": "1c07e5fbf537a8b5772075f34315900edd8cfc4fc804f66751f6b9669be5fa0c",
+        "width": 708,
+        "height": 936,
+        "mode": "RGB",
+        "format": "JPEG",
+        "decoded_dtype": "uint8",
+        "bits_per_channel": 8,
+        "channels": 3,
+        "mean": 0.5036035776138306,
+        "std": 0.10663968324661255,
+        "background_top_quartile_mean": 0.5592379570007324,
+        "background_top_quartile_std": 0.00557628832757473,
+        "ink_bottom_decile_mean": 0.22136053442955017,
+        "quantiles": [
+          0.0470588244497776,
+          0.0784313753247261,
+          0.4431372582912445,
+          0.5372549295425415,
+          0.5607843399047852,
+          0.572549045085907,
+          0.5921568870544434
+        ],
+        "near_white_fraction": 0.0,
+        "near_black_fraction": 0.0,
+        "edge_mean": 0.17442689836025238,
+        "local_contrast": 0.10736563801765442,
+        "noise_laplacian": 0.004523318602363909,
+        "histogram": [
+          0,
+          110,
+          17830,
+          7775,
+          4218,
+          3759,
+          3471,
+          3122,
+          2837,
+          2902,
+          2753,
+          2824,
+          3320,
+          8064,
+          19967,
+          58494,
+          123950,
+          346604,
+          50688,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_channel_spread": 0.12192632098954798
+      },
+      "clean": {
+        "path": "C:\\testly_external_workspace\\biailab\\spatial-nlm-spatial-control-study\\bettertest\\clean\\0000035.jpg",
+        "sha256": "0816e91e66cc300834756e12f4bfafc1d5d907302f84c8317f58b84ddf864c7d",
+        "width": 708,
+        "height": 936,
+        "mode": "RGB",
+        "format": "JPEG",
+        "decoded_dtype": "uint8",
+        "bits_per_channel": 8,
+        "channels": 3,
+        "mean": 0.9297885894775391,
+        "std": 0.2261384129524231,
+        "background_top_quartile_mean": 1.0,
+        "background_top_quartile_std": 0.0,
+        "ink_bottom_decile_mean": 0.316444993019104,
+        "quantiles": [
+          0.0,
+          0.003921568859368563,
+          0.886274516582489,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "near_white_fraction": 0.8820334757834758,
+        "near_black_fraction": 0.024153145975179875,
+        "edge_mean": 0.361950546503067,
+        "local_contrast": 0.21272063255310059,
+        "noise_laplacian": 0.008154855920286672,
+        "histogram": [
+          18405,
+          4262,
+          2691,
+          2180,
+          1966,
+          1793,
+          1731,
+          1528,
+          1603,
+          1526,
+          1519,
+          1433,
+          1327,
+          1308,
+          1253,
+          1336,
+          1297,
+          1289,
+          1236,
+          1210,
+          1543,
+          1455,
+          1571,
+          1593,
+          1790,
+          1838,
+          2229,
+          2421,
+          2897,
+          3403,
+          4378,
+          586677
+        ],
+        "mean_channel_spread": 0.0003874120752651826
+      },
+      "geometry": {
+        "valid": true,
+        "reason": "accepted",
+        "matches": 3820,
+        "inliers": 3727,
+        "inlier_fraction": 0.9756544502617801,
+        "coverage": 0.4445514976978302,
+        "residual_median": 0.022902175784111023,
+        "residual_p95": 0.1289544254541397,
+        "resized_identity_median": 0.022893676534295082,
+        "resized_identity_p95": 0.12944498658180237,
+        "registration_required": false,
+        "homography": [
+          [
+            1.0000378818298699,
+            1.3249074298034242e-05,
+            -0.017054593812814194
+          ],
+          [
+            -7.219112271204427e-06,
+            1.0000231214171267,
+            -0.0003872633876018756
+          ],
+          [
+            -5.239191958055913e-09,
+            3.783197800670455e-08,
+            1.0
+          ]
+        ]
+      },
+      "pairing_rule": "exact filename identity across dirty/clean",
+      "exact_prior_dirty_matches": [],
+      "prepared": {
+        "width": 708,
+        "height": 936,
+        "original_clean_roi": [
+          0,
+          0,
+          708,
+          936
+        ],
+        "resize_required": false,
+        "registration": false,
+        "applied_homography": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "dirty": {
+          "path": "prepared/0000035_dirty.png",
+          "sha256": "4c3df5f82cc8c0c51eecbf587c68b6bbb3a70a020115b7cc237b68c0ef9f2bac"
+        },
+        "clean": {
+          "path": "prepared/0000035_clean.png",
+          "sha256": "5bf0d51886ee54bff891712dd6182c9372082b070f8ac2b3b20fce8275ad2383"
+        }
+      }
+    }
+  ],
+  "unmatched": [],
+  "geometry_source": "unchanged audit_dataset.correspondence",
+  "preparation_source": "original prepare_pairs.py pixel-preparation block"
+}

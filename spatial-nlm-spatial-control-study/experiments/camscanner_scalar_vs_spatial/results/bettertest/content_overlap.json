@@ -1,0 +1,5 @@
+{
+  "matches": [],
+  "method": "SIFT1200 over all 100 previous clean sources; ratio .7, homography2px; >=35 inliers, fraction>=.65, >=.12 smaller descriptor set, new coverage>=.2",
+  "limitation": "No detected match is not proof of independent source-page provenance. Used only to describe the cohort, never to choose a model."
+}

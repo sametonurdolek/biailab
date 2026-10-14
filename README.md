@@ -97,3 +97,45 @@ prepared pair paths are relative to that experiment. Recreate manifests in a
 fresh run copy as described in its README rather than rewriting frozen evidence.
 Exact library versions are preserved in the experiment's `requirements.txt`
 and environment manifests. No new training was performed for this publication.
+
+### Bettertest: frozen-system diagnostic on three cleaner references
+
+The [bettertest report](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/BETTERTEST_REPORT.md)
+evaluates pairs `0000015`, `0000025` and `0000035` with the existing scalar
+step0 and spatial step400 checkpoints. There was no retraining, recalibration
+or change to the preprocessing, NLM, bandwidth bounds or postprocessing.
+Only `0000025` required shared homography registration. The original 20-image
+CamScanner test and its artifacts remain intact.
+
+| System | Bettertest mean PSNR (dB) | Bettertest mean SSIM |
+|---|---:|---:|
+| Scalar | 25.694751 | 0.976257 |
+| Spatial | 25.680543 | 0.974001 |
+| Paired spatial minus scalar | -0.014208 | -0.002256 |
+
+Source: [diagnostic metrics](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/metrics.json),
+`means`; [per-image CSV](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/per_image.csv).
+Spatial SSIM is lower on all three pairs, with a smaller deficit than the
+original test. PSNR improves slightly on two pairs and declines on one.
+Background variance/noise proxies are lower in the new clean targets, but
+content, framing and margins change too. Three selected pairs do not isolate
+a causal effect of target cleanliness or establish general performance.
+
+The [diagnostic result directory](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/)
+contains the preparation manifest, environment, checkpoint/source/image hashes,
+float32 arrays, PNG outputs, figures, preserved logs and exact scoring source
+snapshot. The [six raw images](spatial-nlm-spatial-control-study/bettertest/)
+are included. A failed preliminary content-overlap audit is retained and
+documented; scoring succeeded once after its guard was fixed.
+
+### See how the cleaning pipeline works
+
+Read the [six-stage implementation explanation](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/PIPELINE_EXPLANATION.md)
+and inspect [0000015 through the actual pipeline](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/pipeline_explanation_0000015.png).
+The educational figure reuses saved outputs and regenerates only deterministic
+preprocessing/background intermediates; no model inference or scoring was repeated.
+
+Standalone cleaned PNGs: [scalar](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000015_scalar.png)
+and [spatial](spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000015_spatial.png).
+All three pairs' scalar/spatial PNGs and authoritative float32 NPYs are included.
+New-file integrity is recorded in [BETTERTEST_PUBLICATION_MANIFEST.json](BETTERTEST_PUBLICATION_MANIFEST.json).

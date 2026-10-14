@@ -1,0 +1,380 @@
+{
+  "parent_commit": "26807259595d69760ca9dc85e3cbf00434bb82b5",
+  "scope": "Bettertest raw pairs, frozen-system diagnostic, results and educational pipeline explanation",
+  "historical_experiment_files_unchanged": 486,
+  "no_training": true,
+  "no_calibration": true,
+  "diagnostic_evaluations": 1,
+  "files": [
+    {
+      "path": "spatial-nlm-spatial-control-study/bettertest/clean/0000015.jpg",
+      "bytes": 73216,
+      "sha256": "0c6ed722fbf6f209ea6608278f8e728e4c9eb295b3cf762a470f4669d44dec6c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/bettertest/clean/0000025.jpg",
+      "bytes": 101986,
+      "sha256": "08f212cac392127859f00ee505d2346047d00da05efe725fefa3a2ddbcd68bdd"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/bettertest/clean/0000035.jpg",
+      "bytes": 145418,
+      "sha256": "0816e91e66cc300834756e12f4bfafc1d5d907302f84c8317f58b84ddf864c7d"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/bettertest/dirty/0000015.jpg",
+      "bytes": 52927,
+      "sha256": "8feb70041410ed4f519ecaa87456bb883b816cc5782e344119d79db8987c656a"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/bettertest/dirty/0000025.jpg",
+      "bytes": 101942,
+      "sha256": "58e442b2f0fb80b035d743e155e3faeede38a367865201b07f3fbc60bdff6f72"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/bettertest/dirty/0000035.jpg",
+      "bytes": 140794,
+      "sha256": "1c07e5fbf537a8b5772075f34315900edd8cfc4fc804f66751f6b9669be5fa0c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/bettertest_diagnostic.py",
+      "bytes": 29633,
+      "sha256": "9731fd743110a5961762079c530117c69a38d0ab65c18317c2abca5a0b8f2741"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/BETTERTEST_REPORT.md",
+      "bytes": 7635,
+      "sha256": "5346aa41ac6cacd94cc1cb9d23c0b96191160e026c2779b85cd908bda3887d18"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/PIPELINE_EXPLANATION.md",
+      "bytes": 8172,
+      "sha256": "73d76f6accdfc5e0d2b6268a4baf4abbdaa8725cb053a20c36c11cf28f1693ea"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/content_overlap.json",
+      "bytes": 333,
+      "sha256": "fbfad4913fbb31897e04e0c9f31e36f88e5868e37148de5e6683426e78e2e8b1"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/environment.json",
+      "bytes": 2213,
+      "sha256": "c93d588a576a3c0492e9463520b54fe10fa777a1023810693755dc269ab73f09"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/errors/0000015_scalar.npy",
+      "bytes": 2821248,
+      "sha256": "992c0f9d7c655b2c936413dd89e08b1777233c1f95a7d7aa3a236cce559fa46a"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/errors/0000015_spatial.npy",
+      "bytes": 2821248,
+      "sha256": "5e27c01bb839f954e4a2cc76d7d3061462ccfc521ea6ac8762b953192fe75e11"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/errors/0000025_scalar.npy",
+      "bytes": 2392128,
+      "sha256": "5d27f4c1f684e60f6accd71c499f6cd3cfe27a568932f41a9b80b3753054aad7"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/errors/0000025_spatial.npy",
+      "bytes": 2392128,
+      "sha256": "23420cba625d5123d0de4da69e7cb6f213609360c0e54b30791983d8e8073ea5"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/errors/0000035_scalar.npy",
+      "bytes": 2650880,
+      "sha256": "0de4f43e5afa082197cec6b16307a362b1a65760d49c52a1a210a5d532fad33c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/errors/0000035_spatial.npy",
+      "bytes": 2650880,
+      "sha256": "8a45ee5ffae0a8ad99078db78cc509df8ded3de254fe9eeb1c94b98abe757b43"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/evaluation_started.json",
+      "bytes": 286,
+      "sha256": "c785cce5832c3aec9028e7d26877ab735437b3180e63869cd5c5e3371abd7a73"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/figures/0000015_comparison.png",
+      "bytes": 1226647,
+      "sha256": "7ed001f4e71c9edf3e689f7fa8ca68aacc29ea512ac206d16dcd1137ab460360"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/figures/0000025_comparison.png",
+      "bytes": 1659342,
+      "sha256": "0257f296dfdaea31cf77afde0f710c20d26e377ad45d78e9d30d9d1854e599b0"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/figures/0000035_comparison.png",
+      "bytes": 1769039,
+      "sha256": "3c76ed3fd3a7487adc651d673642b2c81ff783eadebaeeaa82c48a175a0e90d5"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/figures/audit_pairs.jpg",
+      "bytes": 121884,
+      "sha256": "d9c6dcde8ebd89ab3714f39da61067f0997660deb8acd0b505790fb649310fbe"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/frozen_system.json",
+      "bytes": 1985,
+      "sha256": "66fa6c04506a8f9cd51d68f79bbf5c70614911d7d21d033756c165bce35fa843"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/h_maps/0000015_scalar.npy",
+      "bytes": 2821248,
+      "sha256": "7fd04a3dcb24d76e4111f1f2bc1d57a933f99f6ecb351b37866ac74f97cc2651"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/h_maps/0000015_spatial.npy",
+      "bytes": 2821248,
+      "sha256": "6548231d615f95d4c68dd592c31155f9429156a3be36456a16733f22650f3542"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/h_maps/0000025_scalar.npy",
+      "bytes": 2392128,
+      "sha256": "6e60386552ac94fe7a1b605539d760117e70fa487594e1e30e87fa91f8f3cf6e"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/h_maps/0000025_spatial.npy",
+      "bytes": 2392128,
+      "sha256": "82044927f8a01e8d9614b630b71aad2069396b5d28ea88ca3eda49433047933e"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/h_maps/0000035_scalar.npy",
+      "bytes": 2650880,
+      "sha256": "e1268dc75fd8f4ab834e14530416822e70367c379895f0089ad75aab870c31f3"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/h_maps/0000035_spatial.npy",
+      "bytes": 2650880,
+      "sha256": "b3324a7d67dd5cc80f957f3b4517c81dffeaa60cc932d1ca810c96fc3f26b6d6"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/journal/0000015.json",
+      "bytes": 639,
+      "sha256": "ca12875d899d2ed478c9b047a788a79baad907fb951693faa75f0f804efffda3"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/journal/0000025.json",
+      "bytes": 643,
+      "sha256": "e9b5681657cc5dae5805a1fbf4b47a45929cd407b0667b6f26e5f2eddff0686b"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/journal/0000035.json",
+      "bytes": 639,
+      "sha256": "6fc471ffe5d1bf6992e275094c37f806d69b38719ecf30a12cdc6987d4838e1f"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/logs/20261013T235656Z_audit.log",
+      "bytes": 1587,
+      "sha256": "137e3a7a0c3411463bc98c76b8bc7fb357bd504e93d6829f421c5791fa728644"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/logs/20261013T235827Z_audit.log",
+      "bytes": 147,
+      "sha256": "a238c1d749a519584ae0860859653cd2955135e672f792dbadf8977e800ab9af"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/logs/20261013T235957Z_evaluate.log",
+      "bytes": 1990,
+      "sha256": "a44079e69c5105affc7345e4d3f3b91dcc00bb164b966da0b441e5602999b86d"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/logs/20261014T000112Z_render.log",
+      "bytes": 13,
+      "sha256": "c1e97067c5f479a44a6f57297a0a8f87a59d181c3c529910f8bf059094bc3abb"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/logs/20261014T000118Z_report.log",
+      "bytes": 154,
+      "sha256": "12414ee5334ff521180c0f4dd30acf0a9fe29b93793bbe129f9bffddc7c6ea40"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/metrics.json",
+      "bytes": 3649,
+      "sha256": "ec5fe7e6851362b9d0577dc9911b6a49d341d216fac850983848cb2b910b98d0"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000015_scalar.npy",
+      "bytes": 2821248,
+      "sha256": "5ab646429a034e9863756d463abc0d99690ab876a730d77d733bb180980343c0"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000015_scalar.png",
+      "bytes": 80482,
+      "sha256": "a18508df376b1554e91df4c170b6c17a1bf00b7b99171ce08e5b38efba18049c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000015_spatial.npy",
+      "bytes": 2821248,
+      "sha256": "854dc7b5505b47e7606667246cb47aa514c35119e6e3f32ebb9b1c80d3ed5964"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000015_spatial.png",
+      "bytes": 113812,
+      "sha256": "955b0e1d06cd3da867100c8feba11e4b6f91827df076e972455cd13558a44c64"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000025_scalar.npy",
+      "bytes": 2392128,
+      "sha256": "ada5e101d62aac94939a3f16a96a67d0c0974af50b72b0d75592c5ae4fb42215"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000025_scalar.png",
+      "bytes": 86764,
+      "sha256": "933b87a8ee29d473b411ca0b7a8b132081d6e8399eabcfcdff06dfad63e0a8a6"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000025_spatial.npy",
+      "bytes": 2392128,
+      "sha256": "4db0dc42e46d0e47091e7b4761d954a94e4549fb49ed45a4d95d339d0535d4fe"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000025_spatial.png",
+      "bytes": 104476,
+      "sha256": "0be07d8515b343d001bf0ec77dd7f291312ecaf096c62d585b6945b454231ecc"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000035_scalar.npy",
+      "bytes": 2650880,
+      "sha256": "6898c8d2fc1fdda3c2e196d4e1ab39b01e13c7cbd9ba1909df1946ca050223d0"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000035_scalar.png",
+      "bytes": 146300,
+      "sha256": "b13eb0cf395af03c6e1451b1afc0d7695fbbdc1c46aef09309d33ceadd6ba450"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000035_spatial.npy",
+      "bytes": 2650880,
+      "sha256": "86f22db8b05a11857d4ab89a7b6fe75c20d210caa8412f8701654d03602a2671"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/outputs/0000035_spatial.png",
+      "bytes": 185537,
+      "sha256": "80aaec18fd727695dc1d7aa9786d7be550dfd472ab536fd9593c2078f9a4b595"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/pairs.json",
+      "bytes": 16506,
+      "sha256": "1a0147006bbb362ccd3f56b8bd6cf3d8f3b5e37b08f397501e95c08be655741b"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/per_image.csv",
+      "bytes": 590,
+      "sha256": "d2b0d2666d726dddb7c85fee60cd7f5f66ccff1d3ad56ceefff7985fae26070c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/pipeline_explanation_0000015.png",
+      "bytes": 1214743,
+      "sha256": "ab2bad07a21755ce5129878e45b17ac97687f01c6bea17397b5cc3607ff5ec4c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/prepared/0000015_clean.png",
+      "bytes": 64695,
+      "sha256": "f97183563deb4fd59d80c484b6c19220655c9fbcd6528149fee7df05324cccd8"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/prepared/0000015_dirty.png",
+      "bytes": 85446,
+      "sha256": "7bcccf681c8fee8f1e4ad3d152b9dc330d04ec2cf476d7418745f9ccc56a3289"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/prepared/0000025_clean.png",
+      "bytes": 91236,
+      "sha256": "d18cc02403323fae6e0ffb5e231385ab41f765008da233e515dc4ce98b53efc7"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/prepared/0000025_dirty.png",
+      "bytes": 112276,
+      "sha256": "42334cb9ee351b036d5f5136156e6f605d97c80e9b476a26f541ef6d7c9ae5aa"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/prepared/0000035_clean.png",
+      "bytes": 138273,
+      "sha256": "5bf0d51886ee54bff891712dd6182c9372082b070f8ac2b3b20fce8275ad2383"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/prepared/0000035_dirty.png",
+      "bytes": 168165,
+      "sha256": "4c3df5f82cc8c0c51eecbf587c68b6bbb3a70a020115b7cc237b68c0ef9f2bac"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/preservation_verification.json",
+      "bytes": 95173,
+      "sha256": "699e75e92a34e9bf2a9fdcbf1981d16e6cb0e012666bb251f885b4bac954d8c9"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/protected_before.json",
+      "bytes": 94042,
+      "sha256": "6424afb045667dc3cedefdc5a653af0e41fc9dbcc507e8eb588ec8d9a3cb2671"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/audit_dataset.py",
+      "bytes": 6877,
+      "sha256": "07a5686da30deb2877a72a2f54bc87c805b0fcad342eed73e9be30a69aa6db3c"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/bettertest_diagnostic_scored.py",
+      "bytes": 28902,
+      "sha256": "56681224fea0ab242f1eee5e58476dc7fdd4f35c37bd803f748ab47f8fdd1051"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/common.py",
+      "bytes": 1980,
+      "sha256": "9622fe78ea67059a3242fc8ac1beadff70d08878cbc80a0650f60a2a5fd9ce4b"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/config.py",
+      "bytes": 172,
+      "sha256": "179ddc7c424f64146b9c56e480057cd13d073f671353dcdfefa35642bb24dc6a"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/document_pipeline.py",
+      "bytes": 2160,
+      "sha256": "c98ba8bc4d6c9a57a52814637ea809fb1409b58e60a35adaccb66e83deb2b462"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/evaluate.py",
+      "bytes": 4868,
+      "sha256": "cc9990d57358d4f02fbac200a61bee3b6d2f0464d511ac2ad71bc2952bd6d6fd"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/metrics.py",
+      "bytes": 2153,
+      "sha256": "18003b5f434d46e926228b90b3affa17e5ad24ef541b8167d4f2066d15a67bac"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/models.py",
+      "bytes": 2756,
+      "sha256": "fb8e89405182d46836c1d6926beffff9d2ad1832729ff2e2d87b7fe14d94fc17"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/nlm.py",
+      "bytes": 7848,
+      "sha256": "4d69f971f9d026dfc5ed305fd53e4c621ec4b80cc459c1339d82cd35924844cb"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/prepare_pairs.py",
+      "bytes": 5757,
+      "sha256": "5b52267c1c22c40790df536ade956c87839f873e040f096cea767a3d45c05c9a"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot/train.py",
+      "bytes": 5588,
+      "sha256": "3750d7aa439a301ac80b69179325423eb0c60bbfb3a58bbb4fbca8761f69bb00"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/source_snapshot.json",
+      "bytes": 1307,
+      "sha256": "671e5d5ca1ae6821dd83f240d78e0c7200c97499cbdc30e8c3e4ecfdc7958440"
+    },
+    {
+      "path": "spatial-nlm-spatial-control-study/experiments/camscanner_scalar_vs_spatial/results/bettertest/target_cleanliness.json",
+      "bytes": 84916,
+      "sha256": "3ed5297c238dc1d083b42faf1547b57f50bb9ead1e77fdc4badee9451da22430"
+    }
+  ]
+}
