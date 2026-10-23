@@ -1,0 +1,14 @@
+{
+  "bench03_present": false,
+  "source": "Prompt fallback research box used because BENCH_03 has no measured affine basin. Not a fitted optimum.",
+  "black_lo": 0.0,
+  "black_hi": 0.30,
+  "white_lo": 0.70,
+  "white_hi": 1.0,
+  "min_span": 0.05,
+  "gain_bias_note": "gain and bias limits are the axis-aligned bounds implied by the corners of this same black/white box. They are not a second fitted range.",
+  "gain_lo": 1.0,
+  "gain_hi": 2.5,
+  "bias_lo": -0.75,
+  "bias_hi": 0.0
+}

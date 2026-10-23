@@ -1,0 +1,12 @@
+{
+  "bench03_present": false,
+  "source": "Frozen BENCH_01 catalog S05 V01-V05. These are the five presets that were confirmed as a family in BENCH_02. They are not a BENCH_03 compact re-optimization and they are not a new optimum.",
+  "ordered_by": "increasing endpoint inset, V01 through V05",
+  "presets": [
+    {"id": "V01", "black": 0.02, "white": 0.98},
+    {"id": "V02", "black": 0.05, "white": 0.95},
+    {"id": "V03", "black": 0.10, "white": 0.92},
+    {"id": "V04", "black": 0.15, "white": 0.88},
+    {"id": "V05", "black": 0.22, "white": 0.82}
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "EXAMPLE_DO_NOT_TRAIN",
+  "note": "BENCH_03 did not produce a measured 1-D manifold. Do not put a hand-drawn curve here. Training starts only when a file with status measured_from_bench03 supplies knots.",
+  "knots": []
+}

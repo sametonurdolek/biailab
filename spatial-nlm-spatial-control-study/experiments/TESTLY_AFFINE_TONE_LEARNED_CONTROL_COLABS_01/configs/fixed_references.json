@@ -1,0 +1,16 @@
+{
+  "s05_v03": {
+    "black": 0.10,
+    "white": 0.92,
+    "source": "BENCH_01 frozen S05 V03. BENCH_02 predeclared gate candidate and the confirmed fixed tone operator on the 123 development-eval pages. Not re-tuned here."
+  },
+  "s_values_current6": [15, 21, 31, 45, 63, 91],
+  "fixed_scale": 31,
+  "split_sha256": "ab03834bcf1cb56a752228287b830eb30a33c9ff4fb2cb0a6f7d3816c52561e1",
+  "split_seed": 20261014,
+  "expected_counts": {"train": 1239, "val": 154, "test": 154, "calibration": 31, "development": 123},
+  "encoder_sha256": "1c2a30b4beb308474c24ab7e3646430606fb3a7a5d2be495e17cd587fcbef0f9",
+  "encoder_epoch": 54,
+  "structural_ink_edge_ratio_max": 1.25,
+  "opencv_note": "BENCH_02 numbers were measured with OpenCV 4.14.0. This package does not force an older OpenCV pin."
+}
