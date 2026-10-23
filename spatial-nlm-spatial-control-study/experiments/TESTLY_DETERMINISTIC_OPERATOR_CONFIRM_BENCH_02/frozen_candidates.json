@@ -1,0 +1,207 @@
+{
+  "S03": {
+    "name": "Canonical closing-division, then fixed affine",
+    "math": "Y = clip(a Z + b), Z = current_s31(x). a and b are preset constants. They are not least-squares fits to T.",
+    "stages": "canonical s=31 division -> Y = clip(gain * Z + bias)",
+    "presets": [
+      {
+        "variant": "V01",
+        "params": {
+          "gain": 1.1,
+          "bias": -0.05
+        }
+      },
+      {
+        "variant": "V02",
+        "params": {
+          "gain": 1.25,
+          "bias": -0.12
+        }
+      },
+      {
+        "variant": "V03",
+        "params": {
+          "gain": 1.45,
+          "bias": -0.22
+        }
+      },
+      {
+        "variant": "V04",
+        "params": {
+          "gain": 1.7,
+          "bias": -0.35
+        }
+      },
+      {
+        "variant": "V05",
+        "params": {
+          "gain": 2.0,
+          "bias": -0.5
+        }
+      }
+    ]
+  },
+  "S04": {
+    "name": "Canonical closing-division, then black point",
+    "math": "Y = clip((Z - k) / (1 - k)), k in {0.02, 0.05, 0.10, 0.18, 0.28}, white fixed at 1.",
+    "stages": "canonical s=31 division -> clip((Z-k)/(1-k))",
+    "presets": [
+      {
+        "variant": "V01",
+        "params": {
+          "black": 0.02
+        }
+      },
+      {
+        "variant": "V02",
+        "params": {
+          "black": 0.05
+        }
+      },
+      {
+        "variant": "V03",
+        "params": {
+          "black": 0.1
+        }
+      },
+      {
+        "variant": "V04",
+        "params": {
+          "black": 0.18
+        }
+      },
+      {
+        "variant": "V05",
+        "params": {
+          "black": 0.28
+        }
+      }
+    ]
+  },
+  "S05": {
+    "name": "Canonical closing-division, then black and white points",
+    "math": "Y = clip((Z-k)/(w-k)) with frozen (k,w) pairs. No percentile of T is used.",
+    "stages": "canonical s=31 division -> clip((Z-k)/(w-k))",
+    "presets": [
+      {
+        "variant": "V01",
+        "params": {
+          "black": 0.02,
+          "white": 0.98
+        }
+      },
+      {
+        "variant": "V02",
+        "params": {
+          "black": 0.05,
+          "white": 0.95
+        }
+      },
+      {
+        "variant": "V03",
+        "params": {
+          "black": 0.1,
+          "white": 0.92
+        }
+      },
+      {
+        "variant": "V04",
+        "params": {
+          "black": 0.15,
+          "white": 0.88
+        }
+      },
+      {
+        "variant": "V05",
+        "params": {
+          "black": 0.22,
+          "white": 0.82
+        }
+      }
+    ]
+  },
+  "S19": {
+    "name": "Single-scale Retinex with a white-paper anchor",
+    "math": "R = log(x+eps) - log(G+eps). Y = clip(1 + gain * R). eps=1/255. This is not exp(R), which would collapse to x/G (S06).",
+    "stages": "R = log(x+eps) - log(G_sigma(x)+eps) -> Y = clip(1 + gain * R)",
+    "presets": [
+      {
+        "variant": "V01",
+        "params": {
+          "sigma": 16.0,
+          "gain": 0.4
+        }
+      },
+      {
+        "variant": "V02",
+        "params": {
+          "sigma": 32.0,
+          "gain": 0.6
+        }
+      },
+      {
+        "variant": "V03",
+        "params": {
+          "sigma": 48.0,
+          "gain": 0.8
+        }
+      },
+      {
+        "variant": "V04",
+        "params": {
+          "sigma": 80.0,
+          "gain": 1.0
+        }
+      },
+      {
+        "variant": "V05",
+        "params": {
+          "sigma": 120.0,
+          "gain": 1.3
+        }
+      }
+    ]
+  },
+  "S28": {
+    "name": "Canonical closing-division, then unsharp mask",
+    "math": "Z = current_s31(x); Y = clip(Z + amount * (Z - G_sigma(Z))). Gonzalez high-boost is this form.",
+    "stages": "canonical s=31 division -> unsharp with sigma and amount",
+    "presets": [
+      {
+        "variant": "V01",
+        "params": {
+          "sigma": 1.0,
+          "amount": 0.4
+        }
+      },
+      {
+        "variant": "V02",
+        "params": {
+          "sigma": 1.2,
+          "amount": 0.8
+        }
+      },
+      {
+        "variant": "V03",
+        "params": {
+          "sigma": 1.5,
+          "amount": 1.2
+        }
+      },
+      {
+        "variant": "V04",
+        "params": {
+          "sigma": 2.0,
+          "amount": 1.6
+        }
+      },
+      {
+        "variant": "V05",
+        "params": {
+          "sigma": 3.0,
+          "amount": 2.2
+        }
+      }
+    ]
+  }
+}

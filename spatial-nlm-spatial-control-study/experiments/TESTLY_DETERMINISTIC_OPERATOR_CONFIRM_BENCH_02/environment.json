@@ -1,0 +1,14 @@
+{
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "opencv": "4.14.0",
+  "scipy": null,
+  "scikit_image": null,
+  "os": "Windows-10-10.0.26200-SP0",
+  "cpu_count": 24,
+  "cv2_threads": 1,
+  "workers": 4,
+  "bootstrap_seed": 20261023,
+  "bootstrap_holdout": 20000,
+  "bootstrap_dev": 20000
+}

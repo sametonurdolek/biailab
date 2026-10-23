@@ -1,0 +1,234 @@
+{
+  "decision": "GO",
+  "passers": [
+    "S05_V03",
+    "S05_V05"
+  ],
+  "candidates": {
+    "S05_V03": {
+      "psnr": {
+        "mean": 1.4040177258009434,
+        "median": 1.2726052425062377,
+        "ci95": [
+          0.8515492471827022,
+          2.0669032363831876
+        ],
+        "frac_positive": 0.9523809523809523,
+        "frac_negative": 0.047619047619047616,
+        "frac_tie": 0.0,
+        "minimum": -0.642512632973034,
+        "maximum": 5.897799479349807,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261023
+      },
+      "ssim": {
+        "mean": 0.012381783553532191,
+        "median": 0.012066781520843506,
+        "ci95": [
+          0.007858210518246605,
+          0.018384572863578794
+        ],
+        "frac_positive": 0.9523809523809523,
+        "frac_negative": 0.047619047619047616,
+        "frac_tie": 0.0,
+        "minimum": -0.01015239953994751,
+        "maximum": 0.06043928861618042,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261024
+      },
+      "wins_psnr": {
+        "wins": 20,
+        "losses": 1,
+        "ties": 0,
+        "n": 21
+      },
+      "wins_ssim": {
+        "wins": 20,
+        "losses": 1,
+        "ties": 0,
+        "n": 21
+      },
+      "severe_fraction": 0.0,
+      "mean_psnr": 28.382718711855595,
+      "mean_ssim": 0.9772205636614845,
+      "worst_psnr_delta": -0.642512632973034,
+      "worst_pair": "acceptednewnewbinarizelast::0000359::ffb06ddb9f",
+      "pass": true
+    },
+    "S05_V05": {
+      "psnr": {
+        "mean": 1.5585780914445975,
+        "median": 1.1919179667137065,
+        "ci95": [
+          0.7162506934644054,
+          2.4442116955224718
+        ],
+        "frac_positive": 0.7142857142857143,
+        "frac_negative": 0.2857142857142857,
+        "frac_tie": 0.0,
+        "minimum": -1.754465912447369,
+        "maximum": 5.790280624212421,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261023
+      },
+      "ssim": {
+        "mean": 0.013143417381104968,
+        "median": 0.013258218765258789,
+        "ci95": [
+          0.006600818534692129,
+          0.01995285976500737
+        ],
+        "frac_positive": 0.9047619047619048,
+        "frac_negative": 0.09523809523809523,
+        "frac_tie": 0.0,
+        "minimum": -0.028443098068237305,
+        "maximum": 0.060984134674072266,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261024
+      },
+      "wins_psnr": {
+        "wins": 15,
+        "losses": 6,
+        "ties": 0,
+        "n": 21
+      },
+      "wins_ssim": {
+        "wins": 19,
+        "losses": 2,
+        "ties": 0,
+        "n": 21
+      },
+      "severe_fraction": 0.09523809523809523,
+      "mean_psnr": 28.537279077499253,
+      "mean_ssim": 0.9779821974890572,
+      "worst_psnr_delta": -1.754465912447369,
+      "worst_pair": "acceptednewnewbinarizelast::0000359::ffb06ddb9f",
+      "pass": true
+    },
+    "S03_V04": {
+      "psnr": {
+        "mean": 0.5266626959012557,
+        "median": 0.20414407048894034,
+        "ci95": [
+          -0.22966162734628126,
+          1.3124116476115815
+        ],
+        "frac_positive": 0.5714285714285714,
+        "frac_negative": 0.42857142857142855,
+        "frac_tie": 0.0,
+        "minimum": -2.5814028240216125,
+        "maximum": 4.017753176102435,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261023
+      },
+      "ssim": {
+        "mean": 0.010313593205951509,
+        "median": 0.008755624294281006,
+        "ci95": [
+          0.0037750108611016046,
+          0.017236348986625655
+        ],
+        "frac_positive": 0.9047619047619048,
+        "frac_negative": 0.09523809523809523,
+        "frac_tie": 0.0,
+        "minimum": -0.0307844877243042,
+        "maximum": 0.05967968702316284,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261024
+      },
+      "wins_psnr": {
+        "wins": 12,
+        "losses": 9,
+        "ties": 0,
+        "n": 21
+      },
+      "wins_ssim": {
+        "wins": 19,
+        "losses": 2,
+        "ties": 0,
+        "n": 21
+      },
+      "severe_fraction": 0.19047619047619047,
+      "mean_psnr": 27.50536368195591,
+      "mean_ssim": 0.9751523733139038,
+      "worst_psnr_delta": -2.5814028240216125,
+      "worst_pair": "acceptednewnewbinarizelast::0000041::13f604c41d",
+      "pass": false
+    },
+    "S03_V05": {
+      "psnr": {
+        "mean": -0.09608724876666672,
+        "median": -0.34800084637436157,
+        "ci95": [
+          -0.9289004098916199,
+          0.7407608055302888
+        ],
+        "frac_positive": 0.42857142857142855,
+        "frac_negative": 0.5714285714285714,
+        "frac_tie": 0.0,
+        "minimum": -4.017786396866047,
+        "maximum": 3.9277392801679305,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261023
+      },
+      "ssim": {
+        "mean": 0.007340908050537109,
+        "median": 0.005140900611877441,
+        "ci95": [
+          0.0007771430271012443,
+          0.01438489733707337
+        ],
+        "frac_positive": 0.8571428571428571,
+        "frac_negative": 0.14285714285714285,
+        "frac_tie": 0.0,
+        "minimum": -0.033261001110076904,
+        "maximum": 0.057605862617492676,
+        "n": 21,
+        "n_resamples": 20000,
+        "seed": 20261024
+      },
+      "wins_psnr": {
+        "wins": 9,
+        "losses": 12,
+        "ties": 0,
+        "n": 21
+      },
+      "wins_ssim": {
+        "wins": 18,
+        "losses": 3,
+        "ties": 0,
+        "n": 21
+      },
+      "severe_fraction": 0.3333333333333333,
+      "mean_psnr": 26.88261373728799,
+      "mean_ssim": 0.9721796881584894,
+      "worst_psnr_delta": -4.017786396866047,
+      "worst_pair": "acceptednewnewbinarizelast::0000041::13f604c41d",
+      "pass": false
+    }
+  },
+  "n": 21,
+  "rule": {
+    "mean_delta_psnr_gt": 0.5,
+    "ci95_lower_gt": 0.0,
+    "mean_delta_ssim_gt": 0.0,
+    "severe_psnr_lt": -1.0,
+    "severe_ssim_lt": -0.05,
+    "max_severe_page_fraction": 0.25,
+    "candidates": [
+      "S05_V03",
+      "S05_V05",
+      "S03_V04",
+      "S03_V05"
+    ],
+    "material_spatial_headroom_db": 0.5,
+    "structural_ink_edge_ratio_max": 1.25
+  }
+}

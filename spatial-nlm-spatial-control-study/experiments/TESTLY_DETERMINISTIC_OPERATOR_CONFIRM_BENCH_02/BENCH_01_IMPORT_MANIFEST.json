@@ -1,0 +1,15 @@
+{
+  "operators.py": "72dafc965f3a250e35a6962176d922d55e065decd0fef13dab6169d0e0fdaeac",
+  "canonical.py": "9e6f349f17f5026547e9a170389a89110b27e91398875c7f5d1235979864ae72",
+  "catalog.py": "84f83d2eaa7f921fe1a5da0faa6f44df5105178bd6be52dcfc9c560de5b32495",
+  "experiment_matrix.json": "f052ff36749d301dd31561a16a5105da939c97baa21746b0db64b1b14b08e37e",
+  "experiment_matrix.json_raw_bytes": "745b1e59b34664ba3b951996bd43da894fd58b1e8f4119ca8a2560e15812891a",
+  "experiment_matrix.sha256": "f052ff36749d301dd31561a16a5105da939c97baa21746b0db64b1b14b08e37e",
+  "benchmark_manifest.json": "5d4e27c8fd87f709b253e228b43896a18c0223e4517d123d524d3cfd2bdb338b",
+  "implementation_version": 1,
+  "protocol_version": 1,
+  "protocol_hash": "edfceff73880ed1e20b8ba2a8fb739172948c72b7980b1ee2f2d0f784a1fe49c",
+  "bench02_protocol.py": "4ea04be3685ab44d6a5c76940911a5ba590655b1c867d071b954de0e19017cae",
+  "bench02_run_confirm.py": "72ff5801651a08a875e665759052c8080033c1ec67f0d72b24695cfc85af7e23",
+  "bench02_report_bench.py": "e2fe7de4f944d9806e91970a75bc45f73c4bd44a277b9a5da9196341bc3a3991"
+}

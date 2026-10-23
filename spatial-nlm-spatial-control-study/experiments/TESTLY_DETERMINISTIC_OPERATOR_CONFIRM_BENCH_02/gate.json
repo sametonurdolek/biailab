@@ -1,0 +1,16 @@
+{
+  "mean_delta_psnr_gt": 0.5,
+  "ci95_lower_gt": 0.0,
+  "mean_delta_ssim_gt": 0.0,
+  "severe_psnr_lt": -1.0,
+  "severe_ssim_lt": -0.05,
+  "max_severe_page_fraction": 0.25,
+  "candidates": [
+    "S05_V03",
+    "S05_V05",
+    "S03_V04",
+    "S03_V05"
+  ],
+  "material_spatial_headroom_db": 0.5,
+  "structural_ink_edge_ratio_max": 1.25
+}
