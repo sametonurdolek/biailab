@@ -12,5 +12,6 @@
   "encoder_sha256": "1c2a30b4beb308474c24ab7e3646430606fb3a7a5d2be495e17cd587fcbef0f9",
   "encoder_epoch": 54,
   "structural_ink_edge_ratio_max": 1.25,
+  "structural_ssim_drop_max": 0.02,
   "opencv_note": "BENCH_02 numbers were measured with OpenCV 4.14.0. This package does not force an older OpenCV pin."
 }

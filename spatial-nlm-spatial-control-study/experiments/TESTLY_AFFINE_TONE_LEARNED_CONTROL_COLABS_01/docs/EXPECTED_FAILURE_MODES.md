@@ -8,7 +8,7 @@ EXP04 prints this and writes `STOP.json` when `configs/manifold.json` is missing
 
 ## No promotable checkpoint
 
-If every calibration epoch fails the ink or edge guard, `best.pt` is absent and the summary says `NO_PROMOTABLE_CHECKPOINT`. `latest.pt` is still there for inspection. That is a failed controller, not a successful constant model.
+If every calibration epoch fails the ink, edge, or SSIM guard, `best.pt` is absent and the summary says `NO_PROMOTABLE_CHECKPOINT`. `latest.pt` is still there for inspection. That is a failed controller, not a successful constant model. Development target caches are not built in that case.
 
 ## Global collapse
 
@@ -28,7 +28,11 @@ If every calibration cell has the same best and second-best cost, tau calibratio
 
 ## Cache identity
 
-`Z_CACHE_MISMATCH`, `COST_CACHE_MISMATCH`, `SPLIT_HASH_MISMATCH`, and `DIRTY_SHA_MISMATCH` stop the run. Deleting the shared cache and letting the script rebuild it is the recovery. Do not point a new operator spec at an old `z_s31` directory by renaming files.
+`Z_CACHE_MISMATCH`, `COST_CACHE_MISMATCH`, `ORACLE_CACHE_MISMATCH`, `SPLIT_HASH_MISMATCH`, `DIRTY_SHA_MISMATCH`, and `CLEAN_SHA_MISSING` stop the run. Deleting the shared cache and letting the script rebuild it is the recovery. Do not point a new operator spec at an old `z_s31` directory by renaming files.
+
+## Resume signature
+
+`CHECKPOINT_SIGNATURE_MISMATCH` means `RESUME = True` found a `latest.pt` from a different input mode, loss, grid, supervision, or other signed field. The run stops and does not load those weights. Set `RESUME = False` to keep that folder and start a suffixed directory, or point `DRIVE_ROOT` at a fresh experiment folder.
 
 ## Over-reading the recovery ratio
 

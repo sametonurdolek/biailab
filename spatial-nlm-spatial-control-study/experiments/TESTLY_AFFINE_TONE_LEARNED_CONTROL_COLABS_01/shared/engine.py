@@ -50,17 +50,66 @@ from .utils import (
     read_json,
     recommend_batch,
     recovery_label,
+    runtime_record,
     seed_all,
     write_history,
     write_json,
 )
 
-REFERENCE_VERSION = "affine_tone_colab_01"
+REFERENCE_VERSION = "affine_tone_colab_02"
 CURRENT6 = (15, 21, 31, 45, 63, 91)
 RECOVERY_CAVEAT = (
     "PSNR is logarithmic in MSE, so a recovery ratio is not a linear fraction of "
     "removed error or of visual quality."
 )
+_BOX_KEYS = (
+    "black_lo", "black_hi", "white_lo", "white_hi",
+    "gain_lo", "gain_hi", "bias_lo", "bias_hi", "min_span",
+)
+
+
+def identity_payload(cfg: dict) -> dict:
+    """Fields that make a checkpoint unsafe to resume under a different run."""
+    bounds = cfg.get("bounds") or {}
+    return {
+        "experiment_id": cfg.get("experiment_id"),
+        "family": cfg.get("family"),
+        "input_mode": cfg.get("input_mode"),
+        "loss_preset": cfg.get("loss_preset"),
+        "grid": int(cfg["grid"]),
+        "supervision": cfg.get("supervision"),
+        "image_with_oracle": bool(cfg.get("image_with_oracle", False)),
+        "clamp_backward": cfg.get("clamp_backward"),
+        "lightweight": bool(cfg.get("lightweight", False)),
+        "out_ch": int(cfg["out_ch"]),
+        "oracle_kind": cfg.get("oracle_kind"),
+        "augment": bool(cfg.get("augment", False)),
+        "warm_start": bool(cfg.get("warm_start", False)),
+        "operator_hash": cfg.get("operator_hash"),
+        "bank_hash": cfg.get("bank_hash"),
+        "min_span": float(cfg["min_span"]),
+        "schedule": cfg.get("schedule"),
+        "lambdas": cfg.get("lambdas"),
+        "bounds_box": {key: bounds[key] for key in _BOX_KEYS if key in bounds},
+    }
+
+
+def run_signature(cfg: dict) -> str:
+    return digest(identity_payload(cfg))
+
+
+def _assert_resume(saved: dict, cfg: dict) -> None:
+    if saved.get("experiment_id") != cfg["experiment_id"]:
+        raise SystemExit("CHECKPOINT_EXPERIMENT_MISMATCH")
+    if saved.get("run_signature") != cfg["run_signature"]:
+        saved_id = saved.get("run_identity") or {}
+        current = cfg["run_identity"]
+        diffs = [
+            key for key in sorted(set(saved_id) | set(current))
+            if saved_id.get(key) != current.get(key)
+        ]
+        detail = ",".join(diffs) if diffs else "unsigned_or_unknown"
+        raise SystemExit(f"CHECKPOINT_SIGNATURE_MISMATCH {detail}")
 
 
 def _tqdm(iterable, **kwargs):
@@ -259,14 +308,16 @@ class ControlDataset(Dataset):
             if flip:
                 costs = bank_costs(zed, target, self.presets, grid)
             else:
-                costs = _load_costs(self.cfg, pid, pair["dirty_sha"])
+                costs = _load_costs(self.cfg, pid, pair["dirty_sha"], pair["clean_sha"])
             regret, q = soft_targets(costs, self.tau)
             item["q"] = q
             item["regret"] = regret
             item["weight"] = cell_area_weights(*zed.shape, grid)
             item["costs"] = costs
         if self.cfg["supervision"] == "oracle_param":
-            black, white = _load_oracle_params(self.cfg, pid, pair["dirty_sha"], self.points, view, flip)
+            black, white = _load_oracle_params(
+                self.cfg, pid, pair["dirty_sha"], pair["clean_sha"], self.points, view, flip,
+            )
             item["black_star"] = black
             item["white_star"] = white
         return item
@@ -288,9 +339,16 @@ def _collate(items: list[dict]) -> dict:
     return batch
 
 
-def _cost_path(cfg: dict, pid: str, dirty_sha: str) -> Path:
+def _cost_path(cfg: dict, pid: str, dirty_sha: str, clean_sha: str) -> Path:
     folder = Path(cfg["cost_dir"])
-    name = digest({"id": pid, "dirty_sha": dirty_sha, "bank": cfg["bank_hash"], "grid": cfg["grid"]})
+    name = digest({
+        "id": pid,
+        "dirty_sha": dirty_sha,
+        "clean_sha": clean_sha,
+        "bank": cfg["bank_hash"],
+        "grid": cfg["grid"],
+        "operator": cfg["operator_hash"],
+    })
     return folder / f"{name}.npz"
 
 
@@ -300,19 +358,25 @@ def _npz_text(value) -> str:
     return str(value)
 
 
-def _load_costs(cfg: dict, pid: str, dirty_sha: str) -> np.ndarray:
-    path = _cost_path(cfg, pid, dirty_sha)
+def _load_costs(cfg: dict, pid: str, dirty_sha: str, clean_sha: str) -> np.ndarray:
+    path = _cost_path(cfg, pid, dirty_sha, clean_sha)
     with np.load(path, allow_pickle=False) as blob:
-        if _npz_text(blob["operator_hash"]) != cfg["operator_hash"] or _npz_text(blob["bank_hash"]) != cfg["bank_hash"]:
+        if (
+            _npz_text(blob["operator_hash"]) != cfg["operator_hash"]
+            or _npz_text(blob["bank_hash"]) != cfg["bank_hash"]
+            or _npz_text(blob["dirty_sha"]) != dirty_sha
+            or _npz_text(blob["clean_sha"]) != clean_sha
+        ):
             raise SystemExit(f"COST_CACHE_MISMATCH {pid}")
         return np.ascontiguousarray(blob["costs"], dtype=np.float32)
 
 
-def _oracle_path(cfg: dict, pid: str, dirty_sha: str) -> Path:
+def _oracle_path(cfg: dict, pid: str, dirty_sha: str, clean_sha: str) -> Path:
     folder = Path(cfg["oracle_dir"])
     name = digest({
         "id": pid,
         "dirty_sha": dirty_sha,
+        "clean_sha": clean_sha,
         "lattice": cfg["lattice_hash"],
         "grid": cfg["grid"],
         "level": cfg["oracle_param_level"],
@@ -320,11 +384,15 @@ def _oracle_path(cfg: dict, pid: str, dirty_sha: str) -> Path:
     return folder / f"{name}.npz"
 
 
-def _load_oracle_params(cfg, pid, dirty_sha, points, view, flip):
+def _load_oracle_params(cfg, pid, dirty_sha, clean_sha, points, view, flip):
     if flip:
         return _oracle_arrays(cfg, view, points)
-    path = _oracle_path(cfg, pid, dirty_sha)
+    path = _oracle_path(cfg, pid, dirty_sha, clean_sha)
     with np.load(path, allow_pickle=False) as blob:
+        if _npz_text(blob["lattice_hash"]) != cfg["lattice_hash"]:
+            raise SystemExit(f"ORACLE_CACHE_MISMATCH {pid}")
+        if "clean_sha" not in blob or _npz_text(blob["clean_sha"]) != clean_sha:
+            raise SystemExit(f"ORACLE_CACHE_MISMATCH {pid}")
         return (
             np.ascontiguousarray(blob["black"], dtype=np.float32),
             np.ascontiguousarray(blob["white"], dtype=np.float32),
@@ -503,20 +571,20 @@ def _render_exact(logits: torch.Tensor, page: dict, cfg: dict, bounds: dict, pre
         })
         return image, aux
     controls = _controls(logits, cfg, bounds, knots)
+    # Z is a host array. The controls follow logits, which validation keeps on CUDA.
+    zed = torch.as_tensor(np.ascontiguousarray(page["Z"]), device=logits.device, dtype=torch.float32)
     height, width = page["Z"].shape
     if family == "gain_bias":
         gain = _upsample_control(controls["gain"][0], height, width)
         bias = _upsample_control(controls["bias"][0], height, width)
-        zed = torch.as_tensor(page["Z"], dtype=torch.float32)
-        image = apply_gain_bias(zed, gain, bias, "exact").cpu().numpy()
+        image = apply_gain_bias(zed, gain, bias, "exact").detach().cpu().numpy()
         gain_np = gain.detach().cpu().numpy()
         bias_np = bias.detach().cpu().numpy()
         aux.update(_continuous_stats(None, None, image, gain_np, bias_np, family))
         return image.astype(np.float32), aux
     black = _upsample_control(controls["black"][0], height, width)
     white = _upsample_control(controls["white"][0], height, width)
-    zed = torch.as_tensor(page["Z"], dtype=torch.float32)
-    image = apply_bw(zed, black, white, "exact", float(cfg["min_span"])).cpu().numpy()
+    image = apply_bw(zed, black, white, "exact", float(cfg["min_span"])).detach().cpu().numpy()
     aux.update(_continuous_stats(
         black.detach().cpu().numpy(),
         white.detach().cpu().numpy(),
@@ -597,7 +665,8 @@ def _evaluate(model, dataset: ControlDataset, cfg, bounds, presets, knots, devic
     return {"mean": summary, "rows": rows, "panels": panels}
 
 
-def _structural_pass(learned: dict, baseline: dict, ratio: float) -> bool:
+def _structural_pass(learned: dict, baseline: dict, ratio: float, ssim_drop_max: float) -> bool:
+    """Ink and edge stay within the MAE ratio, and mean SSIM does not fall by more than the guard."""
     for key in ("ink_mae", "edge_mae"):
         base = baseline.get(key)
         got = learned.get(key)
@@ -606,6 +675,13 @@ def _structural_pass(learned: dict, baseline: dict, ratio: float) -> bool:
         if not np.isfinite(base) or not np.isfinite(got):
             return False
         if got > float(ratio) * base:
+            return False
+    base_ssim = baseline.get("ssim")
+    got_ssim = learned.get("ssim")
+    if base_ssim is not None and got_ssim is not None:
+        if not np.isfinite(base_ssim) or not np.isfinite(got_ssim):
+            return False
+        if float(got_ssim) < float(base_ssim) - float(ssim_drop_max) - 1e-8:
             return False
     return True
 
@@ -717,30 +793,68 @@ def _stop_manifold(cfg: dict, output: Path) -> None:
     raise SystemExit("MANIFOLD_CONFIG_REQUIRED")
 
 
-def _prepare_caches(cfg, train_ids, cal_ids, dev_ids, pairs, store, presets, points):
-    """Build the shared Z cache one page at a time so the train set is not held in RAM."""
-    needed = list(train_ids) + list(cal_ids) + list(dev_ids)
-    print(f"Ensuring Z cache for {len(needed)} pages. Test ids are not included.")
-    for pid in _tqdm(needed, desc="Z s=31"):
-        page = store.ensure(pid, pairs[pid], cfg["test_ids"])
+def _ensure_pages(ids, pairs, store, test_ids, desc: str) -> None:
+    for pid in _tqdm(ids, desc=desc):
+        page = store.ensure(pid, pairs[pid], test_ids)
         del page
+
+
+def _ensure_costs(cfg, ids, pairs, store, presets, test_ids) -> None:
+    for pid in _tqdm(ids, desc="tone costs"):
+        dirty_sha = pairs[pid]["dirty_sha"]
+        clean_sha = pairs[pid]["clean_sha"]
+        path = _cost_path(cfg, pid, dirty_sha, clean_sha)
+        if path.exists():
+            continue
+        page = store.ensure(pid, pairs[pid], test_ids)
+        costs = bank_costs(page["Z"], page["T"], presets, int(cfg["grid"]))
+        tmp = path.with_suffix(".tmp.npz")
+        np.savez_compressed(
+            tmp,
+            costs=costs,
+            operator_hash=cfg["operator_hash"],
+            bank_hash=cfg["bank_hash"],
+            dirty_sha=dirty_sha,
+            clean_sha=clean_sha,
+        )
+        tmp.replace(path)
+        del page
+
+
+def _ensure_oracle(cfg, ids, pairs, store, points, test_ids) -> None:
+    for pid in _tqdm(ids, desc="oracle parameters"):
+        dirty_sha = pairs[pid]["dirty_sha"]
+        clean_sha = pairs[pid]["clean_sha"]
+        path = _oracle_path(cfg, pid, dirty_sha, clean_sha)
+        if path.exists():
+            continue
+        page = store.ensure(pid, pairs[pid], test_ids)
+        black, white = _oracle_arrays(cfg, page, points)
+        tmp = path.with_suffix(".tmp.npz")
+        np.savez_compressed(
+            tmp,
+            black=black,
+            white=white,
+            lattice_hash=cfg["lattice_hash"],
+            dirty_sha=dirty_sha,
+            clean_sha=clean_sha,
+        )
+        tmp.replace(path)
+        del page
+
+
+def _prepare_train_caches(cfg, train_ids, cal_ids, pairs, store, presets, points):
+    """Materialize train and calibration only. Development targets wait for a selected checkpoint."""
+    needed = list(train_ids) + list(cal_ids)
+    print(f"Ensuring Z cache for {len(needed)} train and calibration pages. Test ids are not included.")
+    print("Development target-dependent caches wait until a checkpoint is selected.")
+    _ensure_pages(needed, pairs, store, cfg["test_ids"], "Z s=31")
     if cfg["family"] == "discrete":
-        print("Precomputing frozen-bank cell costs. Tau is not stored in this cache.")
-        for pid in _tqdm(needed, desc="tone costs"):
-            path = _cost_path(cfg, pid, pairs[pid]["dirty_sha"])
-            if path.exists():
-                continue
-            page = store.ensure(pid, pairs[pid], cfg["test_ids"])
-            costs = bank_costs(page["Z"], page["T"], presets, int(cfg["grid"]))
-            tmp = path.with_suffix(".tmp.npz")
-            np.savez_compressed(
-                tmp, costs=costs, operator_hash=cfg["operator_hash"], bank_hash=cfg["bank_hash"],
-            )
-            tmp.replace(path)
-            del page
+        print("Precomputing frozen-bank cell costs for train and calibration. Tau is not stored in this cache.")
+        _ensure_costs(cfg, needed, pairs, store, presets, cfg["test_ids"])
         samples = []
         for pid in cal_ids:
-            costs = _load_costs(cfg, pid, pairs[pid]["dirty_sha"])
+            costs = _load_costs(cfg, pid, pairs[pid]["dirty_sha"], pairs[pid]["clean_sha"])
             regret = costs - costs.min(0, keepdims=True)
             samples.append(regret.reshape(-1))
         tau = calibrate_tau(np.concatenate(samples))
@@ -749,24 +863,20 @@ def _prepare_caches(cfg, train_ids, cal_ids, dev_ids, pairs, store, presets, poi
         print(f"Frozen calibration tau = {tau:.8e}. It is not the V2 scale-regret constant.")
     else:
         cfg["tau"] = None
-    if cfg["supervision"] == "oracle_param" and not cfg.get("image_with_oracle", False):
-        for row in cfg["schedule"]:
-            row["image_weight"] = 0.0
     if cfg["supervision"] == "oracle_param":
         level = "page" if cfg["family"] == "global" else "cell"
         cfg["oracle_param_level"] = level
-        print(f"Precomputing {level} lattice targets. The lattice is a search grid, not an optimum.")
-        ids = list(train_ids) + list(cal_ids) + list(dev_ids)
-        for pid in _tqdm(ids, desc="oracle parameters"):
-            path = _oracle_path(cfg, pid, pairs[pid]["dirty_sha"])
-            if path.exists():
-                continue
-            page = store.ensure(pid, pairs[pid], cfg["test_ids"])
-            black, white = _oracle_arrays(cfg, page, points)
-            tmp = path.with_suffix(".tmp.npz")
-            np.savez_compressed(tmp, black=black, white=white, lattice_hash=cfg["lattice_hash"])
-            tmp.replace(path)
-            del page
+        print(f"Precomputing {level} lattice targets for train and calibration. The lattice is a search grid, not an optimum.")
+        _ensure_oracle(cfg, needed, pairs, store, points, cfg["test_ids"])
+
+
+def _prepare_development_caches(cfg, dev_ids, pairs, store, presets, points) -> None:
+    print(f"Checkpoint selected. Building development target-dependent caches for {len(dev_ids)} pages.")
+    _ensure_pages(dev_ids, pairs, store, cfg["test_ids"], "development Z")
+    if cfg["family"] == "discrete":
+        _ensure_costs(cfg, dev_ids, pairs, store, presets, cfg["test_ids"])
+    if cfg["supervision"] == "oracle_param":
+        _ensure_oracle(cfg, dev_ids, pairs, store, points, cfg["test_ids"])
 
 
 def _build_model(cfg, bounds) -> ToneController:
@@ -822,6 +932,9 @@ def _checkpoint(model, optimizer, scaler, epoch, history, state) -> dict:
         "patience_started": state["patience_started"],
         "tau": state["tau"],
         "experiment_id": state["experiment_id"],
+        "run_signature": state.get("run_signature"),
+        "run_identity": state.get("run_identity"),
+        "runtime": state.get("runtime"),
     }
 
 
@@ -858,6 +971,9 @@ def run(cfg: dict) -> None:
     cfg["encoder_sha"] = fixed["encoder_sha256"]
     cfg["encoder_epoch"] = int(fixed["encoder_epoch"])
     cfg["structural_ratio"] = float(fixed["structural_ink_edge_ratio_max"])
+    if "structural_ssim_drop_max" not in fixed:
+        raise SystemExit("STRUCTURAL_SSIM_GUARD_MISSING")
+    cfg["structural_ssim_drop_max"] = float(fixed["structural_ssim_drop_max"])
     cfg["operator_hash"] = spec_hash()
     cfg["bank_hash"] = digest(presets)[:16]
     if cfg["loss_preset"] not in LOSS_PRESETS:
@@ -871,6 +987,11 @@ def run(cfg: dict) -> None:
     points = lattice(bounds, float(cfg["lattice_step"]), float(cfg["min_span"]))
     cfg["lattice_hash"] = digest({"points": points, "step": cfg["lattice_step"]})[:16]
     cfg["oracle_param_level"] = "page" if cfg["family"] == "global" else "cell"
+    if cfg["supervision"] == "oracle_param" and not cfg.get("image_with_oracle", False):
+        for row in cfg["schedule"]:
+            row["image_weight"] = 0.0
+    cfg["run_identity"] = identity_payload(cfg)
+    cfg["run_signature"] = digest(cfg["run_identity"])
 
     drive_root = Path(cfg["drive_root"])
     output = _allocate_dir(drive_root, cfg["experiment_id"], bool(cfg["resume"]))
@@ -884,6 +1005,12 @@ def run(cfg: dict) -> None:
         knots = measured["knots"]
         # Illegal knots fail inside interp_manifold before any optimizer step.
         interp_manifold(torch.zeros(1), knots)
+
+    latest = output / "checkpoints" / "latest.pt"
+    resume_blob = None
+    if bool(cfg["resume"]) and latest.is_file():
+        resume_blob = torch.load(latest, map_location="cpu", weights_only=False)
+        _assert_resume(resume_blob, cfg)
 
     for name in ("checkpoints", "metrics", "predictions", "logs"):
         (output / name).mkdir(parents=True, exist_ok=True)
@@ -913,8 +1040,7 @@ def run(cfg: dict) -> None:
         raise SystemExit("SPLIT_OVERLAP")
     pairs = index_allowed_pairs(drive_root, cache, train_ids + calibration + development, test_ids)
     store = PageStore(cache / "z_s31")
-    _prepare_caches(cfg, train_ids, calibration, development, pairs, store, presets, points)
-    write_json(output / "config.json", {k: v for k, v in cfg.items() if k != "test_ids"})
+    _prepare_train_caches(cfg, train_ids, calibration, pairs, store, presets, points)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     vram = gpu_vram_gb()
@@ -924,8 +1050,11 @@ def run(cfg: dict) -> None:
     accumulation = int(cfg["accumulation"] or auto_accum)
     cfg["batch_size_resolved"] = batch_size
     cfg["accumulation_resolved"] = accumulation
+    cfg["runtime"] = runtime_record(package)
     gpu_name = torch.cuda.get_device_name(0) if device.type == "cuda" else "cpu"
     print(f"Device {gpu_name} VRAM_GB {vram:.2f} batch {batch_size} accumulation {accumulation}")
+    print("RUN_SIGNATURE", cfg["run_signature"])
+    print("RUNTIME", cfg["runtime"])
     write_json(output / "config.json", {k: v for k, v in cfg.items() if k != "test_ids"})
 
     model = _build_model(cfg, bounds).to(device)
@@ -946,9 +1075,8 @@ def run(cfg: dict) -> None:
         train_ids, pairs, store, test_ids, cfg, presets, points, cfg["tau"], bool(cfg["augment"]),
     )
     cal_set = ControlDataset(calibration, pairs, store, test_ids, cfg, presets, points, cfg["tau"], False)
-    latest = output / "checkpoints" / "latest.pt"
     best_path = output / "checkpoints" / "best.pt"
-    resuming = bool(cfg["resume"] and latest.is_file())
+    resuming = resume_blob is not None
     if (not resuming) and cfg["family"] == "discrete" and not cfg["lightweight"] and hasattr(model, "classifier"):
         prior = _class_prior(cfg, train_set)
         if prior is not None and prior.numel() == model.classifier.bias.numel():
@@ -972,12 +1100,13 @@ def run(cfg: dict) -> None:
         "patience_started": False,
         "tau": cfg["tau"],
         "experiment_id": cfg["experiment_id"],
+        "run_signature": cfg["run_signature"],
+        "run_identity": cfg["run_identity"],
+        "runtime": cfg.get("runtime"),
     }
     start_epoch = 1
     if resuming:
-        saved = torch.load(latest, map_location="cpu", weights_only=False)
-        if saved.get("experiment_id") != cfg["experiment_id"]:
-            raise SystemExit("CHECKPOINT_EXPERIMENT_MISMATCH")
+        saved = resume_blob
         if cfg["tau"] is not None and abs(float(saved.get("tau")) - float(cfg["tau"])) > 1e-12:
             raise SystemExit("TAU_MISMATCH")
         model.load_state_dict(saved["model"])
@@ -1046,7 +1175,9 @@ def run(cfg: dict) -> None:
 
         evaluated = _evaluate(model, cal_set, cfg, bounds, presets, knots, device)
         learned = evaluated["mean"]
-        passed = _structural_pass(learned, fixed_cal, cfg["structural_ratio"])
+        passed = _structural_pass(
+            learned, fixed_cal, cfg["structural_ratio"], cfg["structural_ssim_drop_max"],
+        )
         promoted = False
         image_on = float(schedule["image_weight"]) > 0 or cfg["supervision"] == "oracle_param"
         if cfg["delay_patience"] and image_on and not state["patience_started"]:
@@ -1065,7 +1196,11 @@ def run(cfg: dict) -> None:
                 "calibration": learned,
                 "fixed_s05_v03_calibration": fixed_cal,
                 "structural_guard": "PASS",
-                "selection": "max calibration PSNR among epochs whose ink and edge MAE stay within 1.25x S05 V03",
+                "selection": (
+                    "max calibration PSNR among epochs whose ink and edge MAE stay within "
+                    "1.25x S05 V03 and whose SSIM drop stays within structural_ssim_drop_max"
+                ),
+                "structural_ssim_drop_max": cfg["structural_ssim_drop_max"],
             })
         elif state["patience_started"]:
             state["wait"] += 1
@@ -1099,8 +1234,9 @@ def run(cfg: dict) -> None:
             "status": "NO_PROMOTABLE_CHECKPOINT",
             "calibration_history_epochs": len(history),
             "structural_guard": "FAIL",
-            "note": "No calibration epoch passed the ink/edge guard. best.pt was not fabricated.",
+            "note": "No calibration epoch passed the ink/edge/SSIM guard. best.pt was not fabricated.",
         })
+        print("Development target-dependent caches were not built.")
         _print_block({
             "experiment": cfg["experiment_id"],
             "best_epoch": "n/a",
@@ -1123,6 +1259,7 @@ def run(cfg: dict) -> None:
     model.load_state_dict(saved["model"])
     best_epoch = int(saved["epoch"])
     final_cal = _evaluate(model, cal_set, cfg, bounds, presets, knots, device)
+    _prepare_development_caches(cfg, development, pairs, store, presets, points)
     dev_set = ControlDataset(development, pairs, store, test_ids, cfg, presets, points, cfg["tau"], False)
     final_dev = _evaluate(model, dev_set, cfg, bounds, presets, knots, device)
     _save_panels(final_cal["panels"], cfg, output / "predictions")
@@ -1177,7 +1314,9 @@ def run(cfg: dict) -> None:
     else:
         collapse_text = fmt(collapse) if collapse is not None else "n/a"
     if fixed_dev.get("available"):
-        dev_guard = _structural_pass(learned_dev, fixed_dev, cfg["structural_ratio"])
+        dev_guard = _structural_pass(
+            learned_dev, fixed_dev, cfg["structural_ratio"], cfg["structural_ssim_drop_max"],
+        )
         guard_text = "PASS" if dev_guard else "FAIL"
     else:
         guard_text = "UNMEASURED"
@@ -1203,6 +1342,7 @@ def run(cfg: dict) -> None:
         "recovery_caveat": RECOVERY_CAVEAT,
         "current6_g128_hybrid_oracle_development": current6_dev,
         "structural_guard_development": guard_text,
+        "structural_ssim_drop_max": cfg["structural_ssim_drop_max"],
         "global_collapse": collapse_text,
         "tau": cfg["tau"],
         "bench03_present": False,

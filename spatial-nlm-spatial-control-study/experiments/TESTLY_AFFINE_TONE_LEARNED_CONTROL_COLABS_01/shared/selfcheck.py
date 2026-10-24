@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 from pathlib import Path
 
 import numpy as np
@@ -11,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from shared.dataset import assert_allowed, letterbox
-from shared.engine import load_measured_manifold
+from shared.dataset import PageStore, assert_allowed, letterbox, page_cache_name
+from shared.engine import _render_exact, _structural_pass, load_measured_manifold, run_signature
 from shared.losses import LOSS_PRESETS, image_loss
 from shared.metrics import page_metrics, recovery_ratio, structure_masks
 from shared.models import ToneController
@@ -31,8 +32,8 @@ from shared.operator import (
     upsample_maps,
 )
 from shared.oracle import calibrate_tau, soft_targets
-from shared.presets import BUILDERS
-from shared.utils import read_json
+from shared.presets import BUILDERS, build_exp05
+from shared.utils import read_json, runtime_record
 
 
 def _check(name: str, ok: bool, detail: str = "") -> None:
@@ -185,6 +186,70 @@ def main() -> None:
     head_grad = light.classifier.weight.grad is not None and light.classifier.weight.grad.abs().sum().item() > 0
     _check("head_stage_grad", encoder_clean and head_grad)
 
+    fixed = read_json(ROOT / "configs" / "fixed_references.json")
+    _check("ssim_guard_configured", fixed.get("structural_ssim_drop_max") == 0.02)
+    base = {"ink_mae": 0.10, "edge_mae": 0.10, "ssim": 0.95}
+    _check("ssim_guard_pass", _structural_pass({"ink_mae": 0.12, "edge_mae": 0.12, "ssim": 0.94}, base, 1.25, 0.02))
+    _check("ssim_guard_fail", not _structural_pass({"ink_mae": 0.10, "edge_mae": 0.10, "ssim": 0.90}, base, 1.25, 0.02))
+    _check("ink_guard_still_fails", not _structural_pass({"ink_mae": 0.20, "edge_mae": 0.10, "ssim": 0.95}, base, 1.25, 0.02))
+
+    signed = build_exp05(ROOT)
+    signed.update({
+        "operator_hash": "abc",
+        "bank_hash": "def",
+        "min_span": 0.05,
+        "bounds": bounds,
+        "lambdas": dict(LOSS_PRESETS["mse"]),
+    })
+    base_sig = run_signature(signed)
+    for field, value, name in (
+        ("input_mode", "z", "signature_input_mode"),
+        ("loss_preset", "mse_ssim", "signature_loss"),
+        ("grid", 64, "signature_grid"),
+        ("supervision", "oracle_param", "signature_supervision"),
+    ):
+        changed = dict(signed)
+        changed[field] = value
+        _check(name, run_signature(changed) != base_sig)
+
+    dirty_sha = "a" * 64
+    _check(
+        "clean_sha_identity",
+        page_cache_name("pid", dirty_sha, "b" * 64, "op") != page_cache_name("pid", dirty_sha, "c" * 64, "op"),
+    )
+    with tempfile.TemporaryDirectory() as tmp:
+        store = PageStore(tmp)
+        first = store.path("pid", dirty_sha, "b" * 64)
+        second = store.path("pid", dirty_sha, "c" * 64)
+        _check("page_store_clean_sha", first != second and first.name.endswith(".npz"))
+
+    recorded = runtime_record(ROOT)
+    _check(
+        "runtime_record",
+        recorded["python"].startswith("3.")
+        and recorded["torch"]
+        and recorded["numpy"]
+        and recorded["opencv"]
+        and isinstance(recorded["git_commit"], str)
+        and len(recorded["git_commit"]) == 40,
+    )
+
+    page = {
+        "Z": np.linspace(0, 1, 16 * 12, dtype=np.float32).reshape(16, 12),
+        "dirty": np.full((16, 12), 0.4, np.float32),
+        "T": np.full((16, 12), 0.5, np.float32),
+    }
+    cpu_cfg = {"family": "continuous_bw", "clamp_backward": "exact", "min_span": 0.05, "grid": 4}
+    cpu_image, cpu_aux = _render_exact(torch.zeros(1, 2, 4, 4), page, cpu_cfg, bounds, [], [])
+    _check(
+        "render_exact_cpu",
+        isinstance(cpu_image, np.ndarray) and cpu_image.shape == (16, 12) and np.isfinite(cpu_image).all()
+        and "mean_black" in cpu_aux,
+    )
+    gain_cfg = dict(cpu_cfg, family="gain_bias")
+    gain_image, _gain_aux = _render_exact(torch.zeros(1, 2, 4, 4), page, gain_cfg, bounds, [], [])
+    _check("render_exact_cpu_gain", gain_image.shape == (16, 12) and np.isfinite(gain_image).all())
+
     colabs = sorted((ROOT / "colabs").glob("*.py"))
     _check("colab_count", len(colabs) == 10, str(len(colabs)))
     for path in colabs:
@@ -200,5 +265,45 @@ def main() -> None:
     print("SELFCHECK_OK")
 
 
+def cuda_smoke() -> None:
+    """Continuous validation path with CUDA controls and a host-side page."""
+    if not torch.cuda.is_available():
+        raise SystemExit("CUDA_SMOKE_UNAVAILABLE")
+    bounds = read_json(ROOT / "configs" / "bounds_fallback.json")
+    page = {
+        "Z": np.linspace(0, 1, 24 * 20, dtype=np.float32).reshape(24, 20),
+        "dirty": np.full((24, 20), 0.4, np.float32),
+        "T": np.full((24, 20), 0.6, np.float32),
+    }
+    device = torch.device("cuda")
+    mask = torch.ones(1, 1, 512, 512, device=device)
+    geom = torch.tensor([[0.0, 0.0, 512.0, 512.0]], device=device)
+    global_net = ToneController(1, 2, 1, lightweight=False, kind="global").to(device).eval()
+    spatial = ToneController(1, 2, 8, lightweight=True, kind="spatial").to(device).eval()
+    with torch.no_grad():
+        global_logits = global_net(torch.rand(1, 1, 512, 512, device=device), mask, geom)
+        spatial_logits = spatial(torch.rand(1, 1, 512, 512, device=device), mask, geom)
+    _check("cuda_global_logits", global_logits.device.type == "cuda" and tuple(global_logits.shape) == (1, 2))
+    bw_cfg = {"family": "continuous_bw", "clamp_backward": "exact", "min_span": 0.05, "grid": 8}
+    global_cfg = dict(bw_cfg, family="global", grid=1)
+    gain_cfg = dict(bw_cfg, family="gain_bias")
+    for name, logits, cfg in (
+        ("cuda_render_global", global_logits, global_cfg),
+        ("cuda_render_spatial", spatial_logits, bw_cfg),
+        ("cuda_render_gain", spatial_logits, gain_cfg),
+    ):
+        image, aux = _render_exact(logits, page, cfg, bounds, [], [])
+        _check(
+            name,
+            isinstance(image, np.ndarray)
+            and image.shape == page["Z"].shape
+            and image.dtype == np.float32
+            and np.isfinite(image).all()
+            and aux["saturation_fraction"] >= 0,
+        )
+    print("CUDA_SMOKE_OK")
+
+
 if __name__ == "__main__":
     main()
+    cuda_smoke()

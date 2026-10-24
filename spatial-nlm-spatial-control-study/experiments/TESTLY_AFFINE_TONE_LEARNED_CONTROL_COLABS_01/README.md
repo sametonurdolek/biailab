@@ -39,7 +39,7 @@ Copy the whole folder to Drive. A single `.py` file cannot find `shared/`.
 
 ## Selection
 
-Checkpoints are chosen by calibration PSNR (31 pages) among epochs whose ink MAE and edge MAE stay within 1.25× fixed S05 V03 on those same pages. Development (123 pages) is reported for that checkpoint and is not the early-stopping objective. The summary PSNR and SSIM are the development scores. `CALIBRATION_PSNR` is printed beside them.
+Checkpoints are chosen by calibration PSNR (31 pages) among epochs whose ink MAE and edge MAE stay within 1.25× fixed S05 V03 and whose calibration SSIM stays within 0.02 of that baseline. The 0.02 drop is a guard, not a tuned optimum. Development (123 pages) is reported for that checkpoint and is not the early-stopping objective. The summary PSNR and SSIM are the development scores. `CALIBRATION_PSNR` is printed beside them. `RESUME = True` refuses a checkpoint whose input mode, loss, grid, or supervision does not match the current run.
 
 Fixed reference is S05 V03 (`black=0.10`, `white=0.92`), the predeclared BENCH_02 confirmation, not a new tune. The oracle used for headroom is the frozen five-preset page oracle for the global model and the frozen five-preset G128 hybrid for spatial models. Current6 hybrid is reported separately as `current6_g128_hybrid_oracle` when the six-scale cache can be filled. It is an oracle, not a deployed network score.
 

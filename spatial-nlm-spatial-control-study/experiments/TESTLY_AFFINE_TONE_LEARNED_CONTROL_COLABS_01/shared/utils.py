@@ -11,6 +11,32 @@ import numpy as np
 import torch
 
 
+def runtime_record(cwd: Path | None = None) -> dict:
+    """Versions stored beside a run. They do not belong to the resume signature."""
+    import platform
+    import subprocess
+
+    commit = None
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(cwd or Path.cwd()),
+            stderr=subprocess.DEVNULL,
+            text=True,
+        ).strip() or None
+    except (OSError, subprocess.CalledProcessError):
+        commit = None
+    return {
+        "git_commit": commit,
+        "python": platform.python_version(),
+        "torch": torch.__version__,
+        "cuda": torch.version.cuda if torch.cuda.is_available() else None,
+        "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+        "numpy": np.__version__,
+        "opencv": cv2.__version__,
+    }
+
+
 def seed_all(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)

@@ -18,9 +18,11 @@ Each allowed page is stored once under:
 DRIVE_ROOT/Testly_Affine_Tone_DL/_shared_cache/z_s31/
 ```
 
-The filename is the hash of pair id, dirty sha256, and the operator spec (`s=31`, sigma `s/6`, floor `0.1`, reflect-101, long side 1024, one resize). A file is reused only when those fields match. The dirty sha256 must start with the ten-character hash in the pair id.
+The filename is the hash of pair id, dirty sha256, clean sha256, and the operator spec (`s=31`, sigma `s/6`, floor `0.1`, reflect-101, long side 1024, one resize). A file is reused only when those fields match. The dirty sha256 must start with the ten-character hash in the pair id. The clean sha256 is part of the identity because the stored target, ink mask, and edge mask come from the clean page.
 
-Discrete costs, lattice targets, S05 V03 metrics, the frozen-bank oracle, and the Current6 hybrid oracle use the same shared root. Architectures do not keep private copies of those arrays.
+Train and calibration pages are cached before the first optimizer step. Development pages, their discrete cell costs, and their lattice targets are written only after a checkpoint has been selected. If no epoch passes the guard, those development caches are not built.
+
+Discrete costs, lattice targets, S05 V03 metrics, the frozen-bank oracle, and the Current6 hybrid oracle use the same shared root. Architectures do not keep private copies of those arrays. Cost and lattice filenames also include the clean sha256.
 
 ## Optimization
 
@@ -33,11 +35,15 @@ Discrete costs, lattice targets, S05 V03 metrics, the frozen-bank oracle, and th
 
 ## What is allowed to improve the checkpoint
 
-An epoch is eligible when calibration ink MAE and edge MAE are each at most 1.25× the calibration scores of fixed S05 V03. Among eligible epochs, the highest calibration PSNR is `checkpoints/best.pt`. An ineligible epoch is not promoted and does not reset patience.
+An epoch is eligible when calibration ink MAE and edge MAE are each at most 1.25× the calibration scores of fixed S05 V03, and calibration SSIM is at most `0.02` below that same fixed baseline. The `0.02` drop is a guard (`structural_ssim_drop_max`), not a tuned optimum. Among eligible epochs, the highest calibration PSNR is `checkpoints/best.pt`. An ineligible epoch is not promoted and does not reset patience.
 
 For the staged discrete runs, the early-stop clock starts when image loss turns on. A classification-era checkpoint can still be the one that is kept if later image epochs never beat its calibration PSNR.
 
 `latest.pt` is written every epoch and is the resume point. `best.pt` is written immediately on each promotion. If no epoch passes the guard, `best.pt` is not created.
+
+Resume loads `latest.pt` only when its `run_signature` matches the current run. The signature covers experiment id, family, input mode, loss preset, grid, supervision, image-with-oracle, clamp, lightweight, output channels, oracle kind, augmentation, warm start, operator hash, bank hash, minimum span, loss weights, the endpoint box, and the stage schedule. A mismatch raises `CHECKPOINT_SIGNATURE_MISMATCH` before any cache write or config overwrite. Batch size, epoch count, learning rate, and the recorded library versions are stored and are not part of the signature.
+
+Each checkpoint and `config.json` records the git commit and the Python, PyTorch, CUDA, NumPy, and OpenCV versions of the process that started the run.
 
 ## Discrete schedule
 

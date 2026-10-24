@@ -56,7 +56,7 @@ Full-resolution tone loss dominates memory, not the 1.8M-parameter backbone. A C
 
 ## Disconnects
 
-`RESUME = True` loads `latest.pt` from that experiment folder, including the optimizer and the frozen tau. A tau that does not match the recomputed calibration median aborts with `TAU_MISMATCH` rather than continuing under a different teacher.
+`RESUME = True` loads `latest.pt` from that experiment folder, including the optimizer and the frozen tau, only when the run signature matches. A different `INPUT_MODE`, loss preset, grid, or supervision aborts with `CHECKPOINT_SIGNATURE_MISMATCH` and does not reuse the weights. A tau that does not match the recomputed calibration median aborts with `TAU_MISMATCH`. Changing one of those knobs requires `RESUME = False`, which keeps the old folder and writes `EXP0N_..._2`.
 
 ## End of the cell
 

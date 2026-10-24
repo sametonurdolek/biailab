@@ -46,6 +46,11 @@ def spec_hash() -> str:
     return hashlib.sha256(blob).hexdigest()[:16]
 
 
+def page_cache_name(pid: str, dirty_sha: str, clean_sha: str, operator_hash: str) -> str:
+    """Identity of one cached page: pair, dirty bytes, clean bytes, operator spec."""
+    return hashlib.sha256(f"{pid}|{dirty_sha}|{clean_sha}|{operator_hash}".encode()).hexdigest()
+
+
 def load_split(path: Path, expected_sha: str) -> dict:
     raw = path.read_bytes()
     digest = hashlib.sha256(raw).hexdigest()
@@ -136,7 +141,14 @@ def index_allowed_pairs(drive_root: Path, work_root: Path, ids: list[str], test_
         dirty_sha = sha256_file(dirty)
         if not dirty_sha.startswith(sha10):
             raise SystemExit(f"DIRTY_SHA_MISMATCH {pid}")
-        pairs[pid] = {"id": pid, "dirty": str(dirty), "clean": str(clean), "dirty_sha": dirty_sha}
+        clean_sha = sha256_file(clean)
+        pairs[pid] = {
+            "id": pid,
+            "dirty": str(dirty),
+            "clean": str(clean),
+            "dirty_sha": dirty_sha,
+            "clean_sha": clean_sha,
+        }
     return pairs
 
 
@@ -215,29 +227,32 @@ def letterbox_stack(channels: list[np.ndarray]) -> tuple[np.ndarray, np.ndarray,
 
 
 class PageStore:
-    """One shared Z cache. Identity is the dirty sha plus the operator spec."""
+    """One shared Z cache. Identity is pair id, dirty sha, clean sha, and the operator spec."""
 
     def __init__(self, root: Path):
         self.root = Path(root)
         self.root.mkdir(parents=True, exist_ok=True)
         self.hash = spec_hash()
 
-    def path(self, pid: str, dirty_sha: str) -> Path:
-        name = hashlib.sha256(f"{pid}|{dirty_sha}|{self.hash}".encode()).hexdigest() + ".npz"
-        return self.root / name
+    def path(self, pid: str, dirty_sha: str, clean_sha: str) -> Path:
+        return self.root / (page_cache_name(pid, dirty_sha, clean_sha, self.hash) + ".npz")
 
     def ensure(self, pid: str, pair: dict, test_ids: set[str]) -> dict:
         if pid in test_ids:
             raise SystemExit("TEST_SPLIT_TOUCHED")
-        path = self.path(pid, pair["dirty_sha"])
+        clean_sha = pair.get("clean_sha") or ""
+        if not clean_sha:
+            raise SystemExit(f"CLEAN_SHA_MISSING {pid}")
+        path = self.path(pid, pair["dirty_sha"], clean_sha)
         if path.exists():
-            return self._read(path, pid, pair["dirty_sha"])
+            return self._read(path, pid, pair["dirty_sha"], clean_sha)
         dirty, target = prepare_pair(pair)
         z = normalize_s31(dirty)
         masks = structure_masks(target)
         meta = {
             "id": pid,
             "dirty_sha": pair["dirty_sha"],
+            "clean_sha": clean_sha,
             "operator_hash": self.hash,
             "prep_version": PREP_VERSION,
             "target_resize_count": 1,
@@ -249,12 +264,20 @@ class PageStore:
             metadata=json.dumps(meta),
         )
         tmp.replace(path)
-        return self._read(path, pid, pair["dirty_sha"])
+        return self._read(path, pid, pair["dirty_sha"], clean_sha)
 
-    def _read(self, path: Path, pid: str, dirty_sha: str) -> dict:
+    def _read(self, path: Path, pid: str, dirty_sha: str, clean_sha: str) -> dict:
         with np.load(path, allow_pickle=False) as blob:
-            meta = json.loads(str(blob["metadata"]))
-            if meta["id"] != pid or meta["dirty_sha"] != dirty_sha or meta["operator_hash"] != self.hash:
+            raw_meta = blob["metadata"]
+            if isinstance(raw_meta, np.ndarray):
+                raw_meta = raw_meta.item()
+            meta = json.loads(raw_meta if isinstance(raw_meta, str) else str(raw_meta))
+            if (
+                meta.get("id") != pid
+                or meta.get("dirty_sha") != dirty_sha
+                or meta.get("clean_sha") != clean_sha
+                or meta.get("operator_hash") != self.hash
+            ):
                 raise SystemExit(f"Z_CACHE_MISMATCH {pid}")
             return {
                 "dirty": np.ascontiguousarray(blob["dirty"], dtype=np.float32),
